@@ -1,6 +1,6 @@
 /* ==========================================================================
    Atiyeh — global styles (tokens, base, header, footer, inner pages)
-   Homepage sections live in home.css.
+   Homepage sections and shared components live in sections.css.
    ========================================================================== */
 
 :root {
@@ -125,6 +125,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .btn--accent { background: var(--c-accent); color: var(--c-ink); }
 .btn--white { background: #fff; color: var(--c-primary-dark); }
 .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, .5); padding: 12px 26px; }
+.btn--outline { background: transparent; color: var(--c-primary); border: 1.5px solid var(--c-primary); padding: 11px 26px; }
 .btn--outline-dark { background: transparent; color: #fff; border: 1.5px solid var(--c-body); padding: 11px 26px; }
 
 .sweep { position: relative; overflow: hidden; isolation: isolate; transition: transform .35s var(--ease), box-shadow .35s, color .3s; }

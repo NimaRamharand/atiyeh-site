@@ -19,20 +19,7 @@ $atiyeh_terms = atiyeh_service_terms();
 	</div>
 	<ul class="projects__grid" role="list">
 		<?php foreach ( atiyeh_home_projects() as $p ) : ?>
-			<li class="projects__cell" data-filter-item="<?php echo esc_attr( $p['service'] ); ?>">
-				<a class="project-card lift rv" href="<?php echo esc_url( $p['url'] ); ?>">
-					<span class="project-card__media zoom">
-						<span class="zi project-card__img">
-							<img src="<?php echo esc_url( $p['img'] ); ?>" alt="" class="pimg" width="400" height="300" loading="lazy" decoding="async">
-							<span class="project-card__tag"><?php echo esc_html( $atiyeh_terms[ $p['service'] ] ?? '' ); ?></span>
-						</span>
-					</span>
-					<span class="project-card__body">
-						<b class="project-card__title"><?php echo esc_html( atiyeh_nb( $p['title'] ) ); ?></b>
-						<span class="project-card__desc mut"><?php echo esc_html( $p['desc'] ); ?></span>
-					</span>
-				</a>
-			</li>
+			<?php get_template_part( 'template-parts/card-project', null, $p ); ?>
 		<?php endforeach; ?>
 	</ul>
 	<p class="projects__empty" hidden data-filter-empty>پروژه‌ای در این دسته ثبت نشده است.</p>

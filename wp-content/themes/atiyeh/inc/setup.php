@@ -32,10 +32,9 @@ add_action(
 		$css = ATIYEH_DIR . '/assets/css/main.css';
 		$js  = ATIYEH_DIR . '/assets/js/main.js';
 		wp_enqueue_style( 'atiyeh', atiyeh_asset( 'css/main.css' ), array(), (string) filemtime( $css ) );
-		if ( is_front_page() ) {
-			$home = ATIYEH_DIR . '/assets/css/home.css';
-			wp_enqueue_style( 'atiyeh-home', atiyeh_asset( 'css/home.css' ), array( 'atiyeh' ), (string) filemtime( $home ) );
-		}
+		// Section components (homepage sections, project cards, forms) — reused by inner templates.
+		$sections = ATIYEH_DIR . '/assets/css/sections.css';
+		wp_enqueue_style( 'atiyeh-sections', atiyeh_asset( 'css/sections.css' ), array( 'atiyeh' ), (string) filemtime( $sections ) );
 		wp_enqueue_script( 'atiyeh', atiyeh_asset( 'js/main.js' ), array(), (string) filemtime( $js ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 	}
 );

@@ -67,9 +67,17 @@ function atiyeh_hero_slides(): array {
  * @return array<int, array{src:string, alt:string}>
  */
 function atiyeh_home_clients(): array {
-	$clients = apply_filters( 'atiyeh_home_clients', null );
-	if ( is_array( $clients ) && $clients ) {
-		return $clients;
+	if ( post_type_exists( 'client' ) ) {
+		$out = array();
+		foreach ( get_posts( array( 'post_type' => 'client', 'numberposts' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ) ) as $c ) {
+			$src = get_the_post_thumbnail_url( $c, 'medium' );
+			if ( $src ) {
+				$out[] = array( 'src' => $src, 'alt' => get_the_title( $c ) );
+			}
+		}
+		if ( $out ) {
+			return $out;
+		}
 	}
 	return array(
 		array( 'src' => atiyeh_asset( 'img/logos/logo-esfahan.webp' ), 'alt' => 'شهرداری اصفهان' ),
@@ -139,14 +147,35 @@ function atiyeh_service_terms(): array {
  * @return array<int, array{title:string, desc:string, service:string, img:string, url:string}>
  */
 function atiyeh_home_projects(): array {
-	$projects = apply_filters( 'atiyeh_home_projects', null );
-	if ( is_array( $projects ) && $projects ) {
-		return $projects;
+	if ( post_type_exists( 'project' ) ) {
+		$posts = get_posts( array( 'post_type' => 'project', 'numberposts' => 3, 'orderby' => 'menu_order', 'order' => 'ASC' ) );
+		if ( $posts ) {
+			return array_map( 'atiyeh_project_item', $posts );
+		}
 	}
 	return array(
 		array( 'title' => 'نصب پلاک کدپستی [ شهر ]', 'desc' => '[ توضیح کوتاه پروژه و کارفرما ]', 'service' => 'plaque', 'img' => atiyeh_asset( 'img/project-postal-plaque.webp' ), 'url' => '#' ),
 		array( 'title' => 'آرشیو دیجیتال اسناد [ سازمان ]', 'desc' => '[ توضیح کوتاه پروژه و کارفرما ]', 'service' => 'archive', 'img' => atiyeh_asset( 'img/careers-team.webp' ), 'url' => '#' ),
 		array( 'title' => 'بهنگام‌سازی کدپستی [ شهر ]', 'desc' => '[ توضیح کوتاه پروژه و کارفرما ]', 'service' => 'update', 'img' => atiyeh_asset( 'img/project-map-update.webp' ), 'url' => '#' ),
+	);
+}
+
+/**
+ * Card data for one project post.
+ *
+ * @return array{title:string, desc:string, service:string, services:string[], img:string, url:string}
+ */
+function atiyeh_project_item( WP_Post $p ): array {
+	$terms    = get_the_terms( $p, 'service' );
+	$services = is_array( $terms ) ? wp_list_pluck( $terms, 'slug' ) : array();
+	$img      = get_the_post_thumbnail_url( $p, 'atiyeh-card' );
+	return array(
+		'title'    => get_the_title( $p ),
+		'desc'     => has_excerpt( $p ) ? get_the_excerpt( $p ) : '[ توضیح کوتاه پروژه و کارفرما ]',
+		'service'  => $services[0] ?? '',
+		'services' => $services,
+		'img'      => $img ? $img : atiyeh_asset( 'img/project-postal-plaque.webp' ),
+		'url'      => (string) get_permalink( $p ),
 	);
 }
 

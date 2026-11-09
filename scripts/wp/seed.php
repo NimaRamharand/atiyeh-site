@@ -16,9 +16,10 @@ const ATIYEH_PLACEHOLDER = '<!-- wp:paragraph --><p>[ محتوای این صفح
 
 /** Deletes every demo-tagged post (any type, any status) and its attachments. */
 function atiyeh_demo_purge(): void {
+	// Explicit type list: 'any' skips non-public types such as client and job.
 	$ids = get_posts(
 		array(
-			'post_type'      => 'any',
+			'post_type'      => array_values( array_diff( get_post_types(), array( 'attachment' ) ) ),
 			'post_status'    => 'any',
 			'posts_per_page' => -1,
 			'fields'         => 'ids',
@@ -82,14 +83,14 @@ function atiyeh_demo_image( string $file, string $alt = '' ): int {
 	require_once ABSPATH . 'wp-admin/includes/media.php';
 	require_once ABSPATH . 'wp-admin/includes/image.php';
 	$dir = getenv( 'ASSETS_DIR' ) ? getenv( 'ASSETS_DIR' ) : dirname( __DIR__, 2 ) . '/assets-source';
-	$src = rtrim( $dir, '/' ) . '/images/' . $file;
+	$src = rtrim( $dir, '/' ) . '/' . ( str_contains( $file, '/' ) ? $file : 'images/' . $file );
 	if ( ! is_readable( $src ) ) {
 		WP_CLI::warning( "تصویر پیدا نشد: {$src}" );
 		return 0;
 	}
-	$tmp = wp_tempnam( $file );
+	$tmp = wp_tempnam( basename( $file ) );
 	copy( $src, $tmp );
-	$id = media_handle_sideload( array( 'name' => $file, 'tmp_name' => $tmp ), 0 );
+	$id = media_handle_sideload( array( 'name' => basename( $file ), 'tmp_name' => $tmp ), 0 );
 	if ( is_wp_error( $id ) ) {
 		WP_CLI::warning( $id->get_error_message() );
 		return 0;

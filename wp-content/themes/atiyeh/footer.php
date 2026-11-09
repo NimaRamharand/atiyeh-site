@@ -33,14 +33,25 @@
 		<div class="site-footer__col">
 			<b class="site-footer__title">تماس</b>
 			<address class="site-footer__contact">
-				<span><?php echo esc_html( atiyeh_contact( 'address' ) ); ?></span>
-				<span dir="auto"><?php echo esc_html( atiyeh_contact( 'phone' ) ); ?></span>
-				<span dir="auto"><?php echo esc_html( atiyeh_contact( 'email' ) ); ?></span>
+				<span><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'address' ) ) ); ?></span>
+				<span dir="auto"><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'phone' ) ) ); ?></span>
+				<span dir="auto"><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'email' ) ) ); ?></span>
 			</address>
 		</div>
 
-		<div class="site-footer__newsletter">
+		<div class="site-footer__newsletter" id="newsletter">
 			<b class="site-footer__title">دریافت خبرنامه</b>
+			<?php
+			$atiyeh_nl  = isset( $_GET['newsletter'] ) ? sanitize_key( $_GET['newsletter'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification
+			$atiyeh_nlm = array(
+				'ok'      => array( 'ok', 'عضویت شما در خبرنامه ثبت شد.' ),
+				'invalid' => array( 'err', 'لطفاً یک ایمیل معتبر وارد کنید.' ),
+				'expired' => array( 'err', 'زمان فرم به پایان رسیده است؛ دوباره تلاش کنید.' ),
+			);
+			if ( isset( $atiyeh_nlm[ $atiyeh_nl ] ) ) {
+				printf( '<p class="form-msg form-msg--%1$s form-msg--dark" role="%2$s" tabindex="-1" data-focus>%3$s</p>', esc_attr( $atiyeh_nlm[ $atiyeh_nl ][0] ), 'ok' === $atiyeh_nlm[ $atiyeh_nl ][0] ? 'status' : 'alert', esc_html( $atiyeh_nlm[ $atiyeh_nl ][1] ) );
+			}
+			?>
 			<form class="newsletter" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 				<input type="hidden" name="action" value="atiyeh_newsletter">
 				<?php wp_nonce_field( 'atiyeh_newsletter', '_atiyeh_nonce' ); ?>

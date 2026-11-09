@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Atiyeh — homepage sections (loaded on the front page only).
+   Atiyeh — homepage sections + shared components (project cards, forms) used by inner pages.
    Measurements follow docs/mockup/export/Main.dc.html at 1440px.
    ========================================================================== */
 
@@ -329,10 +329,111 @@
 .careers__roles .chip { background: rgba(255, 255, 255, .14); padding: 5px 16px; border-radius: 999px; font-size: 13px; }
 .careers__cta { position: relative; padding: 15px 34px; margin-left: 150px; }
 
+/* ---------- Forms: Fluent Forms skin (matches the mockup form) + own forms ---------- */
+.fluentform fieldset { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
+.fluentform .ff-el-group { margin: 0; position: relative; }
+.fluentform .ff-wide { grid-column: 1 / -1; }
+.fluentform .ff-el-input--label { margin-bottom: 6px; }
+.fluentform .ff-el-input--label label { font-size: 14px; font-weight: 700; color: var(--c-slate-900); }
+.fluentform .ff-el-input--label.ff-el-is-required.asterisk-right label::after { color: #c0392b; margin-right: 3px; }
+/* !important: Fluent Forms' own stylesheet loads after ours with equal specificity. */
+.fluentform .ff-el-form-control {
+	height: 48px; border-radius: 999px !important; border: 1px solid var(--c-border) !important; background: var(--c-page) !important; padding: 0 20px !important;
+	font-family: inherit; font-size: 15px; color: var(--c-slate-900); box-shadow: none; transition: border-color .2s, box-shadow .2s;
+}
+.fluentform select.ff-el-form-control, .fluentform select.ff-el-form-control:not([size]):not([multiple]) { height: 48px !important; padding: 0 16px !important; }
+.fluentform textarea.ff-el-form-control { height: auto; min-height: 120px; border-radius: 24px !important; padding: 14px 20px !important; }
+.fluentform .ff-el-form-control:focus { outline: none; border-color: var(--c-primary) !important; box-shadow: 0 0 0 3px rgba(23, 87, 184, .18); }
+.fluentform .ff-el-is-error .ff-el-form-control { border-color: #c0392b !important; }
+/* Errors overlay the row gap so showing/hiding them never shifts the submit button. */
+.fluentform .ff-el-group .error, .fluentform .ff-el-group .text-danger { position: absolute; top: 100%; right: 20px; margin: 2px 0 0; color: #c0392b; font-size: 12px; line-height: 1.6; white-space: nowrap; }
+.fluentform .ff_submit_btn_wrapper { text-align: right; }
+.fluentform .ff-btn-submit.btn, .fluentform .ff-btn-submit.btn:hover {
+	background: var(--c-primary) !important; color: #fff !important; border: 0 !important; border-radius: 999px !important;
+	padding: 14px 38px !important; font-family: inherit; font-size: 16px; font-weight: 700; opacity: 1 !important; line-height: 1.8;
+}
+.fluentform .ff-btn-submit.btn:hover { transform: translateY(-3px); }
+.fluentform .ff-btn-submit.btn::after { content: '←'; display: inline-block; margin-right: 10px; transition: transform .3s; }
+.fluentform .ff-btn-submit.btn:hover::after { transform: translateX(-6px); }
+.ff-message-success, .form-msg {
+	border-radius: 20px; padding: 16px 20px; font-weight: 700; margin: 0 0 18px; box-shadow: none !important;
+	background: #e7f4ec; color: #1e6b3d; border: 1px solid #bfe3cc;
+}
+.form-msg--err { background: #fdecea; color: #a5281b; border-color: #f5c6c0; }
+.form-msg--dark { margin: 10px 0 0; font-size: 14px; padding: 10px 16px; }
+.form-msg:focus { outline: none; box-shadow: var(--focus) !important; }
+.req .req, .req-form .req { color: #c0392b; }
+/* Persian file picker: the native input is visually hidden but stays focusable and keeps validation. */
+.file-field { position: relative; display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 6px 8px 6px 18px; border-radius: 999px; border: 1px solid var(--c-border); background: var(--c-page); font-weight: 400; cursor: pointer; }
+.file-field input[type="file"] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; border: 0; padding: 0; }
+.file-field__btn { flex: none; font-weight: 700; border-radius: 999px; padding: 6px 18px; background: var(--c-soft); color: var(--c-primary-dark); }
+.file-field__name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--c-muted); font-size: 14px; }
+.file-field:focus-within { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(23, 87, 184, .18); }
+.hp-field { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.form-card { background: #fff; border-radius: 60px 14px 60px 14px; padding: 44px; box-shadow: 0 30px 60px rgba(20, 40, 30, .06); }
+.form-card__title { font-size: 26px; margin: 0 0 22px; }
+
+/* ---------- Project archive & single ---------- */
+.projects--archive { padding-top: 50px; }
+.projects__chips { margin-bottom: 40px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 0 0 28px; }
+.facts__item { background: var(--c-page); border-radius: 18px; padding: 14px 18px; }
+.facts dt { font-size: 13px; color: var(--c-muted); }
+.facts dd { margin: 0; font-weight: 700; }
+.facts--stack { grid-template-columns: 1fr; }
+.back-link { margin: 32px 0 0; }
+
+/* ---------- Appreciation gallery + lightbox ---------- */
+.plaques { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.plaque__link { display: block; background: #fff; border-radius: 120px 20px 28px 28px; overflow: hidden; }
+.plaque:nth-child(even) .plaque__link { border-radius: 20px 120px 28px 28px; }
+.plaque__img { display: block; height: 280px; }
+.plaque__body { display: block; padding: 18px 22px 22px; }
+.plaque__title { display: block; font-size: 17px; }
+.plaque__meta { font-size: 14px; }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; overflow: visible; }
+.lightbox::backdrop { background: rgba(10, 20, 30, .82); }
+.lightbox img { display: block; max-width: 100%; max-height: 82vh; border-radius: 24px; margin: 0 auto; }
+.lightbox__caption { color: #fff; text-align: center; margin: 12px 0 0; font-weight: 700; }
+.lightbox__close { position: absolute; top: -18px; right: -18px; background: #fff; color: var(--c-slate-900); }
+
+/* ---------- Careers page ---------- */
+.careers-page__intro { margin: 0 0 40px; }
+.jobs { display: flex; flex-direction: column; gap: 14px; margin-bottom: 50px; }
+.job { background: #fff; border-radius: 40px 10px 40px 10px; overflow: hidden; }
+.job:nth-child(even) { border-radius: 10px 40px 10px 40px; }
+.job__head { display: flex; align-items: center; gap: 14px; padding: 20px 26px; cursor: pointer; list-style: none; }
+.job__head::-webkit-details-marker { display: none; }
+.job__title { font-size: 18px; flex: 1; }
+.job__city { font-size: 14px; }
+.job__toggle { width: 34px; height: 34px; flex: none; border-radius: 50%; background: var(--c-soft); position: relative; transition: transform .3s, background .3s; }
+.job__toggle::before, .job__toggle::after { content: ''; position: absolute; top: 50%; left: 50%; width: 12px; height: 2px; background: var(--c-primary); translate: -50% -50%; border-radius: 2px; }
+.job__toggle::after { rotate: 90deg; transition: rotate .3s; }
+.job[open] .job__toggle { background: var(--c-primary); }
+.job[open] .job__toggle::before, .job[open] .job__toggle::after { background: #fff; }
+.job[open] .job__toggle::after { rotate: 0deg; }
+.job__body { padding: 0 26px 24px; }
+.job__apply { margin-top: 6px; }
+
+/* ---------- Contact & payment pages ---------- */
+.contact-page { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 26px; align-items: start; }
+.contact-page__info {
+	color: #fff; border-radius: 60px 14px 60px 14px; padding: 40px 34px; position: relative; overflow: hidden;
+	background: linear-gradient(145deg, var(--c-primary), var(--c-primary-dark));
+}
+.contact-page__title { font-size: 24px; margin-bottom: 18px; }
+.contact-page__info .facts__item { background: rgba(255, 255, 255, .12); }
+.contact-page__info .facts dt { color: #cfe3ff; }
+.request-page .request { padding-bottom: 0; }
+.pay-card { text-align: center; }
+.pay-card__btn { border: 0; cursor: pointer; font-size: 16px; padding: 14px 38px; }
+.pay-card__note { margin: 16px 0 0; }
+
 /* ==========================================================================
    Responsive (the mockup is desktop-only; these layouts are our own)
    ========================================================================== */
 @media (max-width: 1180px) {
+	.plaques { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.hero-slide__title { font-size: 44px; }
 	.areas__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.areas__cell:nth-child(n) { margin-top: 0; }
@@ -345,6 +446,7 @@
 }
 
 @media (max-width: 900px) {
+	.contact-page { grid-template-columns: 1fr; }
 	.hero__slides { min-height: 0; }
 	.hero-slide__inner { flex-direction: column; align-items: stretch; gap: 28px; padding-top: 120px; padding-bottom: 200px; }
 	.hero-slide__text { flex: none; }
@@ -368,6 +470,13 @@
 }
 
 @media (max-width: 600px) {
+	.fluentform fieldset { grid-template-columns: 1fr; }
+	.form-card { padding: 28px 20px; border-radius: 40px 12px 40px 12px; }
+	.plaques { grid-template-columns: 1fr; }
+	.plaque__img { height: 230px; }
+	.job__head { padding: 16px 18px; }
+	.job__body { padding: 0 18px 20px; }
+	.contact-page__info { padding: 32px 24px; border-radius: 40px 12px 40px 12px; }
 	.hero-slide__title { font-size: 31px; line-height: 1.5; margin: 14px 0 10px; }
 	.hero-slide__desc { font-size: 16px; margin-bottom: 22px; }
 	.hero-slide__inner { padding-top: 104px; padding-bottom: 170px; }

@@ -14,7 +14,7 @@
 			<span class="kicker kicker--pale">حسن انجام کار</span>
 			<h2 class="trust__title">سندی بر تخصص و تعهد</h2>
 			<p class="trust__desc">ده‌ها پلاک نصب‌شده، هرکدام با لوح سپاس کارفرمایان. نمونه‌ای از تقدیرنامه‌ها را ببینید.</p>
-			<a class="btn btn--white" href="<?php echo esc_url( home_url( '/appreciations/' ) ); ?>">مشاهده لوح‌های سپاس <span class="ar" aria-hidden="true">←</span></a>
+			<a class="btn btn--white" href="<?php echo esc_url( post_type_exists( 'appreciation' ) ? (string) get_post_type_archive_link( 'appreciation' ) : home_url( '/appreciations/' ) ); ?>">مشاهده لوح‌های سپاس <span class="ar" aria-hidden="true">←</span></a>
 		</div>
 		<div class="trust__media rvl">
 			<div class="trust__img lift">

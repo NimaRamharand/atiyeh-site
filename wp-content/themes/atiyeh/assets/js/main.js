@@ -168,7 +168,62 @@
 		}));
 	}
 
-	const modules = [initHeader, initReveal, initSlider, initFilter, initCounters, initDemoForms];
+	/* Appreciation gallery: open plaques in a <dialog> lightbox (falls back to the image link). */
+	function initLightbox() {
+		const dlg = document.querySelector('[data-lightbox-dialog]');
+		if (!dlg || typeof dlg.showModal !== 'function') return;
+		const img = dlg.querySelector('[data-lightbox-img]');
+		const cap = dlg.querySelector('[data-lightbox-caption]');
+		let opener = null;
+		document.querySelectorAll('[data-lightbox]').forEach((a) => a.addEventListener('click', (e) => {
+			e.preventDefault();
+			opener = a;
+			img.src = a.href;
+			img.alt = a.dataset.caption || '';
+			cap.textContent = a.dataset.caption || '';
+			dlg.showModal();
+		}));
+		dlg.querySelector('[data-lightbox-close]')?.addEventListener('click', () => dlg.close());
+		dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+		dlg.addEventListener('close', () => opener?.focus());
+	}
+
+	/* Résumé upload: check type and size before sending (the server checks again). */
+	function initResumeForm() {
+		document.querySelectorAll('[data-resume-form]').forEach((form) => {
+			const input = form.querySelector('input[type="file"]');
+			if (!input) return;
+			const max = Number(input.dataset.max || 0);
+			const check = () => {
+				const f = input.files[0];
+				let msg = '';
+				if (f && !/\.(pdf|docx)$/i.test(f.name)) msg = 'فقط فایل PDF یا DOCX پذیرفته می‌شود.';
+				else if (f && max && f.size > max) msg = 'حجم فایل رزومه باید حداکثر ۵ مگابایت باشد.';
+				input.setCustomValidity(msg);
+				return !msg;
+			};
+			const label = form.querySelector('[data-file-name]');
+			input.addEventListener('change', () => {
+				if (label) label.textContent = input.files[0] ? input.files[0].name : 'فایلی انتخاب نشده است';
+				if (!check()) input.reportValidity();
+			});
+			form.addEventListener('submit', (e) => { if (!check()) { e.preventDefault(); input.reportValidity(); } });
+		});
+	}
+
+	/* Payment page: the demo has no bank gateway connected; explain instead of navigating. */
+	function initPayButton() {
+		const btn = document.querySelector('[data-pay-btn]');
+		const note = document.querySelector('[data-pay-note]');
+		btn?.addEventListener('click', () => { if (note) note.hidden = false; });
+	}
+
+	/* Move focus to a server-side status message (after a form redirect) so screen readers announce it. */
+	function initFocusMessages() {
+		document.querySelector('[data-focus]')?.focus({ preventScroll: false });
+	}
+
+	const modules = [initHeader, initReveal, initSlider, initFilter, initCounters, initDemoForms, initLightbox, initResumeForm, initPayButton, initFocusMessages];
 	window.atiyeh = { modules, reduceMotion };
 	const boot = () => modules.forEach((fn) => fn());
 	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
