@@ -39,7 +39,7 @@ body {
 	background: var(--c-page);
 	color: var(--c-slate-900);
 	font-family: var(--font);
-	font-size: 17px;
+	font-size: 16px;
 	line-height: 1.8;
 	overflow-x: hidden;
 	text-rendering: optimizeLegibility;
@@ -51,6 +51,7 @@ p { margin: 0 0 1em; }
 button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 8px; }
 .btn:focus-visible, .icon-btn:focus-visible { border-radius: 999px; }
+#main { overflow-x: clip; }
 #main:focus { outline: none; }
 
 .container { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }

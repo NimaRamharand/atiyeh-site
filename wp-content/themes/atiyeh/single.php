@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => atiyeh_jdate( get_post_timestamp() ) ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => atiyeh_post_date() ) );
 	?>
 	<article <?php post_class( 'container content-card prose' ); ?>>
 		<?php if ( has_post_thumbnail() ) : ?>

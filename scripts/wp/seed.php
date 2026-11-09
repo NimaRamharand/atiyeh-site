@@ -37,10 +37,11 @@ function atiyeh_demo_purge(): void {
 	foreach ( array_merge( $ids, $attachments ) as $id ) {
 		wp_delete_post( $id, true );
 	}
-	// WordPress' own sample content.
-	foreach ( array( 'hello-world', 'sample-page', 'privacy-policy' ) as $slug ) {
-		$p = get_page_by_path( $slug, OBJECT, array( 'post', 'page' ) );
-		if ( $p ) {
+	// WordPress' own sample content (English or Persian install; slugs differ, titles are fixed).
+	$defaults = array( 'Hello world!', 'Sample Page', 'Privacy Policy', 'سلام دنیا!', 'برگه نمونه', 'سیاست حفظ حریم خصوصی' );
+	foreach ( array( 1, 2, 3 ) as $default_id ) {
+		$p = get_post( $default_id );
+		if ( $p && ! get_post_meta( $p->ID, ATIYEH_DEMO_META, true ) && in_array( $p->post_title, $defaults, true ) ) {
 			wp_delete_post( $p->ID, true );
 		}
 	}
@@ -64,6 +65,40 @@ function atiyeh_demo_insert( array $args, array $meta = array() ): int {
 		update_post_meta( $id, $k, $v );
 	}
 	return (int) $id;
+}
+
+/**
+ * Imports an image from assets-source/images into the media library (once per run) and returns its ID.
+ *
+ * @param string $file File name, e.g. «project-postal-plaque.webp».
+ * @param string $alt  Alt text.
+ */
+function atiyeh_demo_image( string $file, string $alt = '' ): int {
+	static $cache = array();
+	if ( isset( $cache[ $file ] ) ) {
+		return $cache[ $file ];
+	}
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	require_once ABSPATH . 'wp-admin/includes/media.php';
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+	$dir = getenv( 'ASSETS_DIR' ) ? getenv( 'ASSETS_DIR' ) : dirname( __DIR__, 2 ) . '/assets-source';
+	$src = rtrim( $dir, '/' ) . '/images/' . $file;
+	if ( ! is_readable( $src ) ) {
+		WP_CLI::warning( "تصویر پیدا نشد: {$src}" );
+		return 0;
+	}
+	$tmp = wp_tempnam( $file );
+	copy( $src, $tmp );
+	$id = media_handle_sideload( array( 'name' => $file, 'tmp_name' => $tmp ), 0 );
+	if ( is_wp_error( $id ) ) {
+		WP_CLI::warning( $id->get_error_message() );
+		return 0;
+	}
+	update_post_meta( $id, ATIYEH_DEMO_META, 1 );
+	if ( $alt ) {
+		update_post_meta( $id, '_wp_attachment_image_alt', $alt );
+	}
+	return $cache[ $file ] = (int) $id;
 }
 
 /** Creates the site pages and returns slug => ID. */

@@ -29,5 +29,13 @@ add_action(
 			$wp_customize->add_setting( 'atiyeh_' . $key, array( 'default' => $default, 'sanitize_callback' => 'sanitize_text_field' ) );
 			$wp_customize->add_control( 'atiyeh_' . $key, array( 'label' => $label, 'section' => 'atiyeh_contact', 'type' => 'text' ) );
 		}
+
+		// Homepage stats: empty = «[ ۰۰ ]» placeholder. A number animates as a counter.
+		$wp_customize->add_section( 'atiyeh_stats', array( 'title' => 'آمار صفحه اصلی', 'priority' => 31, 'description' => 'خالی بماند تا «[ ۰۰ ]» نمایش داده شود. فقط عدد واقعی وارد کنید.' ) );
+		$stats = array( 'plaques' => 'پلاک نصب‌شده', 'docs' => 'سند اسکن‌شده', 'clients' => 'کارفرمای فعال', 'years' => 'سال تجربه' );
+		foreach ( $stats as $key => $label ) {
+			$wp_customize->add_setting( "atiyeh_stat_{$key}", array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
+			$wp_customize->add_control( "atiyeh_stat_{$key}", array( 'label' => $label, 'section' => 'atiyeh_stats', 'type' => 'text' ) );
+		}
 	}
 );

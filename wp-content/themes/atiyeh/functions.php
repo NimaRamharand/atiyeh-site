@@ -19,3 +19,4 @@ define( 'ATIYEH_URI', get_template_directory_uri() );
 require ATIYEH_DIR . '/inc/helpers.php';
 require ATIYEH_DIR . '/inc/setup.php';
 require ATIYEH_DIR . '/inc/customizer.php';
+require ATIYEH_DIR . '/inc/home-data.php';

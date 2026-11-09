@@ -48,10 +48,40 @@ function atiyeh_jdate( ?int $timestamp = null ): string {
 	return atiyeh_fa_num( $d . ' ' . $months[ $m - 1 ] . ' ' . $y );
 }
 
+/**
+ * Display date of a post. Demo posts flagged `_atiyeh_date_placeholder` show «[ تاریخ ]»
+ * because their real publish dates are not known yet.
+ *
+ * @param WP_Post|int|null $post Post.
+ */
+function atiyeh_post_date( WP_Post|int|null $post = null ): string {
+	$post = get_post( $post );
+	if ( ! $post ) {
+		return '';
+	}
+	if ( get_post_meta( $post->ID, '_atiyeh_date_placeholder', true ) ) {
+		return '[ تاریخ ]';
+	}
+	return atiyeh_jdate( (int) get_post_time( 'U', true, $post ) );
+}
+
 /** Current Jalali year in Persian digits. */
 function atiyeh_jyear(): string {
 	$dt = new DateTimeImmutable( 'now', wp_timezone() );
 	return atiyeh_fa_num( atiyeh_to_jalali( (int) $dt->format( 'Y' ), (int) $dt->format( 'n' ), (int) $dt->format( 'j' ) )[0] );
+}
+
+/**
+ * Keeps «[ placeholder ]» brackets on one line with their text (no orphan «]» when wrapping).
+ *
+ * @param string $text Text.
+ */
+function atiyeh_nb( string $text ): string {
+	return str_replace( array( '[ ', ' ]' ), array( "[\u{00A0}", "\u{00A0}]" ), $text );
+}
+
+if ( ! is_admin() ) {
+	add_filter( 'the_title', 'atiyeh_nb' );
 }
 
 /** URL of a file inside the theme's assets/ folder. */

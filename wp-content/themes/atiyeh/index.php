@@ -32,7 +32,7 @@ get_template_part( 'template-parts/page-hero', null, array( 'title' => $atiyeh_t
 					<?php endif; ?>
 					<span>
 						<b class="news-item__title"><?php the_title(); ?></b>
-						<span class="mut news-item__meta"><?php echo esc_html( atiyeh_jdate( get_post_timestamp() ) ); ?> · ادامه مطلب ←</span>
+						<span class="mut news-item__meta"><?php echo esc_html( atiyeh_post_date() ); ?> · ادامه مطلب ←</span>
 					</span>
 				</a>
 			<?php endwhile; ?>
