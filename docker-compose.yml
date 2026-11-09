@@ -48,7 +48,7 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "${ATIYEH_PORT:-8080}:80"
+      - "${ATIYEH_PORT:-8093}:80"
     environment: *wp-env
     volumes: *wp-volumes
 
@@ -62,7 +62,7 @@ services:
     environment:
       <<: *wp-env
       WP: wp
-      SITE_URL: http://localhost:${ATIYEH_PORT:-8080}
+      SITE_URL: http://localhost:${ATIYEH_PORT:-8093}
       ASSETS_DIR: /assets-source
       DEMO_DIR: /demo
       SCRIPTS_DIR: /scripts

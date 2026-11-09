@@ -5,7 +5,7 @@
 ## اجرا (Docker)
 ```bash
 npm install
-npm run start        # http://localhost:8080  — مدیریت: admin / atiyeh-demo
+npm run start        # http://localhost:8093  — مدیریت: admin / atiyeh-demo
 npm run reset-demo   # پاک کردن و ساخت دوباره محتوای نمونه
 npm run stop
 ```

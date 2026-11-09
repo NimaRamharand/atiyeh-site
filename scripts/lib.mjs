@@ -5,7 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PORT = process.env.ATIYEH_PORT || '8080';
+const PORT = process.env.ATIYEH_PORT || '8093';
 const LITE_PORT = process.env.ATIYEH_LITE_PORT || '8081';
 export const SITE_URL_DOCKER = `http://localhost:${PORT}`;
 export const SITE_URL_LITE = `http://localhost:${LITE_PORT}`;
