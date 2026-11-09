@@ -1,0 +1,36 @@
+<?php
+
+defined( 'ABSPATH' ) || exit;
+
+if ( ! function_exists( 'parsidate' ) ) {
+  /**
+   * Convert gregorian datetime to persian datetime
+   *
+   * @param mixed $format Format
+   * @param string $dateTime Gregorian datetime
+   * @param bool|string $lang true or per: convert numbers to Persian, false or eng: don't convert numbers
+   *
+   * @return string
+   */
+  // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound -- Legacy public function, kept for backward compatibility.
+  function parsidate( $format, $dateTime = 'now', $lang = 'per' ): string {
+    $lang = is_bool( $lang ) ? ( $lang ? 'per' : 'eng' ) : $lang;
+
+    return WPParsidate\Core\WPP_ParsiDate::getInstance()->persian_date( $format, $dateTime, $lang );
+  }
+}
+
+if ( ! function_exists( 'gregdate' ) ) {
+  /**
+   * Convert persian datetime to gregorian datetime
+   *
+   * @param mixed $format Format
+   * @param mixed $datetime Shamsi datetime
+   *
+   * @return false|string
+   */
+  // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound -- Legacy public function, kept for backward compatibility.
+  function gregdate( $format, $datetime ) {
+    return WPParsidate\Core\WPP_ParsiDate::getInstance()->gregorian_date( $format, $datetime );
+  }
+}

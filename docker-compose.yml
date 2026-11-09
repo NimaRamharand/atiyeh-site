@@ -1,0 +1,73 @@
+# Local demo stack: WordPress (Persian, PHP 8.3) + MariaDB + WP-CLI.
+# After the images are pulled once, the site runs fully offline.
+name: atiyeh
+
+x-wp-env: &wp-env
+  WORDPRESS_DB_HOST: db:3306
+  WORDPRESS_DB_USER: atiyeh
+  WORDPRESS_DB_PASSWORD: atiyeh
+  WORDPRESS_DB_NAME: atiyeh
+  WORDPRESS_CONFIG_EXTRA: |
+    define('WP_ENVIRONMENT_TYPE', 'local');
+    define('AUTOMATIC_UPDATER_DISABLED', true);
+    define('WP_AUTO_UPDATE_CORE', false);
+    define('DISALLOW_FILE_EDIT', true);
+    define('WP_HTTP_BLOCK_EXTERNAL', true);
+    define('WP_ACCESSIBLE_HOSTS', 'localhost');
+
+x-wp-volumes: &wp-volumes
+  - wp_core:/var/www/html
+  - ./wp-content/themes/atiyeh:/var/www/html/wp-content/themes/atiyeh
+  - ./wp-content/plugins:/var/www/html/wp-content/plugins
+  - ./wp-content/languages:/var/www/html/wp-content/languages
+  - ./scripts/wp:/scripts:ro
+  - ./assets-source:/assets-source:ro
+  - ./demo:/demo:ro
+
+services:
+  db:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: atiyeh
+      MARIADB_USER: atiyeh
+      MARIADB_PASSWORD: atiyeh
+      MARIADB_ROOT_PASSWORD: atiyeh-root
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 3s
+      timeout: 5s
+      retries: 40
+
+  wordpress:
+    image: wordpress:7.1-php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${ATIYEH_PORT:-8080}:80"
+    environment: *wp-env
+    volumes: *wp-volumes
+
+  wpcli:
+    image: wordpress:cli-2.12-php8.3
+    profiles: ["cli"]
+    user: "33:33"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      <<: *wp-env
+      WP: wp
+      SITE_URL: http://localhost:${ATIYEH_PORT:-8080}
+      ASSETS_DIR: /assets-source
+      DEMO_DIR: /demo
+      SCRIPTS_DIR: /scripts
+    volumes: *wp-volumes
+
+volumes:
+  db_data:
+  wp_core:

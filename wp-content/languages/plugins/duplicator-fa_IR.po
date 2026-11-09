@@ -1,0 +1,2592 @@
+# Translation of Plugins - Duplicator &#8211; Backups &amp; Migration Plugin &#8211; Cloud Backups, Scheduled Backups, &amp; More - Stable (latest release) in Persian
+# This file is distributed under the same license as the Plugins - Duplicator &#8211; Backups &amp; Migration Plugin &#8211; Cloud Backups, Scheduled Backups, &amp; More - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-08-27 13:11:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.1.0\n"
+"Language: fa\n"
+"Project-Id-Version: Plugins - Duplicator &#8211; Backups &amp; Migration Plugin &#8211; Cloud Backups, Scheduled Backups, &amp; More - Stable (latest release)\n"
+
+#. translators: %s: error message
+#: addons/litebase/src/Settings/ConnectController.php:158
+msgid "Upgrade installation failed: %s. Please try again or install manually."
+msgstr "نصب ارتقا ناموفق بود: %s. لطفاً دوباره امتحان کنید یا دستی نصب کنید."
+
+#: addons/litebase/LiteBase.php:226
+msgid "Please try again or contact support if the issue persists."
+msgstr "لطفا دوباره امتحان کنید یا در صورت بروز مشکل با پشتیبانی تماس بگیرید."
+
+#: addons/litebase/template/litebase/settings/connect.php:87
+msgid "This opens connect.duplicator.com where you'll securely connect to Duplicator Pro."
+msgstr "این دستور connect.duplicator.com را باز می‌کند که در آن می‌توانید به طور ایمن به Duplicator Pro متصل شوید."
+
+#: addons/litebase/template/litebase/settings/connect.php:83
+msgid "Connect to Duplicator Pro"
+msgstr "اتصال به Duplicator Pro"
+
+#: addons/litebase/template/litebase/tools/db-reset.php:19
+msgid "Clean & Reset WordPress Database"
+msgstr "پاک‌سازی و تنظیم مجدد پایگاه داده وردپرس"
+
+#: addons/litebase/LiteBase.php:148
+msgid "Docs"
+msgstr "اسناد"
+
+#: addons/litebase/LiteBase.php:152
+msgid "Migration Services"
+msgstr "خدمات مهاجرت"
+
+#: addons/litebase/LiteBase.php:156
+msgid "Free Plugins"
+msgstr "افزونه‌های رایگان"
+
+#: template/parts/plugin-footer.php:24
+msgid "Made with ♥ by the Duplicator Team"
+msgstr "ساخته شده با ♥ توسط تیم داپلیکیتور"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:608
+msgid "Database Reset Pro"
+msgstr "بازنشانی پایگاه داده حرفه ای"
+
+#: src/Utils/DupliPhpVersionCheck.php:119
+msgid "Please contact your hosting provider to upgrade your PHP version."
+msgstr "لطفا برای ارتقاء نسخه PHP خود با ارائه دهنده خدمات میزبانی وب خود تماس بگیرید."
+
+#: src/Utils/DupliPhpVersionCheck.php:127
+msgid "Learn more about this change and how to upgrade"
+msgstr "درباره این تغییر و نحوه ارتقا بیشتر بدانید"
+
+#: src/Utils/DupliPhpVersionCheck.php:112
+msgid ""
+"While your current version of Duplicator will continue to work, \n"
+"                        you'll need to upgrade your PHP version to receive future features, improvements, and security updates."
+msgstr ""
+"در حالی که نسخه فعلی داپلیکیتور شما به کار خود ادامه خواهد داد, \n"
+"                        برای دریافت ویژگی‌ها، بهبودها و به‌روزرسانی‌های امنیتی آینده، باید نسخه PHP خود را ارتقا دهید.."
+
+#: src/Utils/DupliPhpVersionCheck.php:85
+msgid "DUPLICATOR: Action Required - <b>PHP Version Update Needed</b>, Your site is running PHP version %s."
+msgstr "داپلیکیتور: اقدام لازم - <b>به‌روزرسانی نسخه PHP لازم است</b>، سایت شما از نسخه PHP %s استفاده می‌کند."
+
+#: addons/litebase/src/Notifications/MultisiteNotice.php:60
+msgid "Duplicator Lite does not officially support WordPress multisite functionality"
+msgstr "داپلیکیتور Lite رسماً از قابلیت‌های وردپرس پشتیبانی نمی‌کند"
+
+#: src/Utils/DupliPhpVersionCheck.php:99
+msgid "Starting from <b>Duplicator %1$s</b>, Duplicator will require <b>PHP %2$s or higher</b> to receive new updates."
+msgstr "از <b>داپلیکیتور %1$s</b> به بعد، داپلیکیتور برای دریافت به‌روزرسانی‌های جدید به <b>PHP %2$s یا بالاتر</b> نیاز خواهد داشت."
+
+#: addons/litebase/src/Notifications/MultisiteNotice.php:66
+msgid "Upgrade Now!"
+msgstr "هم‌اکنون ارتقاء دهید!"
+
+#: template/admin_pages/tools/duplicator_logs.php:227
+msgid "Backup Logs"
+msgstr "لاگ‌های پشتیبانی"
+
+#: template/admin_pages/packages/packages_scripts.php:78
+msgid "Delete Backups?"
+msgstr "حذف نسخه‌های پشتیبان؟"
+
+#: template/parts/packages/filters/section_filters_incons.php:41
+msgid "Backup Only the Database"
+msgstr "فقط از پایگاه داده پشتیبان بگیرید"
+
+#: template/admin_pages/packages/toolbar.php:46
+msgid "Backup Settings"
+msgstr "تنظیمات پشتیبان گیری"
+
+#: template/admin_pages/packages/no_elements_row.php:21
+msgid "No Backups Found"
+msgstr "هیچ نسخه پشتیبان پیدا نشد"
+
+#: template/admin_pages/packages/packages_table_head.php:34
+msgid "Select all Backups"
+msgstr "انتخاب همه پشتیبان‌ها"
+
+#: src/Models/ActivityLog/LogEventSettingsChange.php:258
+msgid "Backup"
+msgstr "پشتیبان گیری"
+
+#: template/parts/DashboardWidget/package-create-section.php:21
+msgid "Backup creation"
+msgstr "ایجاد نسخه پشتیبان"
+
+#: template/admin_pages/tools/general.php:28
+msgid "Reset Backups ?"
+msgstr "پشتیبان‌ها را ریست کنیم؟"
+
+#: addons/litebase/src/Controllers/Mocks/MockImportPageController.php:27
+#: addons/litebase/src/Controllers/Mocks/MockImportPageController.php:28
+msgid "Import Backups"
+msgstr "وارد کردن پشتیبان‌ها"
+
+#: addons/litebase/src/Controllers/Mocks/MockSchedulePageController.php:27
+#: addons/litebase/src/Controllers/Mocks/MockSchedulePageController.php:28
+msgid "Schedule Backups"
+msgstr "زمانبندی پشتیبان‌گیری"
+
+#: addons/dupcloudaddon/src/Models/DupCloudStorage.php:274
+#: addons/dupcloudaddon/template/dupcloudaddon/connect/storage_auth.php:134
+msgid "Manage Backups"
+msgstr "مدیریت پشتیبان‌گیری‌ها"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:536
+msgid "Uncanny Automator"
+msgstr "خودکار عجیب و غریب"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:507
+msgid "WPCode"
+msgstr "کد وردپرس"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:521
+msgid "Search & Replace Everything"
+msgstr "جستجو و جایگزینی همه چیز"
+
+#: addons/litebase/template/litebase/welcome/intro.php:34
+msgid "Allow & Continue"
+msgstr "اجازه دهید و ادامه دهید"
+
+#: addons/litebase/template/litebase/welcome/intro.php:46
+msgid "This will allow Duplicator to"
+msgstr "این به Duplicator اجازه می‌دهد تا"
+
+#: addons/litebase/template/litebase/welcome/intro.php:53
+msgid "View Basic Profile Info"
+msgstr "مشاهده اطلاعات اولیه پروفایل"
+
+#: addons/litebase/template/litebase/welcome/intro.php:55
+msgid "Your WordPress user's: first & last name, and email address"
+msgstr "نام و نام خانوادگی و آدرس ایمیل کاربر وردپرس شما"
+
+#: addons/litebase/template/litebase/welcome/intro.php:62
+msgid "View Basic Website Info"
+msgstr "مشاهده اطلاعات اولیه وب‌سایت"
+
+#: addons/litebase/template/litebase/welcome/intro.php:64
+msgid "Homepage URL & title, WP & PHP versions, and site language"
+msgstr "آدرس اینترنتی و عنوان صفحه اصلی، نسخه‌های WP و PHP و زبان سایت"
+
+#: addons/litebase/template/litebase/welcome/intro.php:71
+msgid "View Basic Plugin Info"
+msgstr "مشاهده اطلاعات اولیه افزونه"
+
+#: addons/litebase/template/litebase/welcome/intro.php:73
+msgid "Current plugin & SDK versions, and if active or uninstalled"
+msgstr "نسخه‌های فعلی افزونه و SDK، و در صورت فعال بودن یا حذف نصب بودن"
+
+#: addons/litebase/template/litebase/welcome/intro.php:80
+msgid "View Plugins & Themes List"
+msgstr "مشاهده لیست افزونه‌ها و قالب‌ها"
+
+#: addons/litebase/template/litebase/welcome/intro.php:82
+msgid "Names, slugs, versions, and if active or not"
+msgstr "نام‌ها، راک‌ها، نسخه‌ها و فعال یا غیرفعال بودن"
+
+#: template/admin_pages/tools/general.php:73
+msgid "Get Diagnostic Data"
+msgstr "داده های تشخیصی را دریافت کنید"
+
+#: template/admin_pages/tools/general.php:77
+msgid "Downloads a ZIP archive with all relevant diagnostic information."
+msgstr "بایگانی ZIP را با تمام اطلاعات تشخیصی مرتبط بارگیری می کند."
+
+#: src/Controllers/ActivityLogPageController.php:157
+#: src/Models/ActivityLog/LogUtils.php:83
+#: template/parts/tools/server_settings_table.php:70
+msgid "Info"
+msgstr "اطلاعات"
+
+#: src/Package/BuildRequirements.php:191
+msgid "Paths Info"
+msgstr "اطلاعات مسیرها"
+
+#: src/Package/BuildRequirements.php:199
+msgid "URL "
+msgstr "آدرس اینترنتی "
+
+#: src/Package/BuildRequirements.php:206
+msgid "URLs Info"
+msgstr "اطلاعات URLها"
+
+#: src/Package/BuildRequirements.php:219
+msgid "%1$s%% -- %2$s from %3$s"
+msgstr "%1$s%% -- %2$s از %3$s"
+
+#: src/Package/BuildRequirements.php:278
+msgctxt "%1$s and %2$s are the opening and closing anchor tags"
+msgid "This is a %1$sWordPress Setting%2$s"
+msgstr "این یک تنظیمات %1$s وردپرس است%2$s"
+
+#: src/Package/BuildRequirements.php:386
+msgid "PHP SAPI"
+msgstr "پی اچ پی ساپی"
+
+#: src/Package/BuildRequirements.php:412
+msgctxt "%1$s = \"is dynamic\" or \"value is fixed\" based on settings"
+msgid "(default) - %1$s"
+msgstr "(پیش‌فرض) - %1$s"
+
+#: src/Package/BuildRequirements.php:423
+msgid "open_basedir"
+msgstr "مبتنی بر باز"
+
+#: src/Package/BuildRequirements.php:441
+msgid "Shell (exec)"
+msgstr "شل (مدیر اجرایی)"
+
+#: src/Package/BuildRequirements.php:504
+msgid "Path Not Found"
+msgstr "مسیر یافت نشد"
+
+#: src/Package/BuildRequirements.php:518
+msgid "Target root path"
+msgstr "مسیر ریشه هدف"
+
+#: src/Package/BuildRequirements.php:526
+msgid "Original "
+msgstr "اصلی "
+
+#: src/Package/BuildRequirements.php:534
+msgid "Archive "
+msgstr "بایگانی "
+
+#: src/Utils/Support/SupportToolkit.php:175
+msgid "Failed to create zip file"
+msgstr "ایجاد فایل زیپ ناموفق بود"
+
+#: src/Package/AbstractPackageDeployer.php:149
+#: src/Package/AbstractPackageDeployer.php:214
+#: src/Package/AbstractPackageDeployer.php:296
+#: src/Package/AbstractPackageDeployer.php:1204
+#: src/Utils/ZipArchiveExtended.php:415
+msgid "ZipArchive PHP module is not installed/enabled. The current Backup cannot be opened."
+msgstr "ماژول ZipArchive PHP نصب/فعال نشده است. نسخه پشتیبان فعلی قابل باز شدن نیست."
+
+#: addons/litebase/template/litebase/welcome/intro.php:20
+msgid "Never miss an important update"
+msgstr "هرگز یک به‌روزرسانی مهم را از دست ندهید"
+
+#: src/Package/BuildRequirements.php:413
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:50
+msgid "is dynamic"
+msgstr "پویا است"
+
+#: src/Package/BuildRequirements.php:413
+msgid "value is fixed"
+msgstr "مقدار ثابت است"
+
+#: template/admin_pages/packages/scan/scripts.php:755
+msgid "Uppercase:"
+msgstr "حروف بزرگ:"
+
+#: template/admin_pages/packages/scan/scripts.php:759
+msgid "Rows:"
+msgstr "ردیف‌ها:"
+
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:337
+#: template/admin_pages/packages/scan/scripts.php:764
+msgid "Size:"
+msgstr "اندازه:"
+
+#: template/parts/packages/filters/package_components.php:127
+#: template/parts/packages/filters/tables_list_filter.php:69
+msgid "Enable"
+msgstr "فعال کردن"
+
+#: template/parts/packages/filters/package_components.php:166
+#: template/parts/packages/filters/package_components.php:187
+msgid "clear"
+msgstr "واضح"
+
+#: addons/litebase/LiteBase.php:233 addons/litebase/LiteBase.php:244
+msgid "Failure"
+msgstr "شکست"
+
+#: src/Core/Bootstrap.php:450
+msgid "Failed to load help content!"
+msgstr "محتوای راهنما بارگیری نشد!"
+
+#: src/Core/Bootstrap.php:441
+msgid "Copy to clipboard"
+msgstr "کپی در کلیپ بورد"
+
+#: src/Core/Bootstrap.php:443
+msgid "Unable to copy"
+msgstr "کپی کردن ممکن نیست"
+
+#: addons/litebase/LiteBase.php:232
+msgid "Loading..."
+msgstr "در حال بارگیری..."
+
+#: template/parts/help/main.php:48
+msgid "View All Documentation"
+msgstr "مشاهده همه مستندات"
+
+#: template/parts/help/main.php:39
+msgid "View Documentation"
+msgstr "مشاهده مستندات"
+
+#: template/parts/help/main.php:29
+msgid "Related Articles"
+msgstr "مقالات مرتبط"
+
+#: template/parts/help/category-list.php:21
+msgctxt "%1$s and %2$s are the opening and closing tags for the link to the online docs."
+msgid "Could not fetch help information. Please try again later or visit the %1$sonline docs%2$s."
+msgstr "اطلاعات راهنما دریافت نشد. لطفاً بعداً دوباره امتحان کنید یا از %1$s اسناد آنلاین %2$s دیدن کنید."
+
+#: template/parts/help/main.php:23
+msgid "Search"
+msgstr "جستجو"
+
+#: template/parts/help/main.php:25
+msgid "No results found"
+msgstr "هیچ نتیجه‌ای یافت نشد"
+
+#: template/parts/help/main.php:41
+msgid "Browse documentation, reference material, and tutorials for Duplicator."
+msgstr "مستندات، منابع و آموزش‌های مربوط به Duplicator را مرور کنید."
+
+#: template/page/ajax_loader.php:21
+msgid "wait ..."
+msgstr "صبر کن ..."
+
+#: assets/js/duplicator/dup.util.php:73
+msgid "RESPONSE SUCCESS"
+msgstr "موفقیت در پاسخ"
+
+#: template/admin_pages/settings/general/plugin_settings.php:93
+msgid "Usage statistics"
+msgstr "آمار استفاده"
+
+#: addons/aireadyaddon/src/AbilitiesRegistrar.php:52
+#: src/Controllers/PackagesPageController.php:59
+#: src/Controllers/PackagesPageController.php:60
+#: src/Controllers/PackagesPageController.php:96
+#: src/Controllers/PackagesPageController.php:398
+#: src/Controllers/SettingsPageController.php:92
+#: template/admin_pages/packages/details/details_header.php:48
+#: template/admin_pages/packages/details/details_wpbody_header.php:28
+#: template/mail/email_summary.php:98
+msgid "Backups"
+msgstr "پشتیبان‌گیری‌ها"
+
+#: template/admin_pages/settings/general/plugin_settings.php:109
+msgid "Enable usage tracking"
+msgstr "فعال کردن ردیابی استفاده"
+
+#: template/admin_pages/settings/general/plugin_settings.php:112
+msgid "Usage Tracking"
+msgstr "ردیابی میزان استفاده"
+
+#: template/admin_pages/settings/general/plugin_settings.php:120
+msgid "Hide Announcements"
+msgstr "مخفی کردن اعلان‌ها"
+
+#: template/admin_pages/settings/general/plugin_settings.php:131
+msgid "Check this option to hide plugin announcements and update details."
+msgstr "برای مخفی کردن اعلان‌های افزونه و جزئیات به‌روزرسانی، این گزینه را علامت بزنید."
+
+#: template/mail/email_summary.php:207
+msgctxt "%s is an <a> tag with a link to the current website."
+msgid "This email was auto-generated and sent from %s."
+msgstr "این ایمیل به صورت خودکار ایجاد و از %s ارسال شده است."
+
+#: template/admin_pages/settings/general/email_summary.php:21
+msgid "Email Summary"
+msgstr "خلاصه ایمیل"
+
+#: src/Controllers/SettingsPageController.php:547
+#: src/Utils/Email/EmailSummary.php:399
+msgid "Never"
+msgstr "هرگز"
+
+#: src/Utils/Email/EmailSummary.php:400
+msgid "Daily"
+msgstr "روزانه"
+
+#: src/Utils/Email/EmailSummary.php:401
+msgid "Weekly"
+msgstr "هفتگی"
+
+#: src/Utils/Email/EmailSummary.php:415
+msgid "day"
+msgstr "روز"
+
+#: src/Utils/Email/EmailSummary.php:417
+msgid "month"
+msgstr "ماه"
+
+#: src/Utils/Email/EmailSummary.php:420
+msgid "week"
+msgstr "هفته"
+
+#: template/admin_pages/settings/general/email_summary.php:26
+msgid "Frequency"
+msgstr "فرکانس"
+
+#: src/Utils/CronUtils.php:66
+msgid "Once a Day"
+msgstr "روزی یک بار"
+
+#: src/Utils/CronUtils.php:71
+msgid "Once a Week"
+msgstr "هفته‌ای یک بار"
+
+#: src/Utils/CronUtils.php:76
+msgid "Once a Month"
+msgstr "ماهی یک بار"
+
+#: src/Package/Storage/UploadInfo.php:309 src/Utils/Email/EmailSummary.php:268
+#: src/Utils/Email/EmailSummary.php:299 src/Views/AutoTunePageData.php:557
+#: src/Views/AutoTunePageData.php:795
+msgid "Failed"
+msgstr "شکست خورده"
+
+#: src/Utils/Email/EmailSummary.php:402
+msgid "Monthly"
+msgstr "ماهانه"
+
+#: template/admin_pages/packages/scan/items/database/mysqldump.php:33
+msgid "The database size is within the allowed mysqldump size limit."
+msgstr "اندازه پایگاه داده در محدوده مجاز اندازه mysqldump است."
+
+#: template/admin_pages/packages/scan/items/database/mysqldump.php:20
+msgid "Mysqldump memory check"
+msgstr "بررسی حافظه Mysqldump"
+
+#: template/parts/Notifications/main.php:33
+msgid "Next message"
+msgstr "پیام بعدی"
+
+#: template/parts/Notifications/main.php:29
+msgid "Previous message"
+msgstr "پیام قبلی"
+
+#: template/parts/Notifications/main.php:20
+msgid "Notifications"
+msgstr "اعلان‌ها"
+
+#: template/parts/Notifications/single-message.php:27
+msgid "Watch video"
+msgstr "تماشای ویدیو"
+
+#: template/admin_pages/packages/scan/items/database/mysqldump.php:60
+msgid "The database size exceeds the allowed mysqldump size limit."
+msgstr "حجم پایگاه داده از حد مجاز حجم mysqldump تجاوز کرده است."
+
+#: src/Package/Create/BuildComponents.php:410
+#: template/admin_pages/packages/details/parts/environment_card.php:66
+#: template/admin_pages/packages/packages_scripts.php:108
+msgid "Plugins"
+msgstr "افزونه‌ها"
+
+#: src/Package/Create/BuildComponents.php:412
+msgid "Only Active Plugins"
+msgstr "فقط افزونه‌های فعال"
+
+#: template/admin_pages/packages/details/parts/files_card.php:69
+msgid "Components"
+msgstr "قطعات"
+
+#: src/Package/Create/BuildComponents.php:414
+msgid "Themes"
+msgstr "تم‌ها"
+
+#: src/Package/Create/BuildComponents.php:416
+msgid "Only Active Themes"
+msgstr "فقط قالب‌های فعال"
+
+#: src/Package/Create/BuildComponents.php:420
+msgid "Other"
+msgstr "دیگر"
+
+#: addons/litebase/LiteBase.php:225
+msgid "Message: "
+msgstr "پیام: "
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: duplicator.php
+msgid "https://duplicator.com/"
+msgstr "https://duplicator.com/"
+
+#: addons/litebase/src/Controllers/Mocks/Settings/MockCapabilitiesSettingsController.php:32
+msgid "Access"
+msgstr "دسترسی"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:91
+#: addons/litebase/src/Controllers/AboutUsPageController.php:233
+#: addons/litebase/template/litebase/mocks/capabilities.php:327
+#: addons/litebase/template/litebase/scan/education-box.php:33
+msgid "Advanced Backup Permissions"
+msgstr "مجوزهای پیشرفته پشتیبان‌گیری"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:235
+msgid "Enjoy granular access control to ensure only authorized users can perform these critical functions."
+msgstr "از کنترل دسترسی جزئی لذت ببرید تا مطمئن شوید که فقط کاربران مجاز می‌توانند این عملکردهای حیاتی را انجام دهند."
+
+#: addons/litebase/template/litebase/mocks/capabilities.php:328
+msgid "Advanced Backup Permissions are not available in Duplicator Lite!"
+msgstr "مجوزهای پشتیبان‌گیری پیشرفته در Duplicator Lite در دسترس نیست!"
+
+#: addons/litebase/template/litebase/tools/support.php:52
+msgid "Premium Support"
+msgstr "پشتیبانی پریمیوم"
+
+#: addons/litebase/template/litebase/packages/first-backup-banner.php:28
+#: addons/litebase/template/litebase/scan/education-box.php:65
+msgid "Email Address"
+msgstr "آدرس ایمیل"
+
+#: addons/litebase/template/litebase/packages/first-backup-banner.php:35
+#: addons/litebase/template/litebase/scan/education-box.php:72
+msgid "Subscribe"
+msgstr "اشتراک"
+
+#: addons/litebase/template/litebase/settings/connect.php:25
+msgid "You're using Duplicator Lite - no license needed. Enjoy!"
+msgstr "شما از Duplicator Lite استفاده می‌کنید - نیازی به مجوز نیست. لذت ببرید!"
+
+#: addons/litebase/template/litebase/settings-feature-box.php:56
+msgid "Get Duplicator Pro Today and Unlock all the Powerful Features »"
+msgstr "همین امروز Duplicator Pro را دریافت کنید و تمام ویژگی‌های قدرتمند آن را آزاد کنید »"
+
+#. translators: %s: Pro feature name
+#: addons/litebase/template/litebase/scan/education-box.php:44
+msgid "Did you know Duplicator Pro has: %s?"
+msgstr "آیا می‌دانستید که Duplicator Pro دارای: %s است؟"
+
+#: addons/litebase/template/litebase/scan/education-box.php:52
+msgid "Upgrade To Pro"
+msgstr "ارتقا به نسخه حرفه‌ای"
+
+#: addons/litebase/template/litebase/packages/bottom-bar.php:21
+msgid "Upgrade to Pro to Unlock..."
+msgstr "برای باز کردن قفل به نسخه حرفه‌ای ارتقا دهید..."
+
+#: addons/litebase/template/litebase/packages/bottom-bar.php:27
+msgid "Upgrade Now & Save!"
+msgstr "همین حالا ارتقا دهید و ذخیره کنید!"
+
+#: addons/litebase/template/litebase/mocks/static-popup.php:16
+msgid "Upgrade to Duplicator Pro Now"
+msgstr "همین حالا به نسخه Duplicator Pro ارتقا دهید"
+
+#: addons/litebase/template/litebase/scan/education-box.php:76
+msgid "Get tips and product updates straight to your inbox."
+msgstr "نکات و به‌روزرسانی‌های محصول را مستقیماً در صندوق ورودی خود دریافت کنید."
+
+#: addons/litebase/template/litebase/settings-feature-box.php:22
+#: template/parts/Notifications/main.php:24
+msgid "Dismiss this message"
+msgstr "این پیام را رد کنید"
+
+#: addons/litebase/template/litebase/dashboard/recommended-plugin.php:38
+msgid "Install"
+msgstr "نصب"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:59
+msgid "Lite vs Pro"
+msgstr "لایت در مقابل پرو"
+
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:20
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:52
+msgid "Pro"
+msgstr "حرفه‌ای"
+
+#: template/admin_pages/activity_log/parts/sub_table_mini.php:71
+msgid "Total: %s"
+msgstr "مجموع: %s"
+
+#: addons/litebase/template/litebase/dashboard/recommended-plugin.php:31
+msgid "Recommended Plugin:"
+msgstr "افزونه پیشنهادی:"
+
+#: addons/litebase/template/litebase/welcome/features.php:43
+msgid "See All Features"
+msgstr "مشاهده همه ویژگی‌ها"
+
+#: addons/litebase/template/litebase/welcome/testimonials.php:16
+msgid "Testimonials"
+msgstr "نظرات مشتریان"
+
+#: addons/litebase/template/litebase/settings-feature-box.php:45
+msgid "Pro Features:"
+msgstr "ویژگی‌های حرفه‌ای:"
+
+#: addons/litebase/template/litebase/about-us/about-info/info.php:63
+msgid "Yup, we know a thing or two about building awesome products that customers love."
+msgstr "بله، ما یک یا دو نکته در مورد ساخت محصولات فوق‌العاده‌ای که مشتریان دوست دارند می‌دانیم."
+
+#: addons/litebase/template/litebase/about-us/about-info/info.php:69
+msgid "The Awesome Motive Team photo"
+msgstr "عکس تیم انگیزه فوق‌العاده"
+
+#: addons/litebase/template/litebase/about-us/about-info/info.php:71
+msgid "The Awesome Motive Team"
+msgstr "تیم انگیزه فوق‌العاده"
+
+#: addons/litebase/template/litebase/about-us/getting-started/first-package.php:18
+msgid "Creating Your First Backup"
+msgstr "ایجاد اولین نسخه پشتیبان"
+
+#: addons/litebase/template/litebase/about-us/getting-started/first-package.php:48
+msgid "How to Create a Backup"
+msgstr "نحوه ایجاد نسخه پشتیبان"
+
+#: addons/litebase/template/litebase/about-us/getting-started/first-package.php:53
+msgid "How to Migrate to a New Site"
+msgstr "نحوه مهاجرت به سایت جدید"
+
+#: addons/litebase/template/litebase/about-us/getting-started/get-pro.php:29
+#: addons/litebase/template/litebase/settings-feature-box.php:25
+msgid "Get Duplicator Pro and Unlock all the Powerful Features"
+msgstr "Duplicator Pro را دریافت کنید و تمام ویژگی‌های قدرتمند آن را آزاد کنید"
+
+#: addons/litebase/template/litebase/about-us/getting-started/get-pro.php:65
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:98
+msgid "Get Duplicator Pro Today and Unlock all the Powerful Features"
+msgstr "همین امروز Duplicator Pro را دریافت کنید و تمام ویژگی‌های قدرتمند آن را آزاد کنید"
+
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:42
+msgid "Get the most out of Duplicator by upgrading to Pro and unlocking all of the powerful features."
+msgstr "با ارتقا به نسخه حرفه‌ای و باز کردن قفل تمام ویژگی‌های قدرتمند، بیشترین بهره را از Duplicator ببرید."
+
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:19
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:51
+msgid "Lite"
+msgstr "کمی"
+
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:75
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:85
+msgid "Included"
+msgstr "شامل"
+
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:77
+msgid "Not Available"
+msgstr "موجود نیست"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:58
+msgid "Getting Started"
+msgstr "شروع به کار"
+
+#: addons/litebase/template/litebase/welcome/features.php:17
+msgid "Duplicator Features"
+msgstr "ویژگی‌های دستگاه تکثیر"
+
+#: addons/litebase/src/Controllers/WelcomePageController.php:155
+msgid "Cloud Backups"
+msgstr "پشتیبان‌گیری ابری"
+
+#: addons/litebase/src/Controllers/WelcomePageController.php:156
+msgid "Back up to Dropbox, FTP, Google Drive, OneDrive, or Amazon S3 and more for safe storage."
+msgstr "برای ذخیره‌سازی امن، از فایل‌های خود در دراپ‌باکس، اف‌تی‌پی، گوگل درایو، وان‌درایو یا آمازون اس۳ و موارد دیگر نسخه پشتیبان تهیه کنید."
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:206
+#: addons/litebase/src/Controllers/WelcomePageController.php:200
+msgid "Multisite Support"
+msgstr "پشتیبانی چند سایته"
+
+#: addons/litebase/template/litebase/welcome/footer.php:19
+msgid "Create Your First Backup"
+msgstr "اولین نسخه پشتیبان خود را ایجاد کنید"
+
+#: addons/litebase/template/litebase/about-us/getting-started/get-pro.php:17
+#: addons/litebase/template/litebase/welcome/footer.php:25
+msgid "Upgrade to Duplicator Pro"
+msgstr "ارتقا به نسخه حرفه‌ای Duplicator"
+
+#: addons/litebase/template/litebase/welcome/intro.php:17
+msgid "Willie the Duplicator mascot"
+msgstr "نماد ویلیِ نسخه‌بردار"
+
+#: addons/litebase/template/litebase/mail/email-summary-footer.php:33
+#: addons/litebase/template/litebase/welcome/upgrade-box.php:17
+msgid "Upgrade to PRO"
+msgstr "ارتقا به نسخه حرفه‌ای (PRO)"
+
+#: addons/litebase/template/litebase/tools/support.php:68
+#: addons/litebase/template/litebase/welcome/upgrade-box.php:31
+msgid "Upgrade Now"
+msgstr "همین حالا ارتقا دهید"
+
+#: addons/litebase/template/litebase/mocks/import.php:116
+msgid "Overwrite a WordPress site with Drag and Drop Import!"
+msgstr "با کشیدن و رها کردن، یک سایت وردپرس را بازنویسی کنید!"
+
+#: addons/litebase/template/litebase/mocks/schedule.php:86
+msgid "Automate your workflow with scheduled backups!"
+msgstr "با پشتیبان‌گیری زمان‌بندی‌شده، گردش کار خود را خودکار کنید!"
+
+#: addons/litebase/template/litebase/mocks/schedule.php:87
+msgid "Duplicator Lite does not support scheduled backups!"
+msgstr "Duplicator Lite از پشتیبان‌گیری زمان‌بندی‌شده پشتیبانی نمی‌کند!"
+
+#: addons/litebase/template/litebase/mocks/add_new_button.php:21
+#: template/admin_pages/packages/package_create_button.php:43
+#: template/admin_pages/storages/storage_create_button.php:44
+msgid "Add New"
+msgstr "اضافه کردن جدید"
+
+#: addons/litebase/template/litebase/mocks/templates.php:92
+msgid "If you install the same theme, plugins or content on all your WordPress sites then Duplicator can save you a lot of time."
+msgstr "اگر قالب، افزونه‌ها یا محتوای یکسانی را در تمام سایت‌های وردپرس خود نصب می‌کنید، Duplicator می‌تواند در زمان شما صرفه‌جویی زیادی کند."
+
+#: addons/litebase/template/litebase/mocks/templates.php:89
+msgid "Easily customize your backups with templates!"
+msgstr "به راحتی پشتیبان گیری های خود را با قالب ها سفارشی کنید!"
+
+#: template/parts/DashboardWidget/package-create-section.php:22
+msgid "This will create a new Backup. If a Backup is currently running then this button will be disabled."
+msgstr "این یک نسخه پشتیبان جدید ایجاد می‌کند. اگر در حال حاضر نسخه پشتیبان در حال اجرا باشد، این دکمه غیرفعال خواهد بود."
+
+#: template/parts/DashboardWidget/package-create-section.php:30
+msgid "Last backup:"
+msgstr "آخرین نسخه پشتیبان:"
+
+#: template/parts/DashboardWidget/recently-packages.php:45
+msgid "Backups: %1$d, Failures: %2$d"
+msgstr "پشتیبان‌گیری‌ها: %1$d، خرابی‌ها: %2$d"
+
+#: addons/litebase/template/litebase/dashboard/recommended-plugin.php:49
+msgid "Dismiss recommended plugin"
+msgstr "افزونه پیشنهادی را رد کنید"
+
+#: template/parts/DashboardWidget/sections-section.php:39
+msgid "%s Storage"
+msgid_plural "%s Storages"
+msgstr[0] "%s ذخیره سازی"
+msgstr[1] "%s انبارها"
+
+#. translators: %s - star icons.
+#: addons/litebase/template/litebase/settings-feature-box.php:37
+msgid "We know that you will truly love Duplicator. It has over 4000+ five star ratings (%s) and is active on over 1 million websites."
+msgstr "ما می‌دانیم که شما واقعاً عاشق Duplicator خواهید شد. این افزونه بیش از ۴۰۰۰+ امتیاز پنج ستاره (%s) دارد و در بیش از ۱ میلیون وب‌سایت فعال است."
+
+#: addons/litebase/template/litebase/about-us/about-info/extra-plugin-item.php:24
+msgid "Activate"
+msgstr "فعال کردن"
+
+#: addons/litebase/LiteBase.php:235
+#: addons/litebase/template/litebase/about-us/about-info/extra-plugin-item.php:19
+msgid "Activated"
+msgstr "فعال شده"
+
+#: addons/litebase/template/litebase/about-us/about-info/extra-plugin-item.php:47
+msgid "Status:"
+msgstr "وضعیت:"
+
+#: src/Views/DashboardWidget.php:189
+msgctxt "%s represents the time diff, eg. 2 days"
+msgid "%s ago"
+msgstr "%s پیش"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:390
+msgid "Smash Balloon YouTube Feeds Pro"
+msgstr "فیدهای یوتیوب Smash Balloon Pro"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:403
+msgid "TrustPulse"
+msgstr "تراست‌پالس"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:417
+msgid "SearchWP"
+msgstr "جستجوی وردپرس"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:430
+msgid "AffiliateWP"
+msgstr "وابسته WP"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:443
+msgid "WP Simple Pay"
+msgstr "پرداخت ساده وردپرس"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:455
+msgid "WP Simple Pay Pro"
+msgstr "افزونه پرداخت ساده وردپرس (WP Simple Pay Pro)"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:468
+msgid "Easy Digital Downloads"
+msgstr "دانلود آسان دیجیتال"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:482
+msgid "Sugar Calendar"
+msgstr "تقویم شکر"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:494
+msgid "Sugar Calendar Pro"
+msgstr "تقویم شکری حرفه‌ای"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:55
+msgid "Multisite Support - Duplicator Pro supports multisite network backup & migration. You can even install a subsite as a standalone site."
+msgstr "پشتیبانی از چند سایت - افزونه Duplicator Pro از پشتیبان‌گیری و انتقال شبکه چند سایتی پشتیبانی می‌کند. شما حتی می‌توانید یک زیرسایت را به عنوان یک سایت مستقل نصب کنید."
+
+#: addons/litebase/template/litebase/about-us/about-info/extra-plugin-item.php:30
+msgid "Install Plugin"
+msgstr "نصب افزونه"
+
+#: addons/litebase/LiteBase.php:234
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraItem.php:187
+msgid "Active"
+msgstr "فعال"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:38
+#: addons/litebase/src/Controllers/AboutUsPageController.php:39
+#: addons/litebase/src/Controllers/AboutUsPageController.php:57
+msgid "About Us"
+msgstr "درباره ما"
+
+#: addons/litebase/template/litebase/scan/education-box.php:21
+msgid "Secure File Encryption"
+msgstr "رمزگذاری امن فایل"
+
+#: addons/litebase/template/litebase/scan/education-box.php:24
+msgid "Cloud Storage - Google Drive"
+msgstr "فضای ذخیره‌سازی ابری - گوگل درایو"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:259
+msgid "Limited Support"
+msgstr "پشتیبانی محدود"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:92
+msgid "Plugin not found"
+msgstr "افزونه پیدا نشد"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraItem.php:192
+msgid "Not Installed"
+msgstr "نصب نشده"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:189
+msgid "WP Mail SMTP"
+msgstr "WP Mail SMTP"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:176
+msgid "WPForms Pro"
+msgstr "WPForms Pro"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:88
+msgid "Multisite Network"
+msgstr "شبکه چند سایتی"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:149
+msgid "Classic WordPress-less Installs Only"
+msgstr "فقط نصب‌های کلاسیک بدون وردپرس"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:150
+msgid "Drag and Drop migrations and site restores! Simply drag the bundled site archive to the site you wish to overwrite."
+msgstr "انتقال و بازیابی سایت با کشیدن و رها کردن! کافیست آرشیو سایت همراه را به سایتی که می‌خواهید اطلاعات آن را بازنویسی کنید، بکشید."
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:158
+msgid "Ensure that your important data is regularly and consistently backed up, allowing for quick and efficient recovery in case of data loss."
+msgstr "اطمینان حاصل کنید که از داده‌های مهم شما به طور منظم و مداوم نسخه پشتیبان تهیه می‌شود، که در صورت از دست دادن داده‌ها، امکان بازیابی سریع و کارآمد را فراهم می‌کند."
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:166
+#: addons/litebase/template/litebase/mocks/recovery.php:122
+msgid "Recovery Points provide protection against mistakes and bad updates by letting you quickly rollback your system to a known, good state."
+msgstr "نقاط بازیابی با فراهم کردن امکان بازگرداندن سریع سیستم به حالت خوب و شناخته‌شده، از شما در برابر اشتباهات و به‌روزرسانی‌های نامناسب محافظت می‌کنند."
+
+#: addons/litebase/template/litebase/scan/education-box.php:30
+msgid "Larger Site Support"
+msgstr "پشتیبانی سایت‌های بزرگتر"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:217
+msgid "Create your own custom-configured WordPress site and \"Brand\" the installer file with your look and feel."
+msgstr "سایت وردپرس سفارشی خودتان را بسازید و فایل نصب را با ظاهر و حس و حال خودتان «برندسازی» کنید."
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:223
+#: src/Core/Options/Rules/EncryptionRule.php:41
+#: template/admin_pages/packages/scan/items/setup/security.php:44
+msgid "Archive Encryption"
+msgstr "رمزگذاری بایگانی"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:225
+msgid "Protect and secure the archive file with industry-standard AES-256 encryption!"
+msgstr "فایل آرشیو را با رمزگذاری استاندارد صنعتی AES-256 محافظت و ایمن کنید!"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:249
+msgid "Advanced Features"
+msgstr "ویژگی‌های پیشرفته"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:92
+#: addons/litebase/src/Controllers/AboutUsPageController.php:260
+msgid "Priority Support"
+msgstr "پشتیبانی اولویت‌دار"
+
+#: addons/litebase/src/Controllers/WelcomePageController.php:32
+msgid "Welcome to Duplicator"
+msgstr "به تکثیرکننده خوش آمدید"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraItem.php:189
+msgid "Inactive"
+msgstr "غیرفعال"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:86
+msgid "Plugin slug is empty"
+msgstr "نامک افزونه خالی است"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:139
+msgid "MonsterInsights"
+msgstr "مانستر اینسایتس"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:151
+msgid "MonsterInsights Pro"
+msgstr "MonsterInsights Pro"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:164
+msgid "WPForms"
+msgstr "فرم‌های WP"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:201
+msgid "WP Mail SMTP Pro"
+msgstr "افزونه WP Mail SMTP Pro"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:214
+msgid "AIOSEO"
+msgstr "سن"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:226
+msgid "AIOSEO Pro"
+msgstr "آیوسئو پرو"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:239
+msgid "SeedProd"
+msgstr "سیدپرود"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:251
+msgid "SeedProd Pro"
+msgstr "سیدپرود پرو"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:264
+msgid "RafflePress"
+msgstr "رافل پرس"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:276
+msgid "RafflePress Pro"
+msgstr "رافل‌پرس پرو"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:289
+msgid "PushEngage"
+msgstr "پوش انگیج"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:303
+msgid "Smash Balloon Instagram Feeds"
+msgstr "فیدهای اینستاگرام Smash Balloon"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:315
+msgid "Smash Balloon Instagram Feeds Pro"
+msgstr "فیدهای اینستاگرام Smash Balloon Pro"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:328
+msgid "Smash Balloon Facebook Feeds"
+msgstr "فیدهای فیسبوک اسمش بالون"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:340
+msgid "Smash Balloon Facebook Feeds Pro"
+msgstr "فیدهای فیسبوک اسمش بالون پرو"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:353
+msgid "Smash Balloon Twitter Feeds"
+msgstr "فیدهای توییتر Smash Balloon"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:365
+msgid "Smash Balloon Twitter Feeds Pro"
+msgstr "فید توییتر Smash Balloon Pro"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:378
+msgid "Smash Balloon YouTube Feeds"
+msgstr "فیدهای یوتیوب اسمش بالون"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:81
+#: addons/litebase/src/Controllers/WelcomePageController.php:174
+#: addons/litebase/template/litebase/scan/education-box.php:22
+msgid "Server to Server Import"
+msgstr "واردات سرور به سرور"
+
+#: addons/litebase/template/litebase/scan/education-box.php:25
+msgid "Cloud Storage - Amazon S3"
+msgstr "فضای ذخیره‌سازی ابری - آمازون S3"
+
+#: addons/litebase/template/litebase/scan/education-box.php:26
+msgid "Cloud Storage - DropBox"
+msgstr "فضای ذخیره‌سازی ابری - دراپ‌باکس"
+
+#: addons/litebase/template/litebase/scan/education-box.php:27
+msgid "Cloud Storage - OneDrive"
+msgstr "فضای ذخیره‌سازی ابری - وان‌درایو"
+
+#: addons/litebase/template/litebase/scan/education-box.php:28
+msgid "Cloud Storage - FTP/SFTP"
+msgstr "فضای ذخیره‌سازی ابری - FTP/SFTP"
+
+#: addons/litebase/template/litebase/scan/education-box.php:31
+msgid "Multisite Network Support"
+msgstr "پشتیبانی از شبکه چند سایته"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:197
+msgid "Server-to-Server Import"
+msgstr "درون ریزی سرور به سرور"
+
+#: addons/litebase/template/litebase/notice-bar.php:39
+#: addons/litebase/template/litebase/packages/bottom-bar.php:29
+#: addons/litebase/template/litebase/scan/media-cleanup-upsell.php:29
+msgid "Dismiss this message."
+msgstr "این پیام را رد کنید."
+
+#: addons/litebase/src/Menu/PluginActionLink.php:37
+#: addons/litebase/src/Menu/UpgradeMenuEntry.php:40
+#: addons/litebase/template/litebase/storages/table-features.php:30
+msgid "Upgrade to Pro"
+msgstr "ارتقا به نسخه حرفه‌ای"
+
+#: template/parts/migration/migration-message.php:30
+msgid "This site has been successfully restored!"
+msgstr "این سایت با موفقیت بازیابی شد!"
+
+#: template/parts/migration/migration-message.php:61
+msgid "Security actions:"
+msgstr "اقدامات امنیتی:"
+
+#: template/parts/migration/clean-installation-files.php:21
+msgid "Installation cleanup ran!"
+msgstr "پاکسازی نصب اجرا شد!"
+
+#: template/parts/migration/almost-complete.php:25
+msgid "Restore Backup Almost Complete!"
+msgstr "بازیابی نسخه پشتیبان تقریباً کامل شد!"
+
+#: template/parts/migration/clean-installation-files.php:138
+msgid "The Duplicator team has worked many years to make moving a WordPress site a much easier process. "
+msgstr "تیم Duplicator سال‌ها تلاش کرده است تا انتقال یک سایت وردپرس را به فرآیندی بسیار آسان‌تر تبدیل کند. "
+
+#: template/parts/migration/migration-message.php:73
+msgid "Final step:"
+msgstr "مرحله نهایی:"
+
+#: src/Utils/CachesPurge/CacheItem.php:59
+msgid "All caches on <b>%s</b> have been purged."
+msgstr "همه حافظه های پنهان در <b>%s</b> پاک شده اند."
+
+#: src/Core/MigrationMng.php:523
+msgid "Installer boot log"
+msgstr "گزارش بوت نصب کننده"
+
+#: src/Core/MigrationMng.php:522
+msgid "Installer log"
+msgstr "گزارش نصب"
+
+#: src/Utils/CachesPurge/CacheItem.php:98
+msgid "Error on caches purge of <b>%s</b>."
+msgstr "خطا در پاکسازی حافظه پنهان <b>%s</b>."
+
+#: src/Package/Create/PackInstaller.php:1214
+msgid "ARCHIVE CONSISTENCY TEST: FAIL"
+msgstr "آزمون سازگاری بایگانی: ناموفق"
+
+#: src/Package/Create/PackInstaller.php:1200
+msgid "ARCHIVE CONSISTENCY TEST: PASS"
+msgstr "آزمون سازگاری بایگانی: قبول"
+
+#: src/Core/MigrationMng.php:499
+msgid "Original files folder moved in installer backup directory"
+msgstr "پوشه فایل‌های اصلی به پوشه پشتیبان نصب‌کننده منتقل شد"
+
+#: src/Core/MigrationMng.php:524
+msgid "Original files folder"
+msgstr "پوشه فایل‌های اصلی"
+
+#: template/admin_pages/packages/no_elements_row.php:29
+msgid "Visit the 'Quick Start' guide!"
+msgstr "به راهنمای «شروع سریع» مراجعه کنید!"
+
+#: template/admin_pages/packages/details/parts/general_card.php:98
+msgid "Build Log"
+msgstr "گزارش ساخت"
+
+#: src/Core/MigrationMng.php:449
+msgid "Can't remove installer file <b>%s</b>, please remove it for security reasons"
+msgstr "فایل نصب <b>%s</b> حذف نشد ، لطفاً به دلایل امنیتی آن را حذف کنید"
+
+#: src/Core/MigrationMng.php:460
+msgid "Installer file <b>%s</b> renamed with HASH"
+msgstr "فایل نصب کننده (Installer) <b>%s</b> با HASH تغییر نام داده شد"
+
+#: src/Core/MigrationMng.php:444
+msgid "Installer file <b>%s</b> removed for security reasons"
+msgstr "فایل نصبی <b>%s</b> به دلایل امنیتی حذف شد"
+
+#: src/Core/MigrationMng.php:466
+msgid "Can't rename installer file <b>%s</b> with HASH, please remove it for security reasons"
+msgstr "تغییر نام فایل نصب <b>%s</b> با هش امکان پذیر نیست ، لطفاً به دلایل امنیتی آن را حذف کنید"
+
+#: template/admin_pages/settings/general/advanced_settings.php:57
+msgid "Foreign JavaScript"
+msgstr "جاوا اسکریپت خارجی"
+
+#: addons/litebase/template/litebase/about-us/getting-started/first-package.php:43
+msgid "Quick Start Guide"
+msgstr "راهنمای شروع سریع"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:135
+#: addons/litebase/template/litebase/scan/education-box.php:23
+msgid "File & Database Table Filters"
+msgstr "فیلترهای جدول فایل و پایگاه داده"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:87
+#: addons/litebase/src/Controllers/AboutUsPageController.php:215
+#: addons/litebase/src/Controllers/WelcomePageController.php:169
+msgid "Installer Branding"
+msgstr "برندسازی نصاب"
+
+#: template/admin_pages/settings/general/advanced_settings.php:67
+#: template/admin_pages/settings/general/advanced_settings.php:94
+msgid "Disable"
+msgstr "غیرفعال کردن"
+
+#: template/admin_pages/settings/general/advanced_settings.php:84
+msgid "Foreign CSS"
+msgstr "سی‌اس‌اس خارجی"
+
+#: template/admin_pages/packages/scan/items/setup/system.php:29
+msgid "System"
+msgstr "سیستم"
+
+#: template/admin_pages/packages/scan/items/database/procedures.php:17
+msgid "Object Access"
+msgstr "دسترسی به اشیاء"
+
+#: template/admin_pages/packages/scan/items/database/triggers.php:17
+msgid "Triggers"
+msgstr "محرک‌ها"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:80
+#: addons/litebase/src/Controllers/AboutUsPageController.php:164
+#: addons/litebase/src/Controllers/WelcomePageController.php:160
+#: addons/litebase/template/litebase/scan/education-box.php:20
+msgid "Recovery Points"
+msgstr "نقاط بازیابی"
+
+#: src/Ajax/ServicesStorage.php:80 src/Ajax/ServicesStorage.php:122
+#: src/Ajax/ServicesTools.php:196
+msgid "Invalid Request."
+msgstr "درخواست نامعتبر."
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:82
+#: addons/litebase/src/Controllers/AboutUsPageController.php:147
+#: addons/litebase/template/litebase/scan/education-box.php:29
+msgid "Drag & Drop Installs"
+msgstr "نصب با کشیدن و رها کردن"
+
+#: addons/litebase/template/litebase/mocks/import.php:117
+msgid "Drag and Drop Import is not available in Duplicator Lite!"
+msgstr "قابلیت وارد کردن با کشیدن و رها کردن (Drag and Drop) در Duplicator Lite در دسترس نیست!"
+
+#: addons/litebase/src/Controllers/LiteToolsController.php:45
+msgid "Recovery"
+msgstr "بهبودی"
+
+#: template/admin_pages/settings/backup/installer_settings.php:29
+msgid "Default 'Save as' name:"
+msgstr "نام پیش‌فرض «ذخیره به عنوان»:"
+
+#: src/Ajax/ServicesPackage.php:370 src/Ajax/ServicesPackage.php:692
+#: src/Ajax/ServicesPackage.php:719 src/Ajax/ServicesPackage.php:763
+#: src/Ajax/ServicesPackage.php:909 src/Ajax/ServicesPackage.php:1005
+msgid "Invalid request."
+msgstr "درخواست نامعتبر."
+
+#: src/Views/AdminNotices.php:742
+msgid "Warning!"
+msgstr "هشدار!"
+
+#: template/parts/packages/filters/section_installer.php:45
+msgid "Prefills"
+msgstr "پیش پرکننده‌ها"
+
+#: template/admin_pages/packages/details/parts/prefills_card.php:38
+#: template/parts/packages/filters/section_installer.php:63
+msgid "Basic"
+msgstr "پایه"
+
+#: src/Views/PackageScreen.php:299
+#: template/admin_pages/packages/details/parts/general_card.php:236
+#: template/parts/packages/filters/section_security.php:37
+msgid "Security"
+msgstr "امنیت"
+
+#: template/parts/packages/filters/section_installer.php:47
+msgid "Setup/Prefills"
+msgstr "تنظیمات/پیش‌پر کردن‌ها"
+
+#: template/admin_pages/packages/scan/validation_error.php:25
+msgid "Input fields not valid"
+msgstr "فیلدهای ورودی معتبر نیستند"
+
+#: template/admin_pages/packages/scan/main.php:96
+msgid "Do you want to continue?"
+msgstr "می‌خوای ادامه بدی؟"
+
+#: template/admin_pages/packages/scan/main.php:98
+msgid "At least one or more checkboxes were checked in \"Quick Filters\"."
+msgstr "حداقل یک یا چند کادر انتخاب در «فیلترهای سریع» علامت زده شده‌اند."
+
+#: template/admin_pages/packages/scan/main.php:101
+msgid "To apply a \"Quick Filter\" click the \"Add Filters & Rescan\" button"
+msgstr "برای اعمال «فیلتر سریع»، روی دکمه‌ی «افزودن فیلترها و اسکن مجدد» کلیک کنید"
+
+#: template/admin_pages/packages/scan/main.php:109
+msgid "Yes. Continue without applying any file filters."
+msgstr "بله. بدون اعمال هیچ فیلتر فایلی ادامه دهید."
+
+#: template/admin_pages/packages/setup/section-requirements.php:45
+#: template/admin_pages/packages/setup/section-requirements.php:76
+msgid "Fail"
+msgstr "شکست"
+
+#: template/admin_pages/packages/scan/items/archive/files_db_only.php:16
+msgid "Database only"
+msgstr "تنها پایگاه داده"
+
+#: template/admin_pages/packages/scan/items/archive/files_skip_scan.php:20
+msgid "All file checks are skipped. This could cause problems during extraction if problematic files are included."
+msgstr "تمام بررسی‌های فایل نادیده گرفته می‌شوند. اگر فایل‌های مشکل‌دار وجود داشته باشند، این امر می‌تواند هنگام استخراج مشکل ایجاد کند."
+
+#: src/Models/ActivityLog/LogEventBackupCreate.php:844
+msgid "Items"
+msgstr "اقلام"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:143
+msgid "Overwrite Live Site"
+msgstr "بازنویسی سایت زنده"
+
+#: src/Core/Options/Rules/ArchiveEngineRule.php:37
+#: src/Views/AutoTunePageData.php:690
+msgid "Archive Engine"
+msgstr "موتور بایگانی"
+
+#: src/Core/Options/Rules/ArchiveEngineRule.php:51
+msgid "DupArchive"
+msgstr "بایگانی Dup"
+
+#: src/Controllers/SettingsPageController.php:758
+#: src/Controllers/SettingsPageController.php:812
+#: template/admin_pages/settings/backup/archive_settings.php:118
+#: template/admin_pages/settings/backup/database_settings.php:207
+msgid "Multi-Threaded"
+msgstr "چند رشته ای"
+
+#: src/Controllers/SettingsPageController.php:759
+#: src/Controllers/SettingsPageController.php:813
+#: template/admin_pages/settings/backup/archive_settings.php:122
+#: template/admin_pages/settings/backup/database_settings.php:212
+msgid "Single-Threaded"
+msgstr "تک رشته‌ای"
+
+#: assets/js/duplicator/dup.util.php:87
+msgid "RESPONSE ERROR!"
+msgstr "خطای پاسخ!"
+
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:239
+#: template/admin_pages/packages/remote_download/scripts.php:62
+#: template/admin_pages/settings/general/general.php:51
+#: template/admin_pages/settings/general/general.php:62
+#: template/admin_pages/tools/general.php:34
+msgid "No"
+msgstr "خیر"
+
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:239
+#: template/admin_pages/packages/remote_download/scripts.php:61
+#: template/admin_pages/settings/general/general.php:50
+#: template/admin_pages/settings/general/general.php:61
+#: template/admin_pages/tools/general.php:33
+msgid "Yes"
+msgstr "بله"
+
+#: template/admin_pages/settings/backup/advanced_settings.php:186
+#: template/admin_pages/settings/general/advanced_settings.php:25
+msgid "Advanced"
+msgstr "پیشرفته"
+
+#: template/admin_pages/settings/general/advanced_settings.php:50
+msgid "Reset Settings"
+msgstr "تنظیمات را بازنشانی کنید"
+
+#: addons/litebase/template/litebase/welcome/intro.php:40
+#: template/admin_pages/settings/backup/advanced_settings.php:252
+msgid "Skip"
+msgstr "پرش"
+
+#: template/admin_pages/settings/general/advanced_settings.php:78
+#: template/admin_pages/settings/general/advanced_settings.php:105
+msgid "Do not modify this setting unless you know the expected result or have talked to support."
+msgstr "این تنظیم را تغییر ندهید، مگر اینکه از نتیجه مورد انتظار مطلع باشید یا با پشتیبانی صحبت کرده باشید."
+
+#: template/admin_pages/settings/general/general.php:47
+#: template/admin_pages/tools/general.php:30
+msgid "Resetting settings, Please Wait..."
+msgstr "تنظیمات در حال بازنشانی هستند، لطفا صبر کنید..."
+
+#: template/admin_pages/tools/general.php:336
+msgid "Backups successfully reset"
+msgstr "پشتیبان‌ها با موفقیت بازنشانی شدند"
+
+#: template/admin_pages/settings/general/debug_settings.php:27
+#: template/admin_pages/settings/general/debug_settings.php:96
+msgid "Trace Log"
+msgstr "گزارش ردیابی"
+
+#: template/admin_pages/settings/general/debug_settings.php:44
+msgid "WARNING: Only turn on this setting when asked to by support as tracing will impact performance."
+msgstr "هشدار: این تنظیم را فقط در صورت درخواست پشتیبانی فعال کنید زیرا ردیابی بر عملکرد تأثیر می‌گذارد."
+
+#: template/admin_pages/settings/general/debug_settings.php:88
+msgid "Download Trace Log"
+msgstr "دانلود گزارش ردیابی"
+
+#: template/admin_pages/tools/general.php:29
+msgid "This will clear and reset all of the current temporary Backups.  Would you like to continue?"
+msgstr "با این کار تمام نسخه‌های پشتیبان موقت فعلی پاک و بازنشانی می‌شود. آیا می خواهید ادامه دهید؟"
+
+#: template/parts/migration/clean-installation-files.php:103
+msgid "Some of the installer files did not get removed, "
+msgstr "بعضی از فایل‌های نصب‌کننده حذف نشدند، "
+
+#: template/parts/migration/clean-installation-files.php:105
+msgid "please retry the installer cleanup process"
+msgstr "لطفاً فرآیند پاکسازی نصب‌کننده را دوباره امتحان کنید"
+
+#: template/parts/migration/clean-installation-files.php:107
+msgid " If this process continues please see the previous FAQ link."
+msgstr " اگر این روند ادامه داشت، لطفاً به لینک سوالات متداول قبلی مراجعه کنید."
+
+#: src/Package/BuildRequirements.php:306 src/Package/BuildRequirements.php:311
+#: src/Package/BuildRequirements.php:316
+msgid "Can't detect"
+msgstr "تشخیص داده نمیشه"
+
+#: src/Package/BuildRequirements.php:458
+msgid "Architecture"
+msgstr "معماری"
+
+#: template/parts/migration/clean-installation-files.php:27
+msgid "No Duplicator files were found on this WordPress Site."
+msgstr "هیچ فایل تکثیرکننده‌ای در این سایت وردپرس یافت نشد."
+
+#: template/parts/migration/clean-installation-files.php:33
+msgid "Removed"
+msgstr "حذف شد"
+
+#: src/Ajax/ServicesPackage.php:813
+#: src/Models/ActivityLog/LogEventBackupCreate.php:406
+#: src/Models/ActivityLog/LogEventUnknown.php:27
+#: src/Models/Storages/UnknownStorage.php:80
+#: src/Models/Storages/UnknownStorage.php:90
+#: src/Package/BuildRequirements.php:250 src/Package/BuildRequirements.php:276
+#: src/Package/PackageUtils.php:502 src/Package/PackageUtils.php:551
+#: src/Package/PackageUtils.php:615 src/Package/Storage/UploadInfo.php:301
+#: template/admin_pages/activity_log/parts/sub_table_mini.php:60
+#: template/admin_pages/activity_log/parts/table_row.php:36
+#: template/admin_pages/packages/details/parts/files_card.php:27
+#: template/admin_pages/packages/row_parts/details_package.php:109
+#: template/admin_pages/packages/row_parts/environment_details.php:28
+#: template/admin_pages/packages/row_parts/environment_details.php:46
+msgid "Unknown"
+msgstr "ناشناخته"
+
+#: src/Utils/Logging/DupLog.php:254
+msgid "No Log"
+msgstr "بدون لاگ"
+
+#: src/Views/AdminNotices.php:751
+msgid "Activate %s"
+msgstr "%s را فعال کنید"
+
+#: src/Package/AbstractPackage.php:907
+msgid "MySQL Server Host: <b>%1$s</b> isn't a valid host"
+msgstr "هاست سرور MySQL  :<b>%1$s</b> یک هاست معتبر نیست"
+
+#: src/Package/TraitPackageBuild.php:376
+msgid "EXPECTED FILE/DIRECTORY COUNT: %1$s"
+msgstr "تعداد فایل/دایرکتوری مورد انتظار: %1$s"
+
+#: src/Package/TraitPackageBuild.php:377
+msgid "ACTUAL FILE/DIRECTORY COUNT: %1$s"
+msgstr "تعداد واقعی فایل/دایرکتوری: %1$s"
+
+#: template/admin_pages/settings/backup/installer_settings.php:115
+#: template/parts/packages/filters/section_security.php:35
+msgid "Mode"
+msgstr "حالت"
+
+#: template/admin_pages/tools/general_validator.php:55
+msgid "Files:"
+msgstr "فایل‌ها:"
+
+#: addons/litebase/template/litebase/settings/connect.php:22
+msgid "License Key"
+msgstr "کلید مجوز"
+
+#: src/Package/BuildRequirements.php:463
+msgid "Error Log File"
+msgstr "فایل گزارش خطا"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:172
+msgid "Cloud Storage"
+msgstr "فضای ذخیره‌سازی ابری"
+
+#: src/Core/MigrationMng.php:364
+msgid "NOTICE: Safe mode (Basic) was enabled during install, be sure to re-enable all your plugins."
+msgstr "توجه: حالت ایمن (پایه) هنگام نصب فعال شد، حتماً تمام افزونه‌های خود را دوباره فعال کنید."
+
+#: src/Core/MigrationMng.php:367
+msgid "NOTICE: Safe mode (Advanced) was enabled during install, be sure to re-enable all your plugins."
+msgstr "توجه: حالت ایمن (پیشرفته) هنگام نصب فعال شد، حتماً تمام افزونه‌های خود را دوباره فعال کنید."
+
+#: addons/litebase/template/litebase/settings/connect.php:17
+msgid "License"
+msgstr "مجوز"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:228
+msgid "Large Site Support"
+msgstr "پشتیبانی سایت‌های بزرگ"
+
+#: addons/litebase/src/Controllers/LiteToolsController.php:46
+#: template/admin_pages/settings/migrate_settings/import.php:72
+msgid "Templates"
+msgstr "قالب‌ها"
+
+#: template/admin_pages/packages/no_elements_row.php:24
+msgid "New to Duplicator?"
+msgstr "تازه با دستگاه کپی آشنا شدید؟"
+
+#: template/admin_pages/packages/details/parts/prefills_card.php:45
+#: template/parts/packages/filters/section_installer.php:64
+msgid "cPanel"
+msgstr "سی‌پنل"
+
+#: template/admin_pages/packages/scan/items/archive/main.php:53
+#: template/admin_pages/packages/scan/items/database/main.php:47
+msgid "uncompressed"
+msgstr "فشرده نشده"
+
+#: template/admin_pages/packages/scan/items/archive/addons.php:16
+msgid "Addon Sites"
+msgstr "سایت‌های افزونه"
+
+#: template/admin_pages/packages/scan/items/archive/addons.php:55
+#: template/admin_pages/packages/scan/items/archive/files.php:129
+msgid "*Checking a directory will exclude all items in that path recursively."
+msgstr "*بررسی یک دایرکتوری، تمام موارد موجود در آن مسیر را به صورت بازگشتی حذف می‌کند."
+
+#: template/admin_pages/packages/scan/items/archive/unreadable.php:16
+msgid "Read Checks"
+msgstr "چک‌ها را بخوانید"
+
+#: template/admin_pages/packages/scan/items/archive/unreadable.php:34
+msgid "Unreadable Items:"
+msgstr "موارد غیرقابل خواندن:"
+
+#: template/admin_pages/packages/scan/items/archive/unreadable.php:42
+msgid "No unreadable items found."
+msgstr "هیچ مورد غیرقابل خواندنی یافت نشد."
+
+#: template/admin_pages/packages/scan/items/archive/unreadable.php:48
+msgid "Recursive Links:"
+msgstr "لینک‌های بازگشتی:"
+
+#: template/admin_pages/packages/scan/items/archive/unreadable.php:56
+msgid "No recursive sym-links found."
+msgstr "هیچ پیوند نمادین بازگشتی یافت نشد."
+
+#: src/Core/Options/Rules/DbDumpEngineRule.php:54
+msgid "PHP Code"
+msgstr "کد پی اچ پی"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:64
+msgid "What can I try for Timeout Issues?"
+msgstr "چه می توانم برای مسائل Timeout امتحان کنم؟"
+
+#: template/admin_pages/packages/scan/items/archive/addons.php:33
+#: template/admin_pages/packages/scan/items/archive/files.php:73
+msgid "Quick Filters"
+msgstr "فیلترهای سریع"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:107
+#: template/admin_pages/packages/scan/items/archive/files.php:117
+msgid "Show All"
+msgstr "نمایش همه"
+
+#: template/admin_pages/packages/scan/items/database/tables.php:119
+msgid "2. Remove post revisions and stale data from tables.  Tables such as logs, statistical or other non-critical data should be cleared."
+msgstr "2. ویرایش نسخه های پست و داده های قدیمی از جداول را حذف کنید. جداول مانند سیاهههای مربوط، داده های آماری یا غیر بحرانی باید پاکسازی شوند."
+
+#: template/admin_pages/packages/scan/scripts.php:33
+msgid "Error applying filters.  Please go back to Step 1 to add filter manually!"
+msgstr "خطا در استفاده از فیلترها لطفا به مرحله 1 بروید تا فیلتر را به صورت دستی اضافه کنید!"
+
+#: template/admin_pages/settings/backup/database_settings.php:170
+msgid "/usr/bin/mypath/mysqldump"
+msgstr "/usr/bin/mypath/mysqldump"
+
+#: template/admin_pages/packages/scan/items/database/mysqldump.php:24
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:20
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:34
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:61
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:66
+#: template/admin_pages/packages/scan/items/setup/parts/hosting_tooltip_memory.php:9
+#: template/admin_pages/packages/scan/items/setup/parts/hosting_tooltip_timeout.php:9
+#: template/admin_pages/packages/scan/items/setup/security.php:48
+#: template/admin_pages/packages/scan/scripts.php:889
+msgid "Good"
+msgstr "خوب"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:102
+msgid "Hide All"
+msgstr "پنهان کردن همه"
+
+#: template/admin_pages/tools/general_validator.php:81
+msgid "Note: Symlinks are not discoverable on Windows OS with PHP"
+msgstr "توجه: Symlinks در سیستم عامل ویندوز با PHP قابل تشخیص نیست"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:25
+msgid "Size Checks"
+msgstr "بررسی اندازه"
+
+#: template/admin_pages/packages/scan/items/database/mysqldump.php:72
+#: template/admin_pages/packages/scan/items/database/tables.php:92
+msgid "RECOMMENDATIONS:"
+msgstr "توصیه‌ها:"
+
+#: addons/litebase/LiteBase.php:144
+#: addons/litebase/src/Controllers/LiteToolsController.php:48
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: template/admin_pages/packages/scan/items/setup/system.php:69
+msgid "PHP Open Base Dir"
+msgstr "دایرکتوری پایه باز PHP"
+
+#: template/admin_pages/packages/scan/items/setup/system.php:88
+msgid "PHP Max Execution Time"
+msgstr "حداکثر زمان اجرای PHP"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:40
+msgid "more details..."
+msgstr "جزئیات بیشتر..."
+
+#: template/admin_pages/packages/scan/items/archive/files.php:58
+msgid "Timeout Options"
+msgstr "گزینه‌های تایم‌اوت"
+
+#: src/Package/Archive/PackageArchive.php:1174
+msgid "Core WordPress directories should not be filtered. Use caution when excluding files."
+msgstr "دایرکتوری‌های اصلی وردپرس نباید فیلتر شوند. هنگام حذف فایل‌ها احتیاط کنید."
+
+#: src/Package/Archive/PackageArchive.php:1019
+msgid "No large files found during this scan."
+msgstr "در طول این اسکن هیچ فایل حجیمی یافت نشد."
+
+#: template/admin_pages/packages/scan/items/archive/addons.php:63
+#: template/admin_pages/packages/scan/items/archive/files.php:135
+#: template/admin_pages/packages/scan/scripts.php:100
+msgid "Add Filters &amp; Rescan"
+msgstr "اضافه کردن فیلترها و اسکن مجدد"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:141
+msgid "Copy Paths to Clipboard"
+msgstr "کپی کردن مسیرها به کلیپ بورد"
+
+#: template/admin_pages/packages/scan/items/database/tables.php:33
+msgid "TOTAL SIZE"
+msgstr "اندازه کل"
+
+#: template/admin_pages/packages/scan/items/database/tables.php:54
+msgid "TABLE DETAILS:"
+msgstr "جزئیات جدول:"
+
+#: template/admin_pages/packages/scan/scripts.php:21
+msgid "Copy Quick Filter Paths"
+msgstr "کپی کردن مسیرهای فیلتر سریع"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:154
+#: template/admin_pages/packages/scan/items/archive/files.php:161
+msgid "Click to Copy"
+msgstr "برای کپی کردن کلیک کنید"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:165
+msgid "Copy the paths above and apply them as needed on Step 1 &gt; Archive &gt; Files section."
+msgstr "مسیرهای بالا را کپی کنید و در صورت نیاز در بخش مرحله ۱ > بایگانی > فایل‌ها اعمال کنید."
+
+#: template/admin_pages/packages/scan/scripts.php:85
+msgid "Directory applied filter set."
+msgstr "مجموعه فیلتر اعمال شده در دایرکتوری."
+
+#: template/admin_pages/packages/scan/scripts.php:115
+msgid "No directories have been selected!"
+msgstr "هیچ دایرکتوری انتخاب نشده است!"
+
+#: template/admin_pages/packages/scan/scripts.php:118
+msgid "No files have been selected!"
+msgstr "هیچ فایلی انتخاب نشده است!"
+
+#: template/admin_pages/packages/scan/scripts.php:154
+msgid "Copied to Clipboard!"
+msgstr "در کلیپ بورد کپی شد!"
+
+#: template/admin_pages/packages/scan/scripts.php:28
+msgid "Manual copy of selected text required on this browser."
+msgstr "کپی دستی متن انتخاب شده در این مرورگر الزامی است."
+
+#: template/admin_pages/packages/scan/scripts.php:95
+msgid "Initializing Please Wait..."
+msgstr "در حال مقداردهی اولیه لطفا صبر کنید..."
+
+#: template/parts/migration/clean-installation-files.php:114
+msgid "Security Notes"
+msgstr "نکات امنیتی"
+
+#: template/parts/migration/migration-message.php:32
+msgid "This site has been successfully migrated!"
+msgstr "این سایت با موفقیت منتقل شد!"
+
+#: template/parts/migration/migration-message.php:75
+msgid "Remove Installation Files Now!"
+msgstr "همین حالا فایل‌های نصب را حذف کنید!"
+
+#: src/Views/AdminNotices.php:742
+#: template/parts/migration/almost-complete.php:27
+msgid "Migration Almost Complete!"
+msgstr "مهاجرت تقریباً کامل شد!"
+
+#: template/parts/migration/almost-complete.php:46
+#: template/parts/packages/notices/orphaned_packages.php:39
+msgid "Take me there now!"
+msgstr "همین الان من را به آنجا ببر!"
+
+#: src/Package/Create/BuildComponents.php:459
+#: template/admin_pages/packages/package_row_complete.php:57
+#: template/admin_pages/packages/package_row_incomplete.php:56
+#: template/admin_pages/packages/scan/items/archive/main.php:37
+#: template/parts/packages/filters/section_filters_subtab_filters_db.php:97
+msgid "Database Only"
+msgstr "فقط پایگاه داده"
+
+#: src/Package/TraitPackageProgress.php:109
+#: template/admin_pages/packages/details/transfer.php:139
+#: template/admin_pages/settings/backup/processing_settings.php:20
+msgid "Processing"
+msgstr "پردازش"
+
+#: template/parts/packages/filters/section_installer.php:89
+#: template/parts/packages/filters/section_installer.php:224
+msgid "example: localhost (value is optional)"
+msgstr "مثال: localhost (مقدار اختیاری است)"
+
+#: src/Package/BuildRequirements.php:452
+msgid "Suhosin Extension"
+msgstr "افزونه سوهوسین"
+
+#: src/Controllers/SettingsPageController.php:1074
+#: src/Core/Options/Rules/EncryptionRule.php:53
+#: src/Models/ActivityLog/LogEventBackupCreate.php:699
+#: src/Package/BuildRequirements.php:455 src/Views/AutoTunePageData.php:719
+#: template/admin_pages/packages/scan/items/database/tables.php:74
+#: template/admin_pages/packages/scan/items/database/tables.php:82
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:64
+#: template/admin_pages/settings/backup/advanced_settings.php:55
+#: template/admin_pages/settings/backup/detection_result_message.php:106
+msgid "Disabled"
+msgstr "معلول"
+
+#: template/parts/packages/filters/section_installer.php:103
+#: template/parts/packages/filters/section_installer.php:239
+msgid "example: DatabaseName (value is optional)"
+msgstr "مثال: نام پایگاه داده (مقدار اختیاری است)"
+
+#: template/parts/packages/filters/section_installer.php:254
+msgid "example: DatabaseUserName (value is optional)"
+msgstr "مثال: نام کاربری پایگاه داده (مقدار آن اختیاری است)"
+
+#: template/admin_pages/packages/scan/main.php:41
+msgid "Keep this window open during the scan process."
+msgstr "این پنجره را در طول فرآیند اسکن باز نگه دارید."
+
+#: template/admin_pages/packages/scan/main.php:42
+msgid "This can take several minutes."
+msgstr "این می‌تواند چند دقیقه طول بکشد."
+
+#: src/Views/UI/UiDialog.php:66
+msgid "OK"
+msgstr "باشه"
+
+#: template/admin_pages/packages/packages_scripts.php:55
+#: template/admin_pages/storages/storage_list.php:157
+msgid "Selection Required"
+msgstr "انتخاب مورد نیاز"
+
+#: template/admin_pages/tools/general_validator.php:21
+msgid "Run Validator"
+msgstr "اجرای اعتبار سنجی"
+
+#: template/admin_pages/tools/general_validator.php:22
+msgid "This will run the scan validation check.  This may take several minutes.  Do you want to Continue?"
+msgstr "این کنترل چک اسکن را اجرا خواهد کرد. این ممکن است چندین دقیقه طول بکشد. آیا میخواهید ادامه دهید؟"
+
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:252
+#: template/admin_pages/packages/scan/items/database/main.php:40
+msgid "Database Size:"
+msgstr "اندازه پایگاه داده:"
+
+#. Description of the plugin
+#: duplicator.php
+msgid "Migrate and backup a copy of your WordPress files and database. Duplicate and move a site from one location to another quickly."
+msgstr "یک کپی از فایل‌ها و پایگاه داده وردپرس خود را منتقل و پشتیبان‌گیری کنید. یک سایت را به سرعت از یک مکان به مکان دیگر کپی و منتقل کنید."
+
+#: src/Views/UI/UiDialog.php:63
+msgid "Processing please wait..."
+msgstr "در حال پردازش لطفا صبر کنید..."
+
+#: src/Views/UI/UiDialog.php:67
+#: template/admin_pages/packages/remote_download/remote_download_options.php:60
+#: template/admin_pages/packages/remote_download/remote_restore_options.php:60
+#: template/admin_pages/settings/migrate_settings/export.php:63
+#: template/admin_pages/settings/migrate_settings/import.php:117
+#: template/admin_pages/storages/storage_scripts.php:23
+#: template/admin_pages/tools/auto_tune/start_dialog.php:93
+msgid "Cancel"
+msgstr "لغو"
+
+#: template/admin_pages/packages/packages_scripts.php:48
+#: template/admin_pages/storages/storage_list.php:151
+msgid "Bulk Action Required"
+msgstr "اقدام دسته جمعی مورد نیاز است"
+
+#: template/admin_pages/packages/packages_scripts.php:86
+msgid "Removing Backups, Please Wait..."
+msgstr "در حال حذف نسخه‌های پشتیبان، لطفا صبر کنید..."
+
+#: template/admin_pages/packages/scan/items/setup/wordpress.php:84
+msgid "Multisite: N/A"
+msgstr "چندسایتی: ناموجود"
+
+#: template/admin_pages/packages/screen_options.php:96
+msgid "Created Format"
+msgstr "قالب ایجاد شده"
+
+#: template/admin_pages/tools/duplicator_logs.php:228
+msgid "Top 20"
+msgstr "20 برتر"
+
+#: template/admin_pages/settings/backup/installer_settings.php:38
+msgid "recommended"
+msgstr "توصیه شده"
+
+#: src/Core/Options/Rules/DbDumpEngineRule.php:52
+msgid "Mysqldump"
+msgstr "مای‌اس‌کیوال‌دامپ"
+
+#: template/admin_pages/tools/general_validator.php:124
+msgid "Scanning Environment... This may take a few minutes."
+msgstr "محیط اسکن ... این ممکن است چند دقیقه طول بکشد."
+
+#: template/admin_pages/settings/general/debug_settings.php:22
+msgid "Debug"
+msgstr "اشکال‌زدایی"
+
+#: template/admin_pages/tools/general_validator.php:37
+#: template/admin_pages/tools/general_validator.php:145
+msgid "Run Scan Integrity Validation"
+msgstr "اجرای اعتبار یکپارچگی اسکن را اجرا کنید"
+
+#: template/admin_pages/tools/general_validator.php:29
+msgid "Scan Validator"
+msgstr "اسکن معتبر"
+
+#: template/admin_pages/packages/scan/error_message.php:19
+msgid "2. Continue to add/remove filters to isolate which path is causing issues."
+msgstr "۲. به اضافه کردن/حذف فیلترها ادامه دهید تا مشخص شود کدام مسیر باعث ایجاد مشکل می‌شود."
+
+#: template/admin_pages/packages/scan/error_message.php:20
+msgid "3. This message will go away once the correct filters are applied."
+msgstr "۳. این پیام پس از اعمال فیلترهای صحیح از بین خواهد رفت."
+
+#: template/admin_pages/packages/scan/error_message.php:22
+msgid "Common Issues:"
+msgstr "مشکلات رایج:"
+
+#: addons/litebase/src/Utils/ExtraPlugins/ExtraPluginsMng.php:125
+msgid "OptinMonster"
+msgstr "اوپتین مانستر"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:44
+#: template/admin_pages/packages/scan/items/database/tables.php:29
+msgid "Overview"
+msgstr "نمای کلی"
+
+#: template/admin_pages/packages/row_parts/package_progress_error.php:26
+msgid "Error Processing"
+msgstr "پردازش خطا"
+
+#: template/parts/packages/filters/mysqldump_compatibility_mode.php:30
+msgid "Compatibility Mode"
+msgstr "حالت سازگاری"
+
+#: template/parts/packages/filters/mysqldump_compatibility_mode.php:68
+msgid "mysql40"
+msgstr "مای‌اس‌کیوال۴۰"
+
+#: template/parts/packages/filters/mysqldump_compatibility_mode.php:77
+msgid "no_table_options"
+msgstr "بدون_گزینه_جدول"
+
+#: template/parts/packages/filters/mysqldump_compatibility_mode.php:86
+msgid "no_key_options"
+msgstr "بدون_گزینه_کلید"
+
+#: template/parts/packages/filters/mysqldump_compatibility_mode.php:95
+msgid "no_field_options"
+msgstr "بدون_فیلد_آپشن"
+
+#: addons/litebase/template/litebase/dashboard/recommended-plugin.php:42
+msgid "Learn More"
+msgstr "اطلاعات بیشتر"
+
+#: template/admin_pages/packages/details/parts/files_card.php:132
+#: template/admin_pages/packages/details/parts/filter_group.php:26
+msgid "- no filters -"
+msgstr "- بدون فیلتر -"
+
+#: template/parts/packages/filters/package_components.php:116
+msgid "File Filters:"
+msgstr "فیلترهای فایل:"
+
+#: template/admin_pages/packages/details/parts/prefills_card.php:21
+msgid "- not set -"
+msgstr "- تنظیم نشده -"
+
+#: template/admin_pages/packages/details/parts/files_card.php:122
+msgid "Extensions"
+msgstr "افزونه‌ها"
+
+#: template/admin_pages/packages/details/parts/database_card.php:72
+#: template/admin_pages/packages/details/parts/files_card.php:76
+msgid "Filters"
+msgstr "فیلترها"
+
+#: src/Core/Options/Rules/ArchiveEngineRule.php:55
+msgid "ZipArchive"
+msgstr "بایگانی زیپ"
+
+#: template/admin_pages/packages/details/parts/general_card.php:198
+msgid "Runtime"
+msgstr "زمان اجرا"
+
+#: template/admin_pages/packages/details/parts/general_card.php:58
+msgid "- unknown -"
+msgstr "- ناشناخته -"
+
+#: src/Package/BuildRequirements.php:179
+#: template/admin_pages/packages/details/parts/general_card.php:184
+msgid "PHP"
+msgstr "پی اچ پی"
+
+#: template/admin_pages/packages/details/transfer.php:179
+#: template/admin_pages/packages/packages_table_head.php:49
+#: template/admin_pages/tools/auto_tune/sidebar.php:15
+msgid "Status"
+msgstr "وضعیت"
+
+#: template/admin_pages/packages/details/parts/general_card.php:305
+msgid "- no notes -"
+msgstr "- بدون یادداشت -"
+
+#: template/admin_pages/packages/details/parts/general_card.php:188
+msgid "Mysql"
+msgstr "مای اس کیو ال"
+
+#: template/admin_pages/packages/details/parts/general_card.php:203
+msgid "error running"
+msgstr "خطا در اجرا"
+
+#: src/Models/ActivityLog/LogEventBackupCreate.php:257
+#: template/admin_pages/packages/details/details_header.php:43
+#: template/admin_pages/packages/details/details_wpbody_header.php:49
+#: template/admin_pages/packages/details/parts/general_card.php:74
+msgid "Transfer"
+msgstr "انتقال"
+
+#: template/admin_pages/packages/details/parts/general_card.php:130
+msgid "ID"
+msgstr "شناسه"
+
+#: addons/litebase/template/litebase/about-us/lite-vs-pro/main.php:50
+msgid "Feature"
+msgstr "ویژگی"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:89
+#: addons/litebase/template/litebase/scan/education-box.php:32
+msgid "Email Alerts"
+msgstr "هشدارهای ایمیل"
+
+#: template/admin_pages/tools/duplicator_logs.php:181
+#: template/admin_pages/tools/duplicator_logs.php:188
+#: template/admin_pages/tools/php_logs.php:103
+#: template/admin_pages/tools/php_logs.php:154
+msgid "Options"
+msgstr "تنظیمات"
+
+#: src/Package/BuildRequirements.php:495
+msgid "Max Allowed Packets"
+msgstr "حداکثر بسته‌های مجاز"
+
+#: template/admin_pages/tools/duplicator_logs.php:143
+msgid "Reasons for log file not showing"
+msgstr "دلایل عدم نمایش فایل لاگ"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: duplicator.php src/Views/DashboardWidget.php:46
+#: template/admin_pages/packages/details/parts/general_card.php:171
+#: template/admin_pages/packages/row_parts/details_package.php:96
+msgid "Duplicator"
+msgstr "تکثیرکننده"
+
+#: src/Package/BuildRequirements.php:216
+msgid "Free Space"
+msgstr "فضای رایگان"
+
+#: src/Package/BuildRequirements.php:233
+msgid "Server Disk"
+msgstr "دیسک سرور"
+
+#: src/Package/BuildRequirements.php:489
+msgid "Wait Timeout"
+msgstr "مهلت انتظار"
+
+#: src/Package/BuildRequirements.php:501
+msgid "mysqldump Path"
+msgstr "مسیر mysqldump"
+
+#: template/admin_pages/tools/duplicator_logs.php:195
+#: template/admin_pages/tools/php_logs.php:181
+msgid "Refresh"
+msgstr "تازه کردن"
+
+#: template/admin_pages/tools/duplicator_logs.php:199
+#: template/admin_pages/tools/php_logs.php:185
+msgid "Auto Refresh"
+msgstr "بازخوانی خودکار"
+
+#: src/Package/BuildRequirements.php:319
+#: template/admin_pages/packages/details/parts/prefills_card.php:39
+#: template/admin_pages/packages/details/parts/prefills_card.php:47
+#: template/parts/packages/filters/section_installer.php:81
+#: template/parts/packages/filters/section_installer.php:156
+#: template/parts/packages/filters/section_installer.php:215
+msgid "Host"
+msgstr "میزبان"
+
+#: template/admin_pages/settings/storage/storage_ssl.php:19
+msgid "SSL"
+msgstr "گواهینامه SSL"
+
+#: src/Views/AutoTunePageData.php:284
+msgid "Server"
+msgstr "سرور"
+
+#: src/Package/BuildRequirements.php:173
+#: template/admin_pages/packages/details/parts/environment_card.php:32
+#: template/admin_pages/packages/details/parts/general_card.php:182
+#: template/admin_pages/packages/row_parts/details_package.php:92
+#: template/admin_pages/packages/scan/items/setup/wordpress.php:19
+msgid "WordPress"
+msgstr "وردپرس"
+
+#: src/Models/Storages/Local/LocalStorage.php:238
+msgid "Name:"
+msgstr "نام:"
+
+#: template/admin_pages/settings/backup/detection_result_message.php:12
+msgid "Settings Saved"
+msgstr "تنظیمات ذخیره شد"
+
+#: template/admin_pages/settings/backup/backup_settings.php:37
+#: template/admin_pages/settings/general/general.php:39
+#: template/admin_pages/settings/storage/storage_settings.php:36
+msgid "Save Settings"
+msgstr "ذخیره تغییرات"
+
+#: src/Package/BuildRequirements.php:269
+msgid "Operating System"
+msgstr "سیستم عامل"
+
+#: src/Package/BuildRequirements.php:274
+msgid "Timezone"
+msgstr "منطقه زمانی"
+
+#: src/Package/BuildRequirements.php:350
+msgid "Language"
+msgstr "زبان"
+
+#: template/admin_pages/packages/scan/main.php:52
+msgid "Process Time:"
+msgstr "زمان پردازش شده:"
+
+#: src/Package/BuildRequirements.php:345
+#: template/admin_pages/packages/scan/items/setup/wordpress.php:24
+msgid "WordPress Version"
+msgstr "نسخه وردپرس"
+
+#: template/admin_pages/settings/storage/storage_general.php:46
+msgid "Disable if issues occur when downloading installer/archive files."
+msgstr "در صورت بروز مشکلات هنگام بارگیری فایل های نصب / بایگانی غیرفعال شوید."
+
+#: src/Package/BuildRequirements.php:407
+msgid "Max Execution Time"
+msgstr "حداکثر زمان اجرا"
+
+#: src/Controllers/SettingsPageController.php:370
+#: src/Core/Options/Rules/CompressionRule.php:48
+#: template/admin_pages/packages/details/parts/database_card.php:74
+#: template/admin_pages/packages/details/parts/files_card.php:78
+#: template/admin_pages/packages/details/parts/prefills_card.php:46
+#: template/admin_pages/settings/general/debug_settings.php:37
+msgid "On"
+msgstr "روشن"
+
+#: template/admin_pages/packages/scan/items/database/tables.php:36
+msgid "Records"
+msgstr "سوابق"
+
+#: src/Package/BuildRequirements.php:289
+msgid "Server Time"
+msgstr "زمان سرور"
+
+#: src/Models/ActivityLog/LogEventBackupCreate.php:400
+msgid "Shell Exec"
+msgstr "شل Exec"
+
+#: src/Package/BuildRequirements.php:294
+#: template/admin_pages/packages/scan/items/setup/system.php:36
+msgid "Web Server"
+msgstr "وب سرور"
+
+#: template/admin_pages/packages/scan/items/setup/system.php:49
+#: template/admin_pages/packages/scan/items/setup/system.php:81
+#: template/admin_pages/packages/scan/items/setup/system.php:106
+#: template/admin_pages/packages/scan/items/setup/wordpress.php:89
+msgid "details"
+msgstr "جزئیات"
+
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:399
+#: template/admin_pages/packages/scan/main.php:69
+#: template/admin_pages/packages/scan/scripts.php:630
+msgid "Scan Error"
+msgstr "خطای اسکن"
+
+#: template/admin_pages/tools/general.php:232
+msgid "Clear Build Cache"
+msgstr "پاکسازی کش ساخت"
+
+#: template/admin_pages/tools/general.php:236
+msgid "Removes all build data from:"
+msgstr "حذف همه داده های ساخت از:"
+
+#: addons/dupcloudaddon/src/Models/DupCloudStorage.php:773
+#: addons/dupcloudaddon/src/Models/DupCloudStorage.php:783
+#: src/Package/AutoTune/AutoTuneDetector.php:506
+msgid "unknown"
+msgstr "ناشناس"
+
+#: template/admin_pages/tools/server_info.php:22
+msgid "Server Settings"
+msgstr "تنظیمات سرور"
+
+#: template/admin_pages/diagnostics/clean_tmp_cache_message.php:31
+msgid "Build cache removed."
+msgstr "کش ساخت حذف شد."
+
+#: src/Controllers/SettingsPageController.php:91
+#: src/Controllers/ToolsPageController.php:227
+#: src/Models/ActivityLog/LogEventSettingsChange.php:257
+#: src/Package/BuildRequirements.php:167
+#: template/admin_pages/packages/details/parts/general_card.php:84
+#: template/admin_pages/packages/setup/setup_page.php:44
+msgid "General"
+msgstr "عمومی"
+
+#: src/Package/BuildRequirements.php:185
+msgid "MySQL"
+msgstr "خروجی زیر"
+
+#: src/Package/BuildRequirements.php:255 src/Package/BuildRequirements.php:324
+msgid "Duplicator Version"
+msgstr "نسخه تکثیرکننده"
+
+#: src/Package/BuildRequirements.php:299
+msgid "Loaded PHP INI"
+msgstr "فایل PHP INI بارگذاری شده"
+
+#: src/Package/BuildRequirements.php:304
+msgid "Server IP"
+msgstr "آی پی سرور"
+
+#: src/Package/BuildRequirements.php:314
+msgid "Client IP"
+msgstr "آی‌پی کلاینت"
+
+#: src/Package/BuildRequirements.php:355 src/Package/BuildRequirements.php:484
+msgid "Charset"
+msgstr "مجموعه کاراکتر"
+
+#: src/Package/BuildRequirements.php:360 src/Package/BuildRequirements.php:396
+msgid "Memory Limit"
+msgstr "محدودیت حافظه"
+
+#: src/Package/BuildRequirements.php:402
+msgid "Memory In Use"
+msgstr "حافظه در حال استفاده"
+
+#: src/Controllers/SettingsPageController.php:369
+#: src/Controllers/SettingsPageController.php:875
+#: src/Controllers/SettingsPageController.php:999
+#: src/Core/Options/Rules/CompressionRule.php:48
+#: src/Package/BuildRequirements.php:426 src/Views/AutoTunePageData.php:752
+#: template/admin_pages/packages/details/parts/database_card.php:74
+#: template/admin_pages/packages/details/parts/files_card.php:78
+#: template/admin_pages/packages/details/parts/prefills_card.php:46
+#: template/admin_pages/settings/backup/installer_settings.php:125
+#: template/admin_pages/settings/backup/processing_settings.php:36
+#: template/admin_pages/settings/general/debug_settings.php:34
+msgid "Off"
+msgstr "خاموش"
+
+#: src/Package/BuildRequirements.php:432 src/Package/BuildRequirements.php:438
+#: src/Package/BuildRequirements.php:444 src/Package/BuildRequirements.php:449
+msgid "Is Supported"
+msgstr "پشتیبانی می‌شود"
+
+#: src/Package/BuildRequirements.php:432 src/Package/BuildRequirements.php:438
+#: src/Package/BuildRequirements.php:444 src/Package/BuildRequirements.php:449
+msgid "Not Supported"
+msgstr "پشتیبانی نمی‌شود"
+
+#: src/Package/BuildRequirements.php:447
+msgid "Shell Exec Zip"
+msgstr "شل اکس زیپ"
+
+#: src/Controllers/SettingsPageController.php:1075
+#: src/Core/Options/Rules/EncryptionRule.php:53
+#: src/Models/ActivityLog/LogEventBackupCreate.php:699
+#: src/Models/ActivityLog/LogEventBackupCreate.php:924
+#: src/Package/BuildRequirements.php:455 src/Views/AutoTunePageData.php:719
+#: template/admin_pages/packages/scan/items/archive/main.php:39
+#: template/admin_pages/packages/scan/items/database/main.php:35
+#: template/admin_pages/packages/scan/items/database/tables.php:73
+#: template/admin_pages/packages/scan/items/database/tables.php:81
+#: template/admin_pages/packages/scan/items/setup/hosting_status.php:64
+#: template/admin_pages/settings/backup/advanced_settings.php:58
+#: template/admin_pages/settings/backup/detection_result_message.php:106
+msgid "Enabled"
+msgstr "فعال شده"
+
+#: template/admin_pages/settings/general/plugin_settings.php:22
+msgid "Plugin"
+msgstr "افزونه"
+
+#: template/admin_pages/settings/general/plugin_settings.php:34
+msgid "Uninstall"
+msgstr "حذف نصب"
+
+#: template/admin_pages/packages/setup/setup_page.php:94
+msgid "Next"
+msgstr "بعدی"
+
+#: template/admin_pages/packages/details/parts/database_card.php:82
+#: template/admin_pages/packages/row_parts/details_package.php:153
+#: template/admin_pages/packages/scan/items/database/tables.php:35
+msgid "Tables"
+msgstr "جداول"
+
+#: template/admin_pages/activity_log/parts/toolbar.php:84
+#: template/admin_pages/packages/setup/setup_page.php:88
+msgid "Reset"
+msgstr "تنظیم مجدد"
+
+#: template/admin_pages/packages/scan/main.php:71
+#: template/admin_pages/packages/scan/scripts.php:631
+#: template/admin_pages/packages/scan/validation_error.php:26
+msgid "Please try again!"
+msgstr "لطفا دوباره امتحان کنید!"
+
+#: template/admin_pages/packages/scan/main.php:75
+#: template/admin_pages/packages/scan/validation_error.php:30
+msgid "Error Message:"
+msgstr "پیام خطا:"
+
+#: template/admin_pages/packages/scan/main.php:115
+#: template/admin_pages/packages/scan/validation_error.php:40
+msgid "Back"
+msgstr "برگشت"
+
+#: template/admin_pages/packages/scan/main.php:32
+msgid "Scanning Site"
+msgstr "اسکن سایت"
+
+#: template/admin_pages/packages/scan/main.php:40
+#: template/admin_pages/packages/setup/setup_page.php:122
+msgid "Please Wait..."
+msgstr "لطفا صبر کنید..."
+
+#: template/admin_pages/packages/scan/main.php:73
+#: template/admin_pages/packages/scan/validation_error.php:28
+msgid "Server Status:"
+msgstr "وضعیت سرور:"
+
+#: template/admin_pages/packages/scan/main.php:49
+msgid "Scan Complete"
+msgstr "اسکن کامل شد"
+
+#: template/admin_pages/packages/scan/main.php:89
+msgid "Scan checks are not required to pass, however they could cause issues on some systems."
+msgstr "لازم نیست بررسی‌های اسکن با موفقیت انجام شوند، با این حال می‌توانند در برخی سیستم‌ها مشکلاتی ایجاد کنند."
+
+#: template/admin_pages/packages/scan/main.php:91
+msgid "Please review the details for each section by clicking on the detail title."
+msgstr "لطفا جزئیات هر بخش را با کلیک روی عنوان جزئیات بررسی کنید."
+
+#: template/admin_pages/packages/scan/main.php:120
+msgid "Rescan"
+msgstr "اسکن مجدد"
+
+#: template/admin_pages/packages/scan/items/archive/files_db_only.php:17
+#: template/admin_pages/packages/scan/items/archive/files_skip_scan.php:17
+#: template/admin_pages/packages/scan/items/database/mysqldump.php:26
+#: template/admin_pages/packages/scan/items/setup/security.php:50
+#: template/admin_pages/packages/scan/scripts.php:890
+msgid "Notice"
+msgstr "اطلاعیه"
+
+#: template/admin_pages/packages/scan/items/setup/wordpress.php:25
+msgid "Core Files"
+msgstr "فایل‌های اصلی"
+
+#: template/admin_pages/packages/scan/items/archive/files.php:77
+msgid "Large Files"
+msgstr "فایل‌های بزرگ"
+
+#: template/admin_pages/packages/scan/scripts.php:746
+msgid "Unable to report on any tables"
+msgstr "امکان گزارش‌گیری از هیچ جدولی وجود ندارد"
+
+#: template/admin_pages/packages/scan/scripts.php:774
+msgid "Unable to report on database stats"
+msgstr "گزارش‌گیری از آمار پایگاه داده امکان‌پذیر نیست"
+
+#: template/parts/migration/clean-installation-files.php:37
+msgid "Found"
+msgstr "پیدا شد"
+
+#: src/Core/Bootstrap.php:691 template/parts/admin-logo-header.php:20
+msgid "Help"
+msgstr "راهنما"
+
+#: src/Controllers/SettingsPageController.php:71
+#: src/Controllers/SettingsPageController.php:72
+#: template/admin_pages/settings/general/advanced_settings.php:31
+#: template/admin_pages/settings/migrate_settings/import.php:86
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: addons/litebase/src/Controllers/LiteToolsController.php:113
+msgid "Quick Start"
+msgstr "شروع سریع"
+
+#: src/Views/PluginFooter.php:155
+msgid "View"
+msgstr "مشاهده شده"
+
+#: template/admin_pages/packages/row_parts/download_buttons.php:72
+#: template/parts/packages/filters/section_installer.php:34
+msgid "Installer"
+msgstr "نصب کننده"
+
+#: src/Models/Storages/Local/LocalStorage.php:169
+msgid "Local"
+msgstr "محلی"
+
+#: template/admin_pages/packages/setup/section-requirements.php:112
+msgid "For additional help please see the "
+msgstr "برای کمک بیشتر لطفا مراجعه کنید"
+
+#: template/admin_pages/packages/packages_table_head.php:57
+#: template/admin_pages/packages/scan/items/archive/files.php:29
+#: template/admin_pages/packages/scan/items/archive/files.php:119
+#: template/admin_pages/packages/scan/items/database/tables.php:34
+#: template/admin_pages/packages/screen_options.php:48
+msgid "Size"
+msgstr "اندازه"
+
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:175
+#: src/Models/ActivityLog/LogEventWebsitesScan.php:405
+#: template/admin_pages/packages/details/parts/general_card.php:71
+msgid "Scan"
+msgstr "اسکن"
+
+#: addons/litebase/src/Controllers/LiteToolsController.php:121
+msgid "FAQs"
+msgstr "سوالات متداول"
+
+#: addons/litebase/src/Controllers/LiteToolsController.php:125
+msgid "Change Log"
+msgstr "لیست تغییرات"
+
+#: template/parts/DashboardWidget/package-create-section.php:54
+msgid "Create New"
+msgstr "ایجاد جدید"
+
+#: addons/litebase/template/litebase/tools/support.php:32
+msgid "Knowledgebase"
+msgstr "دانشنامه"
+
+#: src/Models/Storages/AbstractStorageEntity.php:1162
+#: template/admin_pages/storages/configs/local_default.php:25
+#: template/admin_pages/storages/storage_list.php:106
+#: template/parts/storage/select_list.php:32
+msgid "Location"
+msgstr "مکان"
+
+#: src/Core/Bootstrap.php:671
+msgid "Manage"
+msgstr "مدیریت"
+
+#: src/Controllers/ToolsPageController.php:67
+#: src/Controllers/ToolsPageController.php:68
+msgid "Tools"
+msgstr "ابزارها"
+
+#: src/Package/Create/BuildComponents.php:418
+msgid "Media"
+msgstr "رسانه"
+
+#: template/admin_pages/packages/details/parts/general_card.php:132
+#: template/admin_pages/packages/row_parts/details_package.php:130
+#: template/admin_pages/packages/row_parts/download_buttons.php:83
+#: template/admin_pages/packages/scan/items/archive/main.php:23
+#: template/admin_pages/settings/backup/archive_settings.php:32
+msgid "Archive"
+msgstr "بایگانی"
+
+#: template/admin_pages/packages/setup/section-requirements.php:29
+#: template/admin_pages/packages/setup/section-requirements.php:32
+msgid "Requirements:"
+msgstr "الزامات:"
+
+#: template/admin_pages/packages/setup/section-requirements.php:38
+msgid "System requirements must pass for the Duplicator to work properly.  Click each link for details."
+msgstr "الزامات سیستم باید برای اجرای صحیح افزونه تایید شوند. برای جزئیات روی هر لینک کلیک کنید."
+
+#: addons/litebase/src/Controllers/LiteToolsController.php:117
+msgid "User Guide"
+msgstr "راهنما کاربر"
+
+#: src/Package/BuildRequirements.php:381
+msgid "PHP Version"
+msgstr "نسخه پی اچ پی"
+
+#: src/Package/BuildRequirements.php:391
+#: template/admin_pages/packages/details/parts/prefills_card.php:41
+#: template/admin_pages/packages/details/parts/prefills_card.php:48
+#: template/admin_pages/settings/backup/advanced_settings.php:147
+#: template/parts/packages/filters/section_installer.php:109
+#: template/parts/packages/filters/section_installer.php:169
+#: template/parts/packages/filters/section_installer.php:244
+msgid "User"
+msgstr "کاربر"
+
+#: src/Package/BuildRequirements.php:479
+#: template/admin_pages/settings/general/plugin_settings.php:27
+msgid "Version"
+msgstr "نسخه"
+
+#: src/Core/Controllers/AbstractSinglePageController.php:390
+msgid "You do not have sufficient permissions to access this page."
+msgstr "شما مجوز کافی برای دسترسی به این صفحه را ندارید."
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:131
+msgid "Backup Files & Database"
+msgstr "پشتیبان‌گیری از فایل‌ها و پایگاه داده"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:139
+msgid "Migration Wizard"
+msgstr "ویزارد مهاجرت"
+
+#: addons/litebase/installer/litebase/src/EducationStrings.php:78
+#: addons/litebase/src/Controllers/AboutUsPageController.php:156
+#: addons/litebase/src/Controllers/WelcomePageController.php:146
+#: addons/litebase/template/litebase/scan/education-box.php:19
+msgid "Scheduled Backups"
+msgstr "پشتیبان‌گیری‌های زمان‌بندی‌شده"
+
+#: addons/litebase/src/Controllers/AboutUsPageController.php:257
+msgid "Customer Support"
+msgstr "پشتیبانی مشتری"
+
+#: src/Controllers/SettingsPageController.php:93
+#: src/Controllers/StoragePageController.php:35
+#: src/Controllers/StoragePageController.php:36
+#: src/Controllers/StoragePageController.php:61
+#: src/Models/ActivityLog/LogEventSettingsChange.php:259
+#: template/admin_pages/packages/details/transfer.php:102
+#: template/admin_pages/packages/setup/section_storages.php:21
+#: template/admin_pages/settings/migrate_settings/import.php:61
+#: template/admin_pages/settings/storage/storage_general.php:25
+#: template/mail/email_summary.php:141
+msgid "Storage"
+msgstr "ذخیره‌سازی"
+
+#: template/admin_pages/packages/toolbar.php:25
+#: template/admin_pages/storages/storage_list.php:62
+msgid "Bulk Actions"
+msgstr "اقدامات دسته جمعی"
+
+#: src/Models/ActivityLog/LogEventBackupDelete.php:135
+#: template/admin_pages/packages/details/detail.php:29
+#: template/admin_pages/packages/details/parts/general_card.php:110
+#: template/admin_pages/packages/row_parts/details_package.php:82
+#: template/admin_pages/packages/toolbar.php:29
+#: template/admin_pages/storages/storage_list.php:66
+#: template/admin_pages/storages/storage_list_row.php:92
+msgid "Delete"
+msgstr "حذف"
+
+#: template/admin_pages/packages/toolbar.php:37
+#: template/admin_pages/storages/parts/edit_toolbar.php:91
+#: template/admin_pages/storages/storage_list.php:74
+#: template/parts/notices/fix_group.php:126
+msgid "Apply"
+msgstr "اعمال کردن"
+
+#: addons/dupcloudaddon/template/dupcloudaddon/connect/storage_auth.php:102
+#: template/admin_pages/packages/details/parts/general_card.php:118
+#: template/admin_pages/packages/packages_table_head.php:40
+#: template/admin_pages/settings/backup/installer_settings.php:26
+#: template/admin_pages/storages/storage_edit.php:68
+#: template/admin_pages/storages/storage_list.php:104
+#: template/admin_pages/storages/storage_list_row.php:128
+#: template/parts/storage/select_list.php:30
+msgid "Name"
+msgstr "نام"
+
+#: template/admin_pages/activity_log/log_list.php:39
+#: template/admin_pages/activity_log/log_list.php:64
+#: template/admin_pages/activity_log/parts/sub_table_mini.php:29
+#: template/admin_pages/packages/details/parts/general_card.php:225
+#: template/admin_pages/packages/details/transfer.php:180
+#: template/admin_pages/storages/storage_edit.php:101
+#: template/admin_pages/storages/storage_list.php:105
+#: template/admin_pages/storages/storage_list_row.php:136
+#: template/admin_pages/tools/php_logs.php:111
+#: template/parts/storage/select_list.php:31
+msgid "Type"
+msgstr "نوع"
+
+#: src/Models/Storages/Local/DefaultLocalStorage.php:24
+#: src/Models/TemplateEntity.php:292
+#: template/admin_pages/storages/storage_edit.php:72
+#: template/parts/packages/filters/section_installer.php:197
+msgid "Default"
+msgstr "پیش‌فرض"
+
+#: src/Package/Create/BuildComponents.php:406
+#: template/admin_pages/packages/details/parts/database_card.php:31
+#: template/admin_pages/packages/details/parts/database_card.php:63
+#: template/admin_pages/packages/details/parts/general_card.php:72
+#: template/admin_pages/packages/details/parts/prefills_card.php:40
+#: template/admin_pages/packages/scan/items/database/main.php:25
+#: template/admin_pages/settings/backup/database_settings.php:36
+#: template/parts/packages/filters/section_installer.php:95
+#: template/parts/packages/filters/section_installer.php:229
+msgid "Database"
+msgstr "پایگاه داده"
+
+#: template/parts/packages/filters/package_components.php:155
+msgid "root path"
+msgstr "مسیر ریشه"
+
+#: template/parts/packages/filters/package_components.php:164
+msgid "cache"
+msgstr "حافظه نهان"
+
+#: template/parts/packages/filters/package_components.php:171
+#: template/parts/packages/filters/package_components.php:173
+msgid "File Extensions"
+msgstr "پسوند فایل‌ها"
+
+#: template/admin_pages/activity_log/parts/table_row.php:52
+#: template/admin_pages/packages/details/details_header.php:34
+#: template/admin_pages/packages/details/details_wpbody_header.php:38
+#: template/admin_pages/packages/details/transfer.php:51
+msgid "Details"
+msgstr "جزئیات"
+
+#: template/admin_pages/packages/details/parts/general_card.php:131
+msgid "Hash"
+msgstr "هش"
+
+#: template/admin_pages/packages/details/parts/general_card.php:300
+#: template/admin_pages/packages/setup/section_notes.php:16
+#: template/admin_pages/storages/storage_edit.php:95
+#: template/admin_pages/storages/storage_list_row.php:132
+msgid "Notes"
+msgstr "یادداشت‌ها"
+
+#: template/admin_pages/packages/details/parts/general_card.php:139
+#: template/admin_pages/packages/packages_table_head.php:60
+#: template/admin_pages/packages/screen_options.php:60
+msgid "Created"
+msgstr "ایجاد شده"
+
+#: template/admin_pages/packages/details/parts/files_card.php:39
+#: template/admin_pages/packages/details/parts/files_card.php:104
+#: template/admin_pages/packages/details/parts/general_card.php:73
+#: template/admin_pages/packages/row_parts/details_package.php:136
+#: template/admin_pages/packages/scan/items/archive/files.php:30
+#: template/admin_pages/packages/scan/items/archive/files.php:158
+#: template/admin_pages/packages/scan/items/archive/main.php:33
+msgid "Files"
+msgstr "فایل‌ها"
+
+#: template/admin_pages/packages/details/parts/files_card.php:86
+#: template/admin_pages/packages/scan/items/archive/files.php:151
+msgid "Directories"
+msgstr "دایرکتوری‌ها"
+
+#: template/admin_pages/packages/scan/items/setup/main.php:17
+msgid "Setup"
+msgstr "راه‌اندازی"
+
+#: src/Core/Bootstrap.php:691
+msgid "Get Help"
+msgstr "کمک بگیرید"
+
+#: template/admin_pages/packages/packages_scripts.php:80
+msgid "Are you sure you want to delete the selected Backup(s)?"
+msgstr "آیا مطمئن هستید که می‌خواهید نسخه پشتیبان(های) انتخاب شده را حذف کنید؟"
+
+#: template/parts/requirements/installer_files_fix_hint.php:40
+msgid "Remove Files Now"
+msgstr "اکنون فایل‌ها را حذف کنید"
+
+#: template/parts/migration/clean-installation-files.php:136
+msgid "Help Support Duplicator"
+msgstr "پشتیبانی از دستگاه کپی"
+
+#: template/parts/help/main.php:53 template/parts/help/main.php:78
+msgid "Get Support"
+msgstr "گرفتن پشتیبانی"
