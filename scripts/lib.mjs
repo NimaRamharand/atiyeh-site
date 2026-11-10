@@ -18,6 +18,15 @@ function run(cmd, args, opts = {}) {
   const r = spawnSync(cmd, args, { stdio: 'inherit', cwd: ROOT, ...opts });
   if (r.status !== 0) {
     console.error(`✖ فرمان ناموفق بود: ${cmd} ${args.join(' ')}`);
+    if (r.error?.code === 'ENOENT') {
+      console.error(`  «${cmd}» روی این سیستم پیدا نشد.` + (cmd === 'docker'
+        ? ' Docker Desktop را نصب و باز کنید، صبر کنید تا «Engine running» شود، سپس یک ترمینال تازه باز کنید.'
+        : ''));
+    } else if (r.error) {
+      console.error('  ' + r.error.message);
+    } else if (cmd === 'docker') {
+      console.error('  اگر خطای «cannot connect / pipe» بالاتر دیدید، Docker Desktop روشن نیست؛ بازش کنید و دوباره امتحان کنید.');
+    }
     process.exit(r.status ?? 1);
   }
 }
