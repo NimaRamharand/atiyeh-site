@@ -3,7 +3,7 @@
  * Homepage content taken verbatim from the approved mockup (docs/mockup/export/Main.dc.html).
  * Bracketed values such as «[ ۰۰ ]» are real data the company has not provided yet — never invent them.
  *
- * Sections whose content becomes editable later (projects, clients, news) read from WordPress first
+ * Sections whose content becomes editable later (projects, clients) read from WordPress first
  * and fall back to these arrays.
  *
  * @package Atiyeh
@@ -177,34 +177,6 @@ function atiyeh_project_item( WP_Post $p ): array {
 		'img'      => $img ? $img : atiyeh_asset( 'img/project-postal-plaque.webp' ),
 		'url'      => (string) get_permalink( $p ),
 	);
-}
-
-/**
- * Latest news: real posts first, mockup placeholders when there are none.
- *
- * @return array<int, array{title:string, date:string, img:string, url:string}>
- */
-function atiyeh_home_news(): array {
-	$fallback_imgs = array( 'project-postal-plaque.webp', 'careers-team.webp', 'project-map-update.webp' );
-	$posts         = get_posts( array( 'numberposts' => 3, 'post_status' => 'publish', 'suppress_filters' => false ) );
-	$out           = array();
-	foreach ( $posts as $i => $post ) {
-		$img   = get_the_post_thumbnail_url( $post, 'atiyeh-thumb' );
-		$out[] = array(
-			'title' => get_the_title( $post ),
-			'date'  => atiyeh_post_date( $post ),
-			'img'   => $img ? $img : atiyeh_asset( 'img/' . $fallback_imgs[ $i % 3 ] ),
-			'url'   => (string) get_permalink( $post ),
-		);
-	}
-	if ( $out ) {
-		return $out;
-	}
-	$titles = array( 'آغاز پروژه نصب پلاک کدپستی [ شهر ]', 'راه‌اندازی مرکز اسکن اسناد [ سازمان ]', 'پایان بهنگام‌سازی کدپستی [ شهر ]' );
-	foreach ( $titles as $i => $title ) {
-		$out[] = array( 'title' => $title, 'date' => '[ تاریخ ]', 'img' => atiyeh_asset( 'img/' . $fallback_imgs[ $i ] ), 'url' => '#' );
-	}
-	return $out;
 }
 
 /**

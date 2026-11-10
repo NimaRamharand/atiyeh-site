@@ -14,9 +14,9 @@ $atiyeh_form = apply_filters( 'atiyeh_request_form_html', '' );
 			<div class="request__frame spin" aria-hidden="true"></div>
 			<span class="kicker kicker--pale">درخواست خدمات</span>
 			<h2 class="request__title">پروژه‌تان را برای ما بنویسید</h2>
-			<p class="request__desc">فرم را تکمیل کنید تا کارشناسان ما برای بررسی و ارائه پیشنهاد با شما تماس بگیرند. پرداخت هزینه خدمات نیز آنلاین انجام می‌شود.</p>
+			<p class="request__desc">فرم را تکمیل کنید تا کارشناسان ما برای بررسی و ارائه پیشنهاد با شما تماس بگیرند.</p>
 			<div class="request__btns">
-				<a class="btn btn--white" href="<?php echo esc_url( atiyeh_page_url( 'payment', '/#request' ) ); ?>">پرداخت آنلاین (درگاه پرداخت) <span class="ar" aria-hidden="true">←</span></a>
+				<a class="btn btn--white" href="<?php echo esc_url( atiyeh_page_url( 'contact', '/#contact' ) ); ?>">تماس با ما <span class="ar" aria-hidden="true">←</span></a>
 				<a class="btn btn--ghost" href="#careers">همکاری با ما <span class="ar" aria-hidden="true">←</span></a>
 			</div>
 		</div>

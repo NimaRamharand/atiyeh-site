@@ -49,5 +49,5 @@ $atiyeh_request  = atiyeh_page_url( 'request', '/#request' );
 			</article>
 		</div>
 	</div>
-	<?php atiyeh_wave( 'M0 100V60C300 110 520 10 800 50S1250 90 1440 30V100Z', '#f4f6f5', 'products__wave', 100 ); ?>
+	<?php atiyeh_wave( 'M0 100V60C300 110 520 10 800 50S1250 90 1440 30V100Z', 'var(--c-page)', 'products__wave', 100 ); ?>
 </section>

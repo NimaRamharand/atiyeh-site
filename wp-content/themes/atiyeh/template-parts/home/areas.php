@@ -8,7 +8,7 @@
 $atiyeh_services = atiyeh_page_url( 'services', '/#areas' );
 ?>
 <section class="areas" id="areas">
-	<?php atiyeh_wave( 'M0 0H1440V40C1200 100 960 10 720 50S240 100 0 30Z', '#f4f6f5', 'areas__wave-top' ); ?>
+	<?php atiyeh_wave( 'M0 0H1440V40C1200 100 960 10 720 50S240 100 0 30Z', 'var(--c-page)', 'areas__wave-top' ); ?>
 	<div class="container areas__inner">
 		<div class="sec-head rv">
 			<div><span class="kicker">خدمات</span><h2 class="section-title">حوزه‌های فعالیت</h2></div>

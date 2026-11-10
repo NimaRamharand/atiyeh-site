@@ -102,17 +102,39 @@ function atiyeh_demo_image( string $file, string $alt = '' ): int {
 	return $cache[ $file ] = (int) $id;
 }
 
-/** Creates the site pages and returns slug => ID. */
+/** Wraps plain paragraphs as block-editor paragraphs. */
+function atiyeh_demo_paras( string ...$paras ): string {
+	return implode( "\n\n", array_map( static fn( string $p ): string => "<!-- wp:paragraph --><p>{$p}</p><!-- /wp:paragraph -->", $paras ) );
+}
+
+/** Creates the site pages and returns slug => ID. Intros are sample copy; company facts stay «[ … ]». */
 function atiyeh_demo_pages(): array {
 	$pages = array(
 		'home'     => array( 'خانه', '' ),
-		'about'    => array( 'درباره ما', ATIYEH_PLACEHOLDER ),
-		'services' => array( 'خدمات', ATIYEH_PLACEHOLDER ),
-		'news'     => array( 'اخبار', '' ),
-		'careers'  => array( 'همکاری با ما', ATIYEH_PLACEHOLDER ),
-		'request'  => array( 'درخواست خدمات', ATIYEH_PLACEHOLDER ),
-		'contact'  => array( 'تماس با ما', ATIYEH_PLACEHOLDER ),
-		'payment'  => array( 'درگاه پرداخت', ATIYEH_PLACEHOLDER ),
+		'about'    => array(
+			'درباره ما',
+			atiyeh_demo_paras(
+				'آمار پژوهان پارسیان مجموعه‌ای تخصصی است که در دو حوزه فعالیت می‌کند: تولید، نصب و بهنگام‌سازی پلاک کدپستی، و تبدیل اسناد کاغذی سازمان‌ها به آرشیو دیجیتال قابل جستجو.',
+				'تیم ما از نیروهای میدانی آموزش‌دیده، اپراتورهای اسکن و کارشناسان نمایه‌سازی تشکیل شده است و هر پروژه را از برداشت اولیه تا تحویل نهایی با کنترل کیفیت چندمرحله‌ای پیش می‌برد.'
+			),
+		),
+		'services' => array( 'خدمات', '' ),
+		'careers'  => array( 'همکاری با ما', atiyeh_demo_paras( 'اگر به کار میدانی، دقت در جزئیات و کار با اسناد علاقه دارید، خوشحال می‌شویم رزومه شما را ببینیم. موقعیت‌های فعال در ادامه آمده‌اند و برای فرصت‌های آینده نیز می‌توانید رزومه بفرستید.' ) ),
+		'request'  => array( 'درخواست خدمات', '' ),
+		'contact'  => array( 'تماس با ما', '' ),
+	);
+	$about_children = array(
+		'company'    => array(
+			'معرفی شرکت',
+			atiyeh_demo_paras(
+				'آمار پژوهان پارسیان با هدف ارائه خدمات دقیق و قابل اعتماد در حوزه نشانی‌یابی و مدیریت اسناد شکل گرفته است. [ سال تأسیس و سابقه شرکت ]',
+				'در حوزه پلاک کدپستی، از تولید پلاک تا نصب میدانی و بهنگام‌سازی اطلاعات نشانی همراه کارفرمایان هستیم. در حوزه آرشیو دیجیتال، اسناد کاغذی را اسکن، نمایه‌سازی و در سامانه‌ای قابل جستجو تحویل می‌دهیم.',
+				'تمرکز ما بر کیفیت اجرا، رعایت زمان‌بندی و حفاظت از اطلاعات کارفرمایان است.'
+			),
+		),
+		'management' => array( 'تیم مدیریت', atiyeh_demo_paras( 'مدیران مجموعه، برنامه‌ریزی پروژه‌ها، هماهنگی تیم‌های اجرایی و نظارت بر کیفیت خدمات را بر عهده دارند. معرفی اعضای تیم مدیریت پس از دریافت اطلاعات تکمیل می‌شود.' ) ),
+		'licenses'   => array( 'مجوزها و رتبه‌بندی‌ها', atiyeh_demo_paras( 'مجوزها، گواهینامه‌ها و رتبه‌بندی‌های شرکت پشتوانه کیفیت خدمات ما هستند. تصاویر و مشخصات هر مجوز پس از دریافت از شرکت در این صفحه قرار می‌گیرد.' ) ),
+		'org-chart'  => array( 'چارت سازمانی', atiyeh_demo_paras( 'ساختار سازمانی ما بر پایه دو واحد تخصصی پلاک کدپستی و آرشیو دیجیتال، با پشتیبانی واحدهای کنترل کیفیت و اداری شکل گرفته است.' ) ),
 	);
 	$ids   = array();
 	$order = 0;
@@ -126,19 +148,13 @@ function atiyeh_demo_pages(): array {
 			)
 		);
 	}
-	$children = array(
-		'company'    => 'معرفی شرکت',
-		'management' => 'تیم مدیریت',
-		'licenses'   => 'مجوزها و رتبه‌بندی‌ها',
-		'org-chart'  => 'چارت سازمانی',
-	);
 	$order = 0;
-	foreach ( $children as $slug => $title ) {
+	foreach ( $about_children as $slug => [ $title, $content ] ) {
 		$ids[ $slug ] = atiyeh_demo_insert(
 			array(
 				'post_title'   => $title,
 				'post_name'    => $slug,
-				'post_content' => ATIYEH_PLACEHOLDER,
+				'post_content' => $content,
 				'post_parent'  => $ids['about'],
 				'menu_order'   => $order++,
 			)
@@ -146,7 +162,7 @@ function atiyeh_demo_pages(): array {
 	}
 	update_option( 'show_on_front', 'page' );
 	update_option( 'page_on_front', $ids['home'] );
-	update_option( 'page_for_posts', $ids['news'] );
+	update_option( 'page_for_posts', 0 );
 	WP_CLI::log( sprintf( '  %d صفحه ساخته شد', count( $ids ) ) );
 	return $ids;
 }
@@ -180,6 +196,7 @@ function atiyeh_demo_menu( string $name, string $location, array $items ): void 
 }
 
 atiyeh_demo_purge();
+update_option( 'blogname', 'آمار پژوهان پارسیان' );
 $atiyeh_pages = atiyeh_demo_pages();
 
 atiyeh_demo_menu(
@@ -191,9 +208,8 @@ atiyeh_demo_menu(
 		array( 'خدمات اصلی', '/#products' ),
 		array( 'پروژه‌ها', '/projects/' ),
 		array( 'حسن انجام کار', '/appreciations/' ),
-		array( 'اخبار', $atiyeh_pages['news'] ),
+		array( 'همکاری با ما', $atiyeh_pages['careers'] ),
 		array( 'تماس', $atiyeh_pages['contact'] ),
-		array( 'درگاه پرداخت', $atiyeh_pages['payment'] ),
 	)
 );
 atiyeh_demo_menu(
@@ -202,7 +218,7 @@ atiyeh_demo_menu(
 	array(
 		array( 'درباره ما', $atiyeh_pages['about'] ),
 		array( 'پروژه‌ها', '/projects/' ),
-		array( 'اخبار', $atiyeh_pages['news'] ),
+		array( 'حسن انجام کار', '/appreciations/' ),
 		array( 'درخواست خدمات', $atiyeh_pages['request'] ),
 		array( 'همکاری با ما', $atiyeh_pages['careers'] ),
 	)

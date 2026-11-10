@@ -7,7 +7,7 @@ SCRIPTS_DIR=${SCRIPTS_DIR:-/scripts}
 
 if ! $WP core is-installed >/dev/null 2>&1; then
   echo "▸ نصب وردپرس"
-  $WP core install --url="$SITE_URL" --title="آتیه آمار پژوهان پارسیان" \
+  $WP core install --url="$SITE_URL" --title="آمار پژوهان پارسیان" \
     --admin_user=admin --admin_password=atiyeh-demo --admin_email=admin@example.com \
     --skip-email --locale=fa_IR
 fi

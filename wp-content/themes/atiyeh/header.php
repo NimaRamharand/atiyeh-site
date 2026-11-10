@@ -17,6 +17,7 @@ $atiyeh_cta_url = $atiyeh_request ? get_permalink( $atiyeh_request ) : home_url(
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+<div class="scroll-progress" aria-hidden="true"><i data-scroll-progress></i></div>
 
 <header class="site-header" data-header>
 	<div class="site-header__bar in">
@@ -49,6 +50,9 @@ $atiyeh_cta_url = $atiyeh_request ? get_permalink( $atiyeh_request ) : home_url(
 		</nav>
 
 		<div class="site-header__actions">
+			<button class="icon-btn theme-toggle" type="button" aria-label="حالت شب" aria-pressed="false" data-theme-toggle>
+				<?php echo atiyeh_icon( 'moon', 20 ) . atiyeh_icon( 'sun', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+			</button>
 			<button class="icon-btn" type="button" aria-label="جستجو" aria-expanded="false" aria-controls="site-search" data-search-toggle>
 				<?php echo atiyeh_icon( 'search', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 			</button>

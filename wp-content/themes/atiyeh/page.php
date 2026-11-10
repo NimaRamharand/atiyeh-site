@@ -1,6 +1,6 @@
 <?php
 /**
- * Generic page.
+ * Generic page: hero, content card, links to child pages, call to action.
  *
  * @package Atiyeh
  */
@@ -11,7 +11,7 @@ while ( have_posts() ) :
 	$atiyeh_parent = wp_get_post_parent_id( get_the_ID() );
 	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => $atiyeh_parent ? get_the_title( $atiyeh_parent ) : '' ) );
 	?>
-	<article <?php post_class( 'container content-card prose' ); ?>>
+	<article <?php post_class( 'container content-card prose rv' ); ?>>
 		<?php the_content(); ?>
 		<?php
 		$atiyeh_children = get_pages( array( 'parent' => get_the_ID(), 'sort_column' => 'menu_order' ) );
@@ -25,5 +25,6 @@ while ( have_posts() ) :
 		<?php endif; ?>
 	</article>
 	<?php
+	get_template_part( 'template-parts/blocks/cta' );
 endwhile;
 get_footer();

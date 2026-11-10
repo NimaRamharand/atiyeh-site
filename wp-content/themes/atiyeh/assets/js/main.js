@@ -39,16 +39,211 @@
 		header.querySelectorAll('.site-nav a').forEach((a) => a.addEventListener('click', () => setNav(false)));
 	}
 
-	/* Scroll reveal fallback for browsers without animation-timeline. */
-	function initReveal() {
-		if (CSS.supports('animation-timeline: view()') || reduceMotion || !('IntersectionObserver' in window)) return;
-		document.documentElement.classList.add('js-reveal');
-		const io = new IntersectionObserver((entries) => {
-			entries.forEach((en) => {
-				if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+	const motionOn = document.documentElement.classList.contains('js-motion');
+	const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+	const REVEAL = ['rv', 'rvl', 'rvr', 'rvs', 'rvc'];
+
+	/* Splits a heading into word spans so the words can rise one by one (text nodes only; markup kept). */
+	function splitWords(el) {
+		if (el.classList.contains('split')) return;
+		let i = 0;
+		const walk = (node) => {
+			[...node.childNodes].forEach((n) => {
+				if (n.nodeType === 1) { walk(n); return; }
+				if (n.nodeType !== 3 || !n.textContent.trim()) return;
+				const frag = document.createDocumentFragment();
+				n.textContent.split(/(\s+)/).forEach((part) => {
+					if (!part) return;
+					if (/^\s+$/.test(part)) { frag.append(part); return; }
+					const outer = document.createElement('span');
+					outer.className = 'wd';
+					const inner = document.createElement('span');
+					inner.textContent = part;
+					inner.style.setProperty('--wi', i++);
+					outer.append(inner);
+					frag.append(outer);
+				});
+				n.replaceWith(frag);
 			});
-		}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-		document.querySelectorAll('.rv, .rvl, .rvr, .rvs').forEach((el) => io.observe(el));
+		};
+		walk(el);
+		el.classList.add('split');
+	}
+
+	/*
+	 * Entrance animations. Elements with rv/rvl/rvr/rvs/rvc play once when they enter the viewport;
+	 * elements entering together are staggered. Once played, the classes are removed so hover effects
+	 * (which also use transform) work normally. Big headings get the word-by-word rise.
+	 */
+	function initReveal() {
+		const headings = document.querySelectorAll('.section-title, .about__title, .trust__title, .request__title, .careers__title, .bento__title, .page-hero__title, .hero-slide__title, .split-me');
+		if (!motionOn || !('IntersectionObserver' in window)) {
+			document.documentElement.classList.remove('js-motion');
+			return;
+		}
+		headings.forEach(splitWords);
+		const done = (el) => (e) => {
+			if (e.target !== el || !REVEAL.includes(e.animationName)) return;
+			el.classList.remove(...REVEAL, 'is-visible');
+			el.style.removeProperty('--rd');
+		};
+		const io = new IntersectionObserver((entries) => {
+			const shown = entries.filter((en) => en.isIntersecting).map((en) => en.target)
+				.sort((x, y) => (x.compareDocumentPosition(y) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1));
+			shown.forEach((el, k) => {
+				io.unobserve(el);
+				if (el.matches('[data-seen]') && !REVEAL.some((c) => el.classList.contains(c))) { el.classList.add('seen'); return; }
+				el.style.setProperty('--rd', Math.min(k, 7) * 0.09 + 's');
+				el.addEventListener('animationend', done(el));
+				el.classList.add('is-visible', 'seen');
+				el.querySelectorAll('.split').forEach((h) => { h.style.setProperty('--wd', (Math.min(k, 7) * 0.09 + 0.15) + 's'); h.classList.add('words-in'); });
+			});
+		}, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+		document.querySelectorAll(REVEAL.map((c) => '.' + c).join(',') + ',[data-seen]').forEach((el) => io.observe(el));
+
+		// Headings that are not inside a reveal element animate on their own.
+		const hio = new IntersectionObserver((entries) => entries.forEach((en) => {
+			if (!en.isIntersecting) return;
+			en.target.classList.add('words-in');
+			hio.unobserve(en.target);
+		}), { threshold: 0.3 });
+		headings.forEach((h) => {
+			if (h.closest('[data-slide]')) return; // the slider drives these
+			if (!h.closest(REVEAL.map((c) => '.' + c).join(','))) hio.observe(h);
+		});
+	}
+
+	/* Scroll progress bar, back-to-top button, hide-on-scroll header. */
+	function initScrollUI() {
+		const bar = document.querySelector('[data-scroll-progress]');
+		const top = document.querySelector('[data-to-top]');
+		const header = document.querySelector('[data-header]');
+		let lastY = window.scrollY, ticking = false;
+		const update = () => {
+			ticking = false;
+			const y = window.scrollY;
+			const max = document.documentElement.scrollHeight - window.innerHeight;
+			const p = max > 0 ? Math.min(1, y / max) : 0;
+			bar?.style.setProperty('--p', p.toFixed(4));
+			if (top) { top.style.setProperty('--p', p.toFixed(4)); top.classList.toggle('is-shown', y > 600); }
+			if (header && !reduceMotion) {
+				const hide = y > 260 && y > lastY + 4 && !header.classList.contains('nav-open') && !header.contains(document.activeElement);
+				if (hide) header.classList.add('is-hidden');
+				else if (y < lastY - 4 || y <= 260) header.classList.remove('is-hidden');
+			}
+			lastY = y;
+		};
+		window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+		window.addEventListener('resize', update);
+		update();
+		top?.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+			document.querySelector('.skip-link')?.focus({ preventScroll: true });
+		});
+	}
+
+	/* Light / dark switch: remembered per browser; circular reveal where View Transitions exist. */
+	function initTheme() {
+		const btn = document.querySelector('[data-theme-toggle]');
+		if (!btn) return;
+		const root = document.documentElement;
+		const sync = () => {
+			const dark = root.getAttribute('data-theme') === 'dark';
+			btn.setAttribute('aria-pressed', String(dark));
+			btn.setAttribute('aria-label', dark ? 'حالت روز' : 'حالت شب');
+			document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#0b1220' : '#1757b8');
+		};
+		const apply = (dark) => {
+			if (dark) root.setAttribute('data-theme', 'dark'); else root.removeAttribute('data-theme');
+			try { localStorage.setItem('atiyeh-theme', dark ? 'dark' : 'light'); } catch (e) { /* private mode */ }
+			sync();
+		};
+		sync();
+		btn.addEventListener('click', () => {
+			const dark = root.getAttribute('data-theme') !== 'dark';
+			if (reduceMotion) { apply(dark); return; }
+			if (!document.startViewTransition) {
+				root.classList.add('theme-fade');
+				apply(dark);
+				setTimeout(() => root.classList.remove('theme-fade'), 500);
+				return;
+			}
+			const r = btn.getBoundingClientRect();
+			const x = r.left + r.width / 2, y = r.top + r.height / 2;
+			const end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+			root.classList.add('vt-theme');
+			const vt = document.startViewTransition(() => apply(dark));
+			vt.ready.then(() => root.animate(
+				{ clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${end}px at ${x}px ${y}px)`] },
+				{ duration: 700, easing: 'cubic-bezier(.2,.8,.2,1)', pseudoElement: '::view-transition-new(root)' }
+			));
+			vt.finished.finally(() => root.classList.remove('vt-theme'));
+		});
+	}
+
+	/* Pointer effects: card spotlight, gentle 3D tilt, magnetic buttons, click ripple, hero parallax. */
+	function initPointerFX() {
+		document.addEventListener('pointerdown', (e) => {
+			const host = e.target.closest('.btn, .chip--btn, .icon-btn, .hero__arrow, .ff-btn-submit');
+			if (!host || reduceMotion) return;
+			const r = host.getBoundingClientRect();
+			const size = Math.max(r.width, r.height) * 2.2;
+			const dot = document.createElement('span');
+			dot.className = 'ripple';
+			dot.setAttribute('aria-hidden', 'true');
+			dot.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - r.left - size / 2}px;top:${e.clientY - r.top - size / 2}px`;
+			if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+			host.style.overflow = 'hidden';
+			host.append(dot);
+			dot.addEventListener('animationend', () => dot.remove());
+		});
+		if (!finePointer || reduceMotion) return;
+
+		document.querySelectorAll('.area-card, .step, .project-card, .bento__card, .plaque__link, .job, .about__link, .link-tile, .value-card, .team-card, .cert, .perk, .svc-feature, .quick-card, .org-node').forEach((el) => {
+			const spot = document.createElement('span');
+			spot.className = 'spot';
+			spot.setAttribute('aria-hidden', 'true');
+			el.classList.add('has-spot');
+			el.append(spot);
+			el.addEventListener('pointermove', (e) => {
+				const r = el.getBoundingClientRect();
+				el.style.setProperty('--sx', (e.clientX - r.left) + 'px');
+				el.style.setProperty('--sy', (e.clientY - r.top) + 'px');
+			});
+		});
+
+		document.querySelectorAll('.bento__card, .project-card, .plaque__link, .stat, .team-card, .cert, .hero-slide__visual, .page-hero__visual').forEach((el) => {
+			el.classList.add('tilt');
+			if (el.parentElement) el.parentElement.style.perspective = '1100px';
+			const max = el.matches('.stat') ? 10 : 6;
+			el.addEventListener('pointermove', (e) => {
+				const r = el.getBoundingClientRect();
+				const x = (e.clientX - r.left) / r.width - 0.5;
+				const y = (e.clientY - r.top) / r.height - 0.5;
+				const mag = Math.min(1, Math.hypot(x, y) * 2);
+				el.style.rotate = `${(-y).toFixed(3)} ${x.toFixed(3)} 0 ${(mag * max).toFixed(2)}deg`;
+			});
+			el.addEventListener('pointerleave', () => { el.style.rotate = ''; });
+		});
+
+		document.querySelectorAll('.btn, .hero__arrow, .to-top').forEach((el) => {
+			el.addEventListener('pointermove', (e) => {
+				const r = el.getBoundingClientRect();
+				const x = (e.clientX - r.left - r.width / 2) / r.width;
+				const y = (e.clientY - r.top - r.height / 2) / r.height;
+				el.style.translate = `${(x * 10).toFixed(1)}px ${(y * 8).toFixed(1)}px`;
+			});
+			el.addEventListener('pointerleave', () => { el.style.translate = ''; });
+		});
+
+		document.querySelectorAll('.hero, .page-hero').forEach((el) => {
+			el.addEventListener('pointermove', (e) => {
+				const r = el.getBoundingClientRect();
+				el.style.setProperty('--mx', ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+				el.style.setProperty('--my', ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+			});
+			el.addEventListener('pointerleave', () => { el.style.setProperty('--mx', 0); el.style.setProperty('--my', 0); });
+		});
 	}
 
 	/* Hero slider: auto-advance 5.5 s; pauses on hover / focus / tab hidden; arrows, dots, keyboard; pause button. */
@@ -61,8 +256,10 @@
 		const pauseBtn = root.querySelector('[data-slider-pause]');
 		const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
 		const DELAY = 5500;
-		let cur = 0, timer = 0, hovered = false, focused = false, userPaused = reduceMotion;
+		let cur = 0, timer = 0, started = 0, left = DELAY, hovered = false, focused = false, userPaused = reduceMotion;
+		root.style.setProperty('--slide-delay', DELAY + 'ms');
 
+		const animateTitle = (slide, on) => slide.querySelectorAll('.split').forEach((h) => h.classList.toggle('words-in', on));
 		const go = (n) => {
 			cur = (n + slides.length) % slides.length;
 			slides.forEach((s, k) => {
@@ -70,24 +267,35 @@
 				s.classList.toggle('is-active', on);
 				s.toggleAttribute('inert', !on);
 				if (on) s.removeAttribute('aria-hidden'); else s.setAttribute('aria-hidden', 'true');
+				animateTitle(s, false);
 			});
+			// Next frame: replay the word rise on the slide that just became active.
+			requestAnimationFrame(() => requestAnimationFrame(() => animateTitle(slides[cur], true)));
 			dots.forEach((d, k) => {
 				d.classList.toggle('is-active', k === cur);
 				if (k === cur) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
 			});
 			if (counter) counter.textContent = fa(cur + 1) + ' / ' + fa(slides.length);
+			clearTimeout(timer); timer = 0; started = 0; left = DELAY;
 			schedule();
 		};
+		// Keeps the remaining time across hover/focus pauses so the dot timer and the slide change stay in sync.
 		const schedule = () => {
 			clearTimeout(timer);
-			if (!userPaused && !hovered && !focused && !document.hidden) timer = setTimeout(() => go(cur + 1), DELAY);
+			const hold = userPaused || hovered || focused || document.hidden;
+			if (timer && started) left = Math.max(0, left - (performance.now() - started));
+			timer = 0; started = 0;
+			root.classList.toggle('is-hold', hold && !userPaused);
+			if (!hold) { started = performance.now(); timer = setTimeout(() => go(cur + 1), left); }
 		};
 		const setPaused = (p) => {
 			userPaused = p;
 			root.classList.toggle('is-paused', p);
 			pauseBtn?.setAttribute('aria-label', p ? 'ادامه نمایش خودکار' : 'توقف نمایش خودکار');
+			if (!p) { clearTimeout(timer); timer = 0; started = 0; left = DELAY; dots[cur]?.classList.remove('is-active'); void dots[cur]?.offsetWidth; dots[cur]?.classList.add('is-active'); }
 			schedule();
 		};
+		requestAnimationFrame(() => animateTitle(slides[cur], true));
 
 		root.querySelector('[data-slider-prev]')?.addEventListener('click', () => go(cur - 1));
 		root.querySelector('[data-slider-next]')?.addEventListener('click', () => go(cur + 1));
@@ -119,7 +327,12 @@
 				items.forEach((it) => {
 					const ok = v === 'all' || it.dataset.filterItem.split(' ').includes(v);
 					it.hidden = !ok;
-					if (ok) shown++;
+					it.classList.remove('is-in');
+					if (ok) {
+						it.style.setProperty('--fd', (shown * 0.08) + 's');
+						if (!reduceMotion) { void it.offsetWidth; it.classList.add('is-in'); }
+						shown++;
+					}
 				});
 				root.classList.toggle('is-filtered', v !== 'all');
 				if (empty) empty.hidden = shown > 0;
@@ -211,19 +424,12 @@
 		});
 	}
 
-	/* Payment page: the demo has no bank gateway connected; explain instead of navigating. */
-	function initPayButton() {
-		const btn = document.querySelector('[data-pay-btn]');
-		const note = document.querySelector('[data-pay-note]');
-		btn?.addEventListener('click', () => { if (note) note.hidden = false; });
-	}
-
 	/* Move focus to a server-side status message (after a form redirect) so screen readers announce it. */
 	function initFocusMessages() {
 		document.querySelector('[data-focus]')?.focus({ preventScroll: false });
 	}
 
-	const modules = [initHeader, initReveal, initSlider, initFilter, initCounters, initDemoForms, initLightbox, initResumeForm, initPayButton, initFocusMessages];
+	const modules = [initHeader, initTheme, initScrollUI, initReveal, initPointerFX, initSlider, initFilter, initCounters, initDemoForms, initLightbox, initResumeForm, initFocusMessages];
 	window.atiyeh = { modules, reduceMotion };
 	const boot = () => modules.forEach((fn) => fn());
 	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);

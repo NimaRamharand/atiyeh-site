@@ -14,8 +14,8 @@ $atiyeh_links = array(
 ?>
 <section class="about container" id="about">
 	<div class="about__media rvr">
-		<div class="about__img">
-			<img src="<?php echo esc_url( atiyeh_asset( 'img/careers-team.webp' ) ); ?>" alt="تیم آتیه آمار پژوهان" class="pimg" width="800" height="450" loading="lazy" decoding="async">
+		<div class="about__img rvc">
+			<img src="<?php echo esc_url( atiyeh_asset( 'img/careers-team.webp' ) ); ?>" alt="تیم آمار پژوهان پارسیان" class="pimg" width="800" height="450" loading="lazy" decoding="async">
 		</div>
 		<div class="about__ball float" aria-hidden="true"></div>
 		<div class="about__frame spin" aria-hidden="true"></div>
@@ -26,7 +26,7 @@ $atiyeh_links = array(
 	</div>
 	<div class="about__text rvl">
 		<span class="kicker">درباره شرکت</span>
-		<h2 class="about__title">آتیه آمار پژوهان پارسیان</h2>
+		<h2 class="about__title">آمار پژوهان پارسیان</h2>
 		<p class="about__lead">[ متن معرفی شرکت، سابقه فعالیت و تخصص‌ها در اینجا قرار می‌گیرد. ]</p>
 		<div class="about__links">
 			<?php foreach ( $atiyeh_links as [ $slug, $label, $shape ] ) : ?>

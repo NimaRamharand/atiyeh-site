@@ -29,6 +29,33 @@
 	--r-asym-alt: 8px 40px 8px 40px;
 	--r-arch: 200px 200px 28px 28px;
 	--focus: 0 0 0 3px #fff, 0 0 0 6px var(--c-primary);
+	/* Semantic surface tokens — redefined for the dark theme below. */
+	--c-surface: #fff;
+	--c-text: var(--c-slate-900);
+	--c-num: #12469a;
+	--c-footer: var(--c-slate-900);
+	--shadow-card: 0 30px 60px rgba(20, 40, 30, .06);
+	color-scheme: light;
+}
+
+/* ---------- Dark theme (toggle in the header; choice remembered per browser) ---------- */
+html[data-theme="dark"] {
+	--c-page: #0b1220;
+	--c-section: #0f1a2e;
+	--c-surface: #131f35;
+	--c-border: #24344f;
+	--c-text: #e8eef8;
+	--c-body: #b5c2d6;
+	--c-muted: #8b9bb4;
+	--c-chip: #1c2a44;
+	--c-soft: #1b2d4d;
+	--c-soft-2: #1b2a44;
+	--c-soft-3: #c9dcf7;
+	--c-num: #9cc6ff;
+	--c-footer: #070c16;
+	--shadow-card: 0 30px 60px rgba(0, 0, 0, .35);
+	--focus: 0 0 0 3px var(--c-page), 0 0 0 6px var(--c-accent);
+	color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -37,7 +64,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
 	margin: 0;
 	background: var(--c-page);
-	color: var(--c-slate-900);
+	color: var(--c-text);
 	font-family: var(--font);
 	font-size: 16px;
 	line-height: 1.8;
@@ -88,22 +115,15 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .drift { animation: drift 10s ease-in-out infinite; }
 .live { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c-accent); animation: pulse 1.8s infinite; }
 
-/* Scroll reveal: CSS scroll-driven where supported … */
-@supports (animation-timeline: view()) {
-	.rv { animation: rv linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
-	.rvl { animation: rvl linear both; animation-timeline: view(); animation-range: entry 0% entry 45%; }
-	.rvr { animation: rvr linear both; animation-timeline: view(); animation-range: entry 0% entry 45%; }
-	.rvs { animation: rvs linear both; animation-timeline: view(); animation-range: entry 0% entry 45%; }
-}
-/* … IntersectionObserver fallback (main.js adds .js-reveal to <html>). */
-@supports not (animation-timeline: view()) {
-	.js-reveal .rv, .js-reveal .rvl, .js-reveal .rvr, .js-reveal .rvs { opacity: 0; transition: opacity .8s var(--ease), transform .9s var(--ease); }
-	.js-reveal .rv { transform: translateY(56px); }
-	.js-reveal .rvl { transform: translateX(-70px); }
-	.js-reveal .rvr { transform: translateX(70px); }
-	.js-reveal .rvs { transform: scale(.88); }
-	.js-reveal .is-visible { opacity: 1; transform: none; }
-}
+/* Scroll reveal: main.js plays the entrance once the element enters the viewport (staggered per batch),
+   then removes these classes so hover transforms keep working. See motion.css for the rest. */
+.js-motion .rv, .js-motion .rvl, .js-motion .rvr, .js-motion .rvs, .js-motion .rvc { opacity: 0; }
+.js-motion .rv.is-visible { animation: rv 1s var(--ease) var(--rd, 0s) both; }
+.js-motion .rvl.is-visible { animation: rvl 1.05s var(--ease) var(--rd, 0s) both; }
+.js-motion .rvr.is-visible { animation: rvr 1.05s var(--ease) var(--rd, 0s) both; }
+.js-motion .rvs.is-visible { animation: rvs .95s var(--ease) var(--rd, 0s) both; }
+.js-motion .rvc.is-visible { animation: rvc 1.2s var(--ease) var(--rd, 0s) both; }
+@keyframes rvc { from { opacity: 1; clip-path: inset(0 0 100% 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 
 /* ---------- Buttons & interactive primitives ---------- */
 .btn {
@@ -206,7 +226,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .search-form { display: flex; gap: 8px; }
 .search-form input {
 	flex: 1; min-width: 0; height: 48px; border-radius: 999px; padding: 0 20px;
-	border: 1px solid var(--c-border); background: #fff; color: var(--c-slate-900);
+	border: 1px solid var(--c-border); background: var(--c-surface); color: var(--c-text);
 }
 
 @media (max-width: 1180px) {
@@ -247,23 +267,23 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* ---------- Inner content ---------- */
 .content-card {
-	position: relative; z-index: 2; max-width: 980px; margin: -40px auto 90px; background: #fff;
-	border-radius: 60px 14px 60px 14px; padding: 48px; box-shadow: 0 30px 60px rgba(20, 40, 30, .06);
+	position: relative; z-index: 2; max-width: 980px; margin: -40px auto 90px; background: var(--c-surface);
+	border-radius: 60px 14px 60px 14px; padding: 48px; box-shadow: var(--shadow-card);
 }
 .content-card__media { margin: 0 0 28px; border-radius: 40px 8px 40px 8px; overflow: hidden; max-height: 460px; }
 .prose { color: var(--c-body); }
-.prose h2 { font-size: 28px; color: var(--c-slate-900); margin: 1.4em 0 .5em; }
-.prose h3 { font-size: 22px; color: var(--c-slate-900); margin: 1.2em 0 .4em; }
+.prose h2 { font-size: 28px; color: var(--c-text); margin: 1.4em 0 .5em; }
+.prose h3 { font-size: 22px; color: var(--c-text); margin: 1.2em 0 .4em; }
 .prose a:not(.btn):not(.link-tile) { color: var(--c-primary); text-decoration: underline; text-underline-offset: 4px; }
 .link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
 .link-tile {
-	display: block; background: #fff; border: 1px solid var(--c-border); border-radius: 28px 6px 28px 6px;
-	padding: 18px 20px; font-weight: 700; color: var(--c-slate-900);
+	display: block; background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 28px 6px 28px 6px;
+	padding: 18px 20px; font-weight: 700; color: var(--c-text);
 }
 .link-tile--alt { border-radius: 6px 28px 6px 28px; }
 
 .post-list { display: flex; flex-direction: column; gap: 16px; max-width: 900px; }
-.news-item { background: #fff; border-radius: 60px 14px 60px 14px; padding: 16px; display: flex; gap: 18px; align-items: center; }
+.news-item { background: var(--c-surface); border-radius: 60px 14px 60px 14px; padding: 16px; display: flex; gap: 18px; align-items: center; }
 .news-item--alt { border-radius: 14px 60px 14px 60px; }
 .news-item__img { width: 110px; height: 84px; border-radius: 20px; flex: none; display: block; }
 .news-item__title { display: block; }
@@ -274,7 +294,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .pagination .current { background: var(--c-primary); color: #fff; }
 
 /* ---------- Footer ---------- */
-.site-footer { position: relative; background: var(--c-slate-900); color: #c9d1cd; margin-top: 80px; }
+.site-footer { position: relative; background: var(--c-footer); color: #c9d1cd; margin-top: 80px; }
 .site-footer .wave--footer { position: absolute; top: -79px; left: 0; height: 80px; }
 .site-footer__inner {
 	max-width: var(--wrap); margin: 0 auto; padding: 64px var(--gutter) 28px;
@@ -318,5 +338,5 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	*, *::before, *::after { animation: none !important; transition: none !important; }
-	.js-reveal .rv, .js-reveal .rvl, .js-reveal .rvr, .js-reveal .rvs { opacity: 1; transform: none; }
+	.js-motion .rv, .js-motion .rvl, .js-motion .rvr, .js-motion .rvs, .js-motion .rvc { opacity: 1; transform: none; }
 }

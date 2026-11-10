@@ -8,14 +8,15 @@
 </main>
 
 <footer class="site-footer" id="contact">
-	<?php atiyeh_wave( 'M0 80V40C240 0 520 70 800 30S1240 10 1440 40V80Z', '#1f262b', 'wave--footer', 80 ); ?>
+	<?php atiyeh_wave( 'M0 80V40C240 0 520 70 800 30S1240 10 1440 40V80Z', 'var(--c-footer)', 'wave--footer', 80 ); ?>
 	<div class="site-footer__inner">
-		<div class="site-footer__about">
-			<b class="site-footer__name"><?php bloginfo( 'name' ); ?></b>
+		<div class="site-footer__about rv">
+			<b class="site-footer__name"><span class="site-footer__mark" aria-hidden="true"><?php echo atiyeh_icon( 'logo', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><?php bloginfo( 'name' ); ?></b>
 			<p>پلاک کدپستی · آرشیو دیجیتال اسناد</p>
+			<p class="site-footer__blurb">تولید و نصب پلاک کدپستی، بهنگام‌سازی نشانی‌ها و تبدیل اسناد کاغذی به آرشیو دیجیتال قابل جستجو؛ با دقت میدانی و امنیت اطلاعات.</p>
 		</div>
 
-		<nav class="site-footer__col" aria-label="دسترسی سریع">
+		<nav class="site-footer__col rv" aria-label="دسترسی سریع">
 			<b class="site-footer__title">دسترسی سریع</b>
 			<?php
 			wp_nav_menu(
@@ -30,7 +31,7 @@
 			?>
 		</nav>
 
-		<div class="site-footer__col">
+		<div class="site-footer__col rv">
 			<b class="site-footer__title">تماس</b>
 			<address class="site-footer__contact">
 				<span><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'address' ) ) ); ?></span>
@@ -39,7 +40,7 @@
 			</address>
 		</div>
 
-		<div class="site-footer__newsletter" id="newsletter">
+		<div class="site-footer__newsletter rv" id="newsletter">
 			<b class="site-footer__title">دریافت خبرنامه</b>
 			<?php
 			$atiyeh_nl  = isset( $_GET['newsletter'] ) ? sanitize_key( $_GET['newsletter'] ) : ''; // phpcs:ignore WordPress.Security.NonceVerification
@@ -63,6 +64,11 @@
 	</div>
 	<div class="site-footer__copy">© <?php echo esc_html( atiyeh_jyear() ); ?> کلیه حقوق برای <?php bloginfo( 'name' ); ?> محفوظ است.</div>
 </footer>
+
+<button class="to-top" type="button" aria-label="بازگشت به بالای صفحه" data-to-top>
+	<svg class="to-top__ring" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21"/><circle cx="24" cy="24" r="21" data-to-top-ring/></svg>
+	<?php echo atiyeh_icon( 'up', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+</button>
 
 <?php wp_footer(); ?>
 </body>

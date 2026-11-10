@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'فرصت‌های شغلی', 'desc' => 'نیروهای میدانی، اپراتور اسکن، نمایه‌سازی و کنترل کیفیت؛ رزومه خود را برای ما ارسال کنید.' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'فرصت‌های شغلی', 'desc' => 'نیروهای میدانی، اپراتور اسکن، نمایه‌سازی و کنترل کیفیت؛ رزومه خود را برای ما ارسال کنید.', 'img' => 'careers-team.webp' ) );
 	$atiyeh_jobs = post_type_exists( 'job' ) ? get_posts(
 		array(
 			'post_type'   => 'job',
@@ -20,17 +20,20 @@ while ( have_posts() ) :
 		)
 	) : array();
 	?>
+	<?php
+	$atiyeh_intro = atiyeh_page_intro();
+	if ( $atiyeh_intro ) {
+		echo '<div class="container"><div class="team__intro team__intro--top prose rv">' . $atiyeh_intro . '</div></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+	get_template_part( 'template-parts/blocks/icon-cards', null, array( 'items' => atiyeh_perks(), 'kicker' => 'چرا با ما', 'title' => 'کار در آمار پژوهان پارسیان', 'class' => 'perks' ) );
+	?>
 	<section class="container section-pad careers-page">
-		<?php if ( trim( wp_strip_all_tags( get_the_content() ) ) ) : ?>
-			<div class="content-card prose careers-page__intro"><?php the_content(); ?></div>
-		<?php endif; ?>
-
-		<div class="sec-head"><div><span class="kicker">موقعیت‌های فعال</span><h2 class="section-title">فرصت‌های شغلی</h2></div></div>
+		<div class="sec-head rv"><div><span class="kicker">موقعیت‌های فعال</span><h2 class="section-title">فرصت‌های شغلی</h2></div></div>
 		<?php if ( $atiyeh_jobs ) : ?>
 			<div class="jobs">
 				<?php foreach ( $atiyeh_jobs as $atiyeh_job ) : ?>
 					<?php $atiyeh_city = get_post_meta( $atiyeh_job->ID, '_atiyeh_city', true ); ?>
-					<details class="job">
+					<details class="job rv">
 						<summary class="job__head">
 							<b class="job__title"><?php echo esc_html( get_the_title( $atiyeh_job ) ); ?></b>
 							<?php if ( $atiyeh_city ) : ?><span class="job__city mut"><?php echo esc_html( atiyeh_nb( $atiyeh_city ) ); ?></span><?php endif; ?>
@@ -46,7 +49,16 @@ while ( have_posts() ) :
 			<p class="mut">در حال حاضر موقعیت فعالی نداریم؛ رزومه شما برای فرصت‌های آینده ثبت می‌شود.</p>
 		<?php endif; ?>
 
-		<div class="form-card" id="apply">
+		<div class="hire-steps" data-seen>
+			<h2 class="hire-steps__title rv">مسیر استخدام</h2>
+			<ol class="hire-steps__list">
+				<?php foreach ( atiyeh_hiring_steps() as [ $atiyeh_n, $atiyeh_t, $atiyeh_d ] ) : ?>
+					<li class="hire-step rv"><span class="hire-step__n"><?php echo esc_html( $atiyeh_n ); ?></span><b><?php echo esc_html( $atiyeh_t ); ?></b><span class="mut"><?php echo esc_html( $atiyeh_d ); ?></span></li>
+				<?php endforeach; ?>
+			</ol>
+		</div>
+
+		<div class="form-card rvs" id="apply">
 			<h2 class="form-card__title">ارسال رزومه</h2>
 			<?php
 			if ( function_exists( 'atiyeh_core_application_form' ) ) {

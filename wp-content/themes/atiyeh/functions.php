@@ -20,3 +20,4 @@ require ATIYEH_DIR . '/inc/helpers.php';
 require ATIYEH_DIR . '/inc/setup.php';
 require ATIYEH_DIR . '/inc/customizer.php';
 require ATIYEH_DIR . '/inc/home-data.php';
+require ATIYEH_DIR . '/inc/page-data.php';

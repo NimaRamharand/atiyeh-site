@@ -13,10 +13,15 @@ get_template_part(
 		'title'  => 'لوح‌های سپاس',
 		'kicker' => 'حسن انجام کار',
 		'desc'   => 'سندی بر تخصص و تعهد؛ تقدیرنامه‌های کارفرمایان پس از اجرای پروژه‌ها.',
+		'img'    => 'trust-plaques.webp',
 	)
 );
 ?>
 <section class="container section-pad">
+	<div class="plaques-intro rv">
+		<span class="plaques-intro__icon float" aria-hidden="true"><?php echo atiyeh_icon( 'award', 30 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
+		<p>هر لوح سپاس، بازخورد کارفرمایی است که پروژه‌اش را به ما سپرده است. برای دیدن تصویر کامل هر لوح، روی آن کلیک کنید.</p>
+	</div>
 	<?php if ( have_posts() ) : ?>
 		<ul class="plaques" role="list">
 			<?php
@@ -48,4 +53,5 @@ get_template_part(
 	<p class="lightbox__caption" data-lightbox-caption></p>
 </dialog>
 <?php
+get_template_part( 'template-parts/blocks/cta' );
 get_footer();

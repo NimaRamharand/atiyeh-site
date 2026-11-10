@@ -35,6 +35,10 @@ add_action(
 		// Section components (homepage sections, project cards, forms) — reused by inner templates.
 		$sections = ATIYEH_DIR . '/assets/css/sections.css';
 		wp_enqueue_style( 'atiyeh-sections', atiyeh_asset( 'css/sections.css' ), array( 'atiyeh' ), (string) filemtime( $sections ) );
+		foreach ( array( 'pages', 'motion' ) as $sheet ) {
+			$file = ATIYEH_DIR . "/assets/css/{$sheet}.css";
+			wp_enqueue_style( "atiyeh-{$sheet}", atiyeh_asset( "css/{$sheet}.css" ), array( 'atiyeh-sections' ), (string) filemtime( $file ) );
+		}
 		wp_enqueue_script( 'atiyeh', atiyeh_asset( 'js/main.js' ), array(), (string) filemtime( $js ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 	}
 );
@@ -100,4 +104,42 @@ add_filter(
 	},
 	10,
 	2
+);
+
+/*
+ * Before first paint: apply the saved light/dark choice (no flash) and opt in to entrance animations.
+ * If main.js never runs, the safety timer removes `js-motion` so hidden reveal elements show up anyway.
+ */
+add_action(
+	'wp_head',
+	function (): void {
+		echo "<script>(function(d){var r=d.documentElement,t;try{t=localStorage.getItem('atiyeh-theme')}catch(e){}if(t==='dark')r.setAttribute('data-theme','dark');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){r.classList.add('js-motion');setTimeout(function(){if(!window.atiyeh)r.classList.remove('js-motion')},2500)}})(document);</script>\n";
+	},
+	0
+);
+
+/** Favicon / app icons from the theme, unless a Site Icon was chosen in the Customizer. */
+function atiyeh_icon_links(): void {
+	if ( has_site_icon() ) {
+		return;
+	}
+	printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( atiyeh_asset( 'img/icon/favicon.svg' ) ) );
+	printf( '<link rel="icon" href="%s" sizes="32x32" type="image/png">' . "\n", esc_url( atiyeh_asset( 'img/icon/favicon-32.png' ) ) );
+	printf( '<link rel="icon" href="%s" sizes="192x192" type="image/png">' . "\n", esc_url( atiyeh_asset( 'img/icon/favicon-192.png' ) ) );
+	printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( atiyeh_asset( 'img/icon/apple-touch-icon.png' ) ) );
+	echo '<meta name="theme-color" content="#1757b8">' . "\n";
+}
+add_action( 'wp_head', 'atiyeh_icon_links', 2 );
+add_action( 'admin_head', 'atiyeh_icon_links' );
+add_action( 'login_head', 'atiyeh_icon_links' );
+
+// /favicon.ico: WordPress would redirect to its own logo; send ours instead.
+add_action(
+	'do_faviconico',
+	function (): void {
+		if ( ! has_site_icon() ) {
+			wp_safe_redirect( atiyeh_asset( 'img/icon/favicon-32.png' ) );
+			exit;
+		}
+	}
 );

@@ -15,11 +15,12 @@ get_template_part(
 		'title'  => $atiyeh_term ? 'پروژه‌های ' . $atiyeh_term->name : 'پروژه‌ها',
 		'kicker' => 'نمونه کارها',
 		'desc'   => 'نمونه‌ای از پروژه‌های پلاک کدپستی و آرشیو دیجیتال اسناد که برای کارفرمایان اجرا شده است.',
+		'img'    => 'project-map-update.webp',
 	)
 );
 ?>
 <section class="projects projects--archive container" data-filter>
-	<div class="chips projects__chips" role="group" aria-label="فیلتر بر اساس خدمت">
+	<div class="chips projects__chips rv" role="group" aria-label="فیلتر بر اساس خدمت">
 		<button type="button" class="chip chip--btn<?php echo 'all' === $atiyeh_active ? ' is-active' : ''; ?>" aria-pressed="<?php echo 'all' === $atiyeh_active ? 'true' : 'false'; ?>" data-filter-btn="all">همه</button>
 		<?php foreach ( atiyeh_service_terms() as $atiyeh_slug => $atiyeh_label ) : ?>
 			<?php $atiyeh_on = $atiyeh_slug === $atiyeh_active; ?>
@@ -39,4 +40,5 @@ get_template_part(
 	<p class="projects__empty"<?php echo have_posts() ? ' hidden' : ''; ?> data-filter-empty>پروژه‌ای در این دسته ثبت نشده است.</p>
 </section>
 <?php
+get_template_part( 'template-parts/blocks/cta', null, array( 'title' => 'پروژه بعدی را با هم اجرا کنیم', 'desc' => 'برای پروژه پلاک کدپستی یا آرشیو دیجیتال سازمان خود درخواست ثبت کنید.' ) );
 get_footer();

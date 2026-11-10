@@ -6,7 +6,7 @@
  */
 
 get_header();
-$atiyeh_sections = array( 'hero', 'clients', 'about', 'areas', 'products', 'stats', 'projects', 'trust', 'news', 'process', 'request', 'careers' );
+$atiyeh_sections = array( 'hero', 'clients', 'about', 'areas', 'products', 'ticker', 'stats', 'projects', 'trust', 'process', 'request', 'careers' );
 foreach ( $atiyeh_sections as $atiyeh_section ) {
 	if ( locate_template( "template-parts/home/{$atiyeh_section}.php" ) ) {
 		get_template_part( "template-parts/home/{$atiyeh_section}" );

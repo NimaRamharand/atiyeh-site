@@ -7,7 +7,7 @@
 
 ?>
 <section class="trust" id="trust">
-	<?php atiyeh_wave( 'M0 0H1440V50C1180 100 900 0 640 50S200 90 0 40Z', '#f4f6f5', 'trust__wave' ); ?>
+	<?php atiyeh_wave( 'M0 0H1440V50C1180 100 900 0 640 50S200 90 0 40Z', 'var(--c-page)', 'trust__wave' ); ?>
 	<div class="trust__frame spin" aria-hidden="true"></div>
 	<div class="container trust__inner">
 		<div class="trust__text rvr">

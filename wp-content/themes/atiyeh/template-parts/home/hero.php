@@ -77,5 +77,5 @@ $atiyeh_total  = count( $atiyeh_slides );
 		</div>
 	</div>
 
-	<?php atiyeh_wave( 'M0 120V70C180 10 360 0 560 40S980 120 1180 80 1360 20 1440 40V120Z', '#f4f6f5', 'hero__wave', 120 ); ?>
+	<?php atiyeh_wave( 'M0 120V70C180 10 360 0 560 40S980 120 1180 80 1360 20 1440 40V120Z', 'var(--c-page)', 'hero__wave', 120 ); ?>
 </section>
