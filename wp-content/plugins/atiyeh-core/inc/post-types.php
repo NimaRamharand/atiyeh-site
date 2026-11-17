@@ -58,6 +58,7 @@ function atiyeh_core_register_types(): void {
 			'menu_icon'          => 'dashicons-building',
 			'menu_position'      => 22,
 			'supports'           => array( 'title', 'thumbnail', 'page-attributes' ),
+			'taxonomies'         => array( 'service' ),
 		)
 	);
 
@@ -91,7 +92,7 @@ function atiyeh_core_register_types(): void {
 
 	register_taxonomy(
 		'service',
-		array( 'project' ),
+		array( 'project', 'client' ),
 		array(
 			'labels'            => array(
 				'name'          => 'نوع خدمت',
@@ -143,7 +144,7 @@ add_action(
 	'manage_job_posts_custom_column',
 	static function ( string $col, int $id ): void {
 		if ( 'atiyeh_active' === $col ) {
-			echo atiyeh_core_meta( $id, '_atiyeh_active' ) ? '✅ فعال' : '⏸ غیرفعال';
+			echo atiyeh_core_meta( $id, '_atiyeh_active' ) ? '<strong style="color:#1e7e34">فعال</strong>' : 'غیرفعال';
 		} elseif ( 'atiyeh_city' === $col ) {
 			echo esc_html( atiyeh_core_meta( $id, '_atiyeh_city' ) );
 		}
@@ -153,13 +154,15 @@ add_action(
 );
 add_filter(
 	'manage_client_posts_columns',
-	static fn( array $c ): array => array( 'cb' => $c['cb'], 'atiyeh_logo' => 'لوگو' ) + $c
+	static fn( array $c ): array => array( 'cb' => $c['cb'], 'atiyeh_logo' => 'لوگو' ) + $c + array( 'atiyeh_city' => 'شهر' )
 );
 add_action(
 	'manage_client_posts_custom_column',
 	static function ( string $col, int $id ): void {
 		if ( 'atiyeh_logo' === $col ) {
 			echo get_the_post_thumbnail( $id, array( 120, 55 ), array( 'style' => 'border:1px solid #ddd;border-radius:6px;background:#fff' ) );
+		} elseif ( 'atiyeh_city' === $col ) {
+			echo esc_html( atiyeh_core_meta( $id, '_atiyeh_city' ) );
 		}
 	},
 	10,

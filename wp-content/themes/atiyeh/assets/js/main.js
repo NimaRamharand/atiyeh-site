@@ -199,7 +199,7 @@
 		});
 		if (!finePointer || reduceMotion) return;
 
-		document.querySelectorAll('.area-card, .step, .project-card, .bento__card, .plaque__link, .job, .about__link, .link-tile, .value-card, .team-card, .cert, .perk, .svc-feature, .quick-card, .org-node').forEach((el) => {
+		document.querySelectorAll('.area-card, .step, .project-card, .bento__card, .plaque__link, .job, .about__link, .link-tile, .value-card, .team-card, .cert, .perk, .svc-feature, .quick-card, .org-node, .client-card').forEach((el) => {
 			const spot = document.createElement('span');
 			spot.className = 'spot';
 			spot.setAttribute('aria-hidden', 'true');
@@ -212,7 +212,7 @@
 			});
 		});
 
-		document.querySelectorAll('.bento__card, .project-card, .plaque__link, .stat, .team-card, .cert, .hero-slide__visual, .page-hero__visual').forEach((el) => {
+		document.querySelectorAll('.bento__card, .project-card, .plaque__link, .stat, .team-card, .cert, .client-card, .hero-slide__visual, .page-hero__visual, .scanner__device').forEach((el) => {
 			el.classList.add('tilt');
 			if (el.parentElement) el.parentElement.style.perspective = '1100px';
 			const max = el.matches('.stat') ? 10 : 6;

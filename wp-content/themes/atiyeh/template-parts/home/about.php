@@ -7,9 +7,7 @@
 
 $atiyeh_links = array(
 	array( 'company', 'معرفی شرکت', 'a' ),
-	array( 'management', 'تیم مدیریت', 'b' ),
 	array( 'licenses', 'مجوزها و رتبه‌بندی‌ها', 'b' ),
-	array( 'org-chart', 'چارت سازمانی', 'a' ),
 );
 ?>
 <section class="about container" id="about">

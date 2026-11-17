@@ -9,10 +9,18 @@ $atiyeh_slides = atiyeh_hero_slides();
 $atiyeh_total  = count( $atiyeh_slides );
 ?>
 <section class="hero" data-slider aria-roledescription="carousel" aria-label="معرفی خدمات" tabindex="-1">
+	<h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?>؛ پلاک کدپستی و آرشیو دیجیتال اسناد</h1>
 	<div class="hero__slides" aria-live="off" data-slider-track>
 		<?php foreach ( $atiyeh_slides as $i => $s ) : ?>
 			<?php $atiyeh_active = 0 === $i; ?>
-			<div class="hero-slide<?php echo $atiyeh_active ? ' is-active' : ''; ?><?php echo $s['docs'] ? ' has-docs' : ''; ?>"
+			<?php
+			$atiyeh_href  = $s['href'] ?? '#products';
+			$atiyeh_img   = ! empty( $s['img_url'] ) ? $s['img_url'] : ( ! empty( $s['img'] ) ? atiyeh_asset( 'img/' . $s['img'] ) : '' );
+			$atiyeh_occ   = ! empty( $s['occasion'] );
+			$atiyeh_ai    = ! empty( $s['ai'] );
+			$atiyeh_class = ( $atiyeh_active ? ' is-active' : '' ) . ( ! empty( $s['docs'] ) ? ' has-docs' : '' ) . ( $atiyeh_occ ? ' hero-slide--occasion' : '' ) . ( $atiyeh_ai ? ' hero-slide--ai' : '' );
+			?>
+			<div class="hero-slide<?php echo esc_attr( $atiyeh_class ); ?>"
 				style="--bg:<?php echo esc_attr( $s['bg'] ); ?>;--c1:<?php echo esc_attr( $s['c1'] ); ?>;--c2:<?php echo esc_attr( $s['c2'] ); ?>"
 				role="group" aria-roledescription="اسلاید"
 				aria-label="<?php echo esc_attr( atiyeh_fa_num( ( $i + 1 ) . ' از ' . $atiyeh_total ) ); ?>"
@@ -24,21 +32,32 @@ $atiyeh_total  = count( $atiyeh_slides );
 				<div class="hero-slide__inner container">
 					<div class="hero-slide__text">
 						<span class="pill"><i class="live" aria-hidden="true"></i><?php echo esc_html( $s['kicker'] ); ?></span>
-						<?php printf( '<%1$s class="hero-slide__title">%2$s</%1$s>', 0 === $i ? 'h1' : 'h2', esc_html( $s['title'] ) ); ?>
-						<p class="hero-slide__desc"><?php echo esc_html( $s['desc'] ); ?></p>
+						<h2 class="hero-slide__title"><?php echo esc_html( $s['title'] ); ?></h2>
+						<?php if ( '' !== (string) $s['desc'] ) : ?>
+							<p class="hero-slide__desc"><?php echo esc_html( $s['desc'] ); ?></p>
+						<?php endif; ?>
 						<div class="hero-slide__btns">
-							<a class="btn btn--white hero-slide__cta" href="#products"><?php echo esc_html( $s['cta'] ); ?> <span class="ar" aria-hidden="true">←</span></a>
-							<a class="btn btn--ghost" href="#request">درخواست دمو</a>
+							<?php if ( '' !== (string) $s['cta'] && '' !== (string) $atiyeh_href ) : ?>
+								<a class="btn btn--white hero-slide__cta" href="<?php echo esc_url( $atiyeh_href ); ?>"><?php echo esc_html( $s['cta'] ); ?> <span class="ar" aria-hidden="true">←</span></a>
+							<?php endif; ?>
+							<?php if ( ! $atiyeh_occ ) : ?>
+								<a class="btn btn--ghost" href="#request">درخواست دمو</a>
+							<?php endif; ?>
 						</div>
 					</div>
 
 					<div class="hero-slide__visual" aria-hidden="true">
 						<div class="hero-slide__blob">
-							<img src="<?php echo esc_url( atiyeh_asset( 'img/' . $s['img'] ) ); ?>" alt="" class="pimg" width="600" height="750"
-								<?php echo 0 === $i ? 'fetchpriority="high"' : 'loading="lazy"'; ?> decoding="async">
+							<?php if ( $atiyeh_img ) : ?>
+								<img src="<?php echo esc_url( $atiyeh_img ); ?>" alt="" class="pimg" width="600" height="750"
+									<?php echo 0 === $i ? 'fetchpriority="high"' : 'loading="lazy"'; ?> decoding="async">
+							<?php endif; ?>
 						</div>
 						<div class="hero-slide__orbit spin"></div>
-						<?php if ( $s['docs'] ) : ?>
+						<?php if ( $atiyeh_ai ) : ?>
+							<?php get_template_part( 'template-parts/blocks/ai-art' ); ?>
+						<?php endif; ?>
+						<?php if ( ! empty( $s['docs'] ) ) : ?>
 							<div class="doc-stack">
 								<div class="doc-stack__sheet doc-stack__sheet--back"></div>
 								<div class="doc-stack__sheet doc-stack__sheet--mid"></div>
@@ -50,11 +69,13 @@ $atiyeh_total  = count( $atiyeh_slides );
 						<?php endif; ?>
 						<div class="hero-slide__sq float"></div>
 						<div class="hero-slide__circle float2"></div>
+						<?php if ( ! $atiyeh_occ ) : ?>
 						<div class="stat-chip">
 							<div class="stat-chip__top"><b><?php echo esc_html( $s['chip'] ); ?></b><span>زنده</span></div>
 							<div class="stat-chip__bars bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 							<div class="stat-chip__foot">[ شاخص کلیدی ] · <b>[ ۰۰۰ ]</b></div>
 						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

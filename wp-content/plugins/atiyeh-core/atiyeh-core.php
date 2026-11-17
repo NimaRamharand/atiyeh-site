@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Atiyeh Core
- * Description: محتوای اختصاصی سایت آمار پژوهان پارسیان: پروژه‌ها، کارفرمایان، لوح‌های سپاس، فرصت‌های شغلی، درخواست‌های همکاری (با رزومه) و خبرنامه.
- * Version: 0.3.0
+ * Description: محتوای اختصاصی سایت آمار پژوهان پارسیان: اسلاید مناسبتی، پروژه‌ها، کارفرمایان، لوح‌های سپاس، فرصت‌های شغلی، درخواست‌های همکاری (با رزومه) و خبرنامه.
+ * Version: 0.4.0
  * Requires PHP: 8.1
  * Author: Atiyeh
  * Text Domain: atiyeh-core
@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'ATIYEH_CORE_DIR', __DIR__ );
 
+require ATIYEH_CORE_DIR . '/inc/occasions.php';
 require ATIYEH_CORE_DIR . '/inc/fields.php';
 require ATIYEH_CORE_DIR . '/inc/post-types.php';
 require ATIYEH_CORE_DIR . '/inc/logo-normalize.php';

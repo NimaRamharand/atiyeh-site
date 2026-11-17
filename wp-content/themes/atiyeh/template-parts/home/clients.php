@@ -15,7 +15,8 @@ $atiyeh_track   = static function ( bool $clone ) use ( $atiyeh_clients ): void 
 			esc_attr( $clone ? '' : $c['alt'] )
 		);
 	}
-	for ( $k = 0; $k < 2; $k++ ) {
+	// Always 10 tiles: real logos first, dashed placeholders for the rest.
+	for ( $k = count( $atiyeh_clients ); $k < 10; $k++ ) {
 		echo '<span class="marquee__item marquee__item--empty chip">[ لوگو کارفرما ]</span>';
 	}
 	echo '</div>';
@@ -29,4 +30,5 @@ $atiyeh_track   = static function ( bool $clone ) use ( $atiyeh_clients ): void 
 			<?php $atiyeh_track( true ); ?>
 		</div>
 	</div>
+	<p class="clients__more"><a class="btn btn--outline" href="<?php echo esc_url( atiyeh_page_url( 'clients', '/#clients' ) ); ?>">همه کارفرمایان <span class="ar" aria-hidden="true">←</span></a></p>
 </section>

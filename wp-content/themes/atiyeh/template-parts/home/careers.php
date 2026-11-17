@@ -5,7 +5,7 @@
  * @package Atiyeh
  */
 
-$atiyeh_roles = array( 'اپراتور اسکن', 'بازرس میدانی', 'نصاب پلاک کدپستی', 'کارمند نمایه‌سازی', 'بازاریاب و ویزیتور' );
+$atiyeh_roles = array( 'اپراتور اسکن', 'همگام‌ساز', 'نصاب پلاک کدپستی' );
 ?>
 <section class="careers container" id="careers">
 	<div class="careers__card rvs">

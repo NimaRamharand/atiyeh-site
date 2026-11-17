@@ -16,15 +16,15 @@ function atiyeh_page_url( string $slug, string $fallback = '/' ): string {
 }
 
 /**
- * Hero slides (3, rotating every 5.5 s).
+ * Hero slides, rotating every 5.5 s. The operator's current «اسلاید مناسبتی» (atiyeh-core) always comes first.
  *
  * @return array<int, array<string, mixed>>
  */
 function atiyeh_hero_slides(): array {
-	return array(
+	$slides = array(
 		array(
 			'kicker' => 'خدمت اصلی',
-			'title'  => 'پلاک کدپستی، نشانی دقیق هر ملک',
+			'title'  => 'پلاک کدپستی، نشانی درست هر ملک',
 			'desc'   => 'تولید، نصب و بهنگام‌سازی پلاک کدپستی در سطح شهر، همراه با کنترل کیفیت میدانی.',
 			'cta'    => 'خدمات پلاک',
 			'bg'     => 'linear-gradient(135deg,#0f3f8a,#1757b8)',
@@ -58,18 +58,37 @@ function atiyeh_hero_slides(): array {
 			'img'    => 'project-map-update.webp',
 			'docs'   => false,
 		),
+		array(
+			'kicker' => 'خدمات انفورماتیک',
+			'title'  => 'راهکارهای هوشمند، با قدرت هوش مصنوعی',
+			'desc'   => 'سامانه‌های اختصاصی، خودکارسازی فرایندها و تحلیل داده؛ برای سازمانی سریع‌تر، دقیق‌تر و کم‌هزینه‌تر.',
+			'cta'    => 'خدمات انفورماتیک',
+			'href'   => '#informatics',
+			'bg'     => 'linear-gradient(135deg,#0a1a3d,#13306b)',
+			'c1'     => '#102a5c',
+			'c2'     => '#7ab8ff',
+			'chip'   => 'هوش مصنوعی',
+			'img'    => '',
+			'ai'     => true,
+			'docs'   => false,
+		),
 	);
+	$occasion = function_exists( 'atiyeh_core_occasion_slide' ) ? atiyeh_core_occasion_slide() : null;
+	if ( $occasion ) {
+		array_unshift( $slides, $occasion );
+	}
+	return $slides;
 }
 
 /**
- * Client logos for the marquee. Phase 3 replaces this with the `client` post type.
+ * Client logos for the homepage marquee: the first 10 clients (admin order).
  *
  * @return array<int, array{src:string, alt:string}>
  */
 function atiyeh_home_clients(): array {
 	if ( post_type_exists( 'client' ) ) {
 		$out = array();
-		foreach ( get_posts( array( 'post_type' => 'client', 'numberposts' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ) ) as $c ) {
+		foreach ( get_posts( array( 'post_type' => 'client', 'numberposts' => 10, 'orderby' => 'menu_order', 'order' => 'ASC' ) ) as $c ) {
 			$src = get_the_post_thumbnail_url( $c, 'medium' );
 			if ( $src ) {
 				$out[] = array( 'src' => $src, 'alt' => get_the_title( $c ) );

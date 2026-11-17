@@ -62,8 +62,8 @@ if ( $atiyeh_thumb ) {
 	set_post_thumbnail( $atiyeh_id, $atiyeh_thumb );
 }
 
-// Jobs: the five role chips from the mockup careers banner.
-foreach ( array( 'اپراتور اسکن', 'بازرس میدانی', 'نصاب پلاک کدپستی', 'کارمند نمایه‌سازی', 'بازاریاب و ویزیتور' ) as $atiyeh_i => $atiyeh_title ) {
+// Jobs: the role chips of the careers banner (list revised after the demo meeting).
+foreach ( array( 'اپراتور اسکن', 'همگام‌ساز', 'نصاب پلاک کدپستی' ) as $atiyeh_i => $atiyeh_title ) {
 	atiyeh_demo_insert(
 		array(
 			'post_type'    => 'job',
@@ -75,6 +75,34 @@ foreach ( array( 'اپراتور اسکن', 'بازرس میدانی', 'نصاب
 	);
 }
 
+// Occasion slides: one current sample (first hero slide) and one past sample that shows as «آرشیو».
+if ( post_type_exists( 'occasion' ) ) {
+	$atiyeh_occasions = array(
+		array( 'نمونه اسلاید آرشیوشده', 'رویداد', 'این اسلاید نمونه‌ای از موارد قبلی است که پس از پایان تاریخ نمایش در آرشیو می‌ماند.', '۱۴۰۵/۰۷/۰۱', '۱۴۰۵/۰۷/۰۷', 'slate', '-30 days' ),
+		array( 'روز آمار و برنامه‌ریزی گرامی باد', 'مناسبت', 'روز آمار و برنامه‌ریزی را به همه فعالان این حوزه و همکاران سازمان‌های همراه تبریک می‌گوییم.', '', '', 'blue', 'now' ),
+	);
+	foreach ( $atiyeh_occasions as [ $atiyeh_t, $atiyeh_k, $atiyeh_d, $atiyeh_s, $atiyeh_e, $atiyeh_theme, $atiyeh_when ] ) {
+		$atiyeh_id = atiyeh_demo_insert(
+			array( 'post_type' => 'occasion', 'post_title' => $atiyeh_t, 'post_date' => ( new DateTimeImmutable( $atiyeh_when, wp_timezone() ) )->format( 'Y-m-d H:i:s' ) ),
+			array(
+				'_atiyeh_kicker'   => $atiyeh_k,
+				'_atiyeh_desc'     => $atiyeh_d,
+				'_atiyeh_btn_text' => '',
+				'_atiyeh_btn_url'  => '',
+				'_atiyeh_theme'    => $atiyeh_theme,
+				'_atiyeh_start'    => $atiyeh_s,
+				'_atiyeh_start_g'  => '' === $atiyeh_s ? '' : (string) atiyeh_core_parse_jdate( $atiyeh_s ),
+				'_atiyeh_end'      => $atiyeh_e,
+				'_atiyeh_end_g'    => '' === $atiyeh_e ? '' : (string) atiyeh_core_parse_jdate( $atiyeh_e ),
+			)
+		);
+		$atiyeh_thumb = atiyeh_demo_image( 'hero-1-green-city.webp', '' );
+		if ( $atiyeh_thumb ) {
+			set_post_thumbnail( $atiyeh_id, $atiyeh_thumb );
+		}
+	}
+}
+
 // Forms (created once, updated in place on every reset so entries are kept).
 $atiyeh_forms = atiyeh_core_ensure_forms();
-WP_CLI::log( '  ۳ پروژه، ۴ کارفرما، ۱ لوح سپاس، ۵ فرصت شغلی' . ( $atiyeh_forms ? '، فرم‌ها: ' . implode( '، ', array_map( static fn( $k, $v ) => "{$k}=#{$v}", array_keys( $atiyeh_forms ), $atiyeh_forms ) ) : '' ) );
+WP_CLI::log( '  ۳ پروژه، ۴ کارفرما، ۱ لوح سپاس، ۳ فرصت شغلی، ۱ اسلاید مناسبتی' . ( $atiyeh_forms ? '، فرم‌ها: ' . implode( '، ', array_map( static fn( $k, $v ) => "{$k}=#{$v}", array_keys( $atiyeh_forms ), $atiyeh_forms ) ) : '' ) );

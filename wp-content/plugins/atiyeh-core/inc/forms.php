@@ -69,7 +69,7 @@ function atiyeh_core_ff_definitions(): array {
 				atiyeh_core_ff_field( 'input_text', 'full_name', 'نام و نام خانوادگی', true ),
 				atiyeh_core_ff_field( 'input_text', 'organization', 'سازمان / شهرداری' ),
 				atiyeh_core_ff_field( 'input_text', 'phone', 'شماره تماس', true, array( 'type' => 'tel', 'ltr' => true ) ),
-				atiyeh_core_ff_field( 'select', 'service', 'نوع خدمت', true, array( 'options' => array( 'پلاک کدپستی', 'بهنگام‌سازی کدپستی', 'آرشیو دیجیتال اسناد', 'سایر' ) ) ),
+				atiyeh_core_ff_field( 'select', 'service', 'نوع خدمت', true, array( 'options' => array( 'پلاک کدپستی', 'بهنگام‌سازی کدپستی', 'آرشیو دیجیتال اسناد', 'مشاوره و خرید اسکنر', 'خدمات انفورماتیک و هوش مصنوعی', 'سایر' ) ) ),
 				atiyeh_core_ff_field( 'textarea', 'description', 'شرح درخواست', false, array( 'wide' => true ) ),
 			),
 			'ارسال درخواست',

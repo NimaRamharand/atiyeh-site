@@ -15,7 +15,7 @@ $atiyeh_services = atiyeh_page_url( 'services', '/#areas' );
 			<p class="sec-head__desc">دو خدمت تخصصی در یک مجموعه: پلاک کدپستی و آرشیو دیجیتال اسناد.</p>
 		</div>
 		<ul class="areas__grid" role="list">
-			<?php foreach ( atiyeh_home_areas() as [ $n, $title, $desc ] ) : ?>
+			<?php foreach ( array_slice( atiyeh_home_areas(), 0, 5 ) as [ $n, $title, $desc ] ) : ?>
 				<li class="areas__cell rv">
 					<a class="sweep area-card" href="<?php echo esc_url( $atiyeh_services ); ?>">
 						<span class="bd area-card__n" aria-hidden="true"><?php echo esc_html( $n ); ?></span>

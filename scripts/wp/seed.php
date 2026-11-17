@@ -121,6 +121,7 @@ function atiyeh_demo_pages(): array {
 		'services' => array( 'خدمات', '' ),
 		'careers'  => array( 'همکاری با ما', atiyeh_demo_paras( 'اگر به کار میدانی، دقت در جزئیات و کار با اسناد علاقه دارید، خوشحال می‌شویم رزومه شما را ببینیم. موقعیت‌های فعال در ادامه آمده‌اند و برای فرصت‌های آینده نیز می‌توانید رزومه بفرستید.' ) ),
 		'request'  => array( 'درخواست خدمات', '' ),
+		'clients'  => array( 'کارفرمایان', '' ),
 		'contact'  => array( 'تماس با ما', '' ),
 	);
 	$about_children = array(
@@ -218,6 +219,7 @@ atiyeh_demo_menu(
 	array(
 		array( 'درباره ما', $atiyeh_pages['about'] ),
 		array( 'پروژه‌ها', '/projects/' ),
+		array( 'کارفرمایان', $atiyeh_pages['clients'] ),
 		array( 'حسن انجام کار', '/appreciations/' ),
 		array( 'درخواست خدمات', $atiyeh_pages['request'] ),
 		array( 'همکاری با ما', $atiyeh_pages['careers'] ),
