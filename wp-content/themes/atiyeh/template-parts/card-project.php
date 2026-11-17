@@ -15,6 +15,9 @@ $atiyeh_services = $args['services'] ?? array( $args['service'] );
 		<span class="project-card__media zoom">
 			<span class="zi project-card__img">
 				<img src="<?php echo esc_url( $args['img'] ); ?>" alt="" class="pimg" width="400" height="300" loading="lazy" decoding="async">
+				<?php if ( 'ongoing' === ( $args['status'] ?? '' ) ) : ?>
+					<span class="status-badge status-badge--ongoing project-card__status">در حال اجرا</span>
+				<?php endif; ?>
 				<?php if ( ! empty( $atiyeh_terms[ $args['service'] ] ) ) : ?>
 					<span class="project-card__tag"><?php echo esc_html( $atiyeh_terms[ $args['service'] ] ); ?></span>
 				<?php endif; ?>

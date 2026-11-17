@@ -12,7 +12,7 @@ $atiyeh_request  = atiyeh_page_url( 'request', '/#request' );
 	<div class="products__ring spin" aria-hidden="true"></div>
 	<div class="container products__inner">
 		<div class="sec-head rv">
-			<div><span class="kicker kicker--light">خدمات شاخص</span><h2 class="section-title">دو خدمت، یک تعهد به دقت</h2></div>
+			<div><span class="kicker kicker--light">خدمات شاخص</span><h2 class="section-title">خدمات شاخص، یک تعهد به کیفیت</h2></div>
 			<a class="btn btn--outline-dark" href="<?php echo esc_url( $atiyeh_services ); ?>">همه خدمات <span class="ar" aria-hidden="true">←</span></a>
 		</div>
 		<div class="bento">
@@ -44,8 +44,8 @@ $atiyeh_request  = atiyeh_page_url( 'request', '/#request' );
 				<a class="bento__link" href="<?php echo esc_url( $atiyeh_services ); ?>">مشاهده <span class="screen-reader-text">اسکن عمده اسناد</span> <span aria-hidden="true">←</span></a>
 			</article>
 			<article class="bento__card bento__card--s3 rvs dk">
-				<h3 class="bento__sub">نمایه‌سازی و بازیابی</h3>
-				<a class="bento__link" href="<?php echo esc_url( $atiyeh_services ); ?>">مشاهده <span class="screen-reader-text">نمایه‌سازی و بازیابی</span> <span aria-hidden="true">←</span></a>
+				<h3 class="bento__sub">آمارگیری و داده‌آمایی</h3>
+				<a class="bento__link" href="<?php echo esc_url( $atiyeh_services . '#stats' ); ?>">مشاهده <span class="screen-reader-text">آمارگیری و داده‌آمایی</span> <span aria-hidden="true">←</span></a>
 			</article>
 		</div>
 	</div>

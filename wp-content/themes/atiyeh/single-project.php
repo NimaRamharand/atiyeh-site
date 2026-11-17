@@ -16,6 +16,7 @@ while ( have_posts() ) :
 		'شهر'       => get_post_meta( get_the_ID(), '_atiyeh_city', true ),
 		'تاریخ اجرا' => get_post_meta( get_the_ID(), '_atiyeh_date', true ),
 		'نوع خدمت'  => $atiyeh_service,
+		'وضعیت'     => 'ongoing' === get_post_meta( get_the_ID(), '_atiyeh_status', true ) ? 'در حال اجرا' : ( get_post_meta( get_the_ID(), '_atiyeh_status', true ) ? 'اجراشده' : '' ),
 	);
 	?>
 	<article <?php post_class( 'container content-card prose project-single rv' ); ?>>

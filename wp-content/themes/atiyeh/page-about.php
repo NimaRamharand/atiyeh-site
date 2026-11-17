@@ -24,17 +24,17 @@ while ( have_posts() ) :
 		<div class="collage rvr" aria-hidden="true">
 			<div class="collage__big rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/hero-1-green-city.webp' ) ); ?>" alt="" width="700" height="700" loading="lazy" decoding="async"></div>
 			<div class="collage__small rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/project-postal-plaque.webp' ) ); ?>" alt="" width="360" height="450" loading="lazy" decoding="async"></div>
-			<div class="collage__badge float"><b>۲</b><span>خدمت تخصصی</span></div>
+			<div class="collage__badge float"><b>۱۳۸۸</b><span>آغاز فعالیت</span></div>
 			<div class="collage__ring spin"></div>
 		</div>
 		<div class="split-intro__text rvl">
 			<span class="kicker">ما که هستیم</span>
-			<h2 class="section-title">نظم در نشانی‌ها، ماندگاری در اسناد</h2>
+			<h2 class="section-title">آمار دقیق، نشانی درست، اسناد ماندگار</h2>
 			<div class="prose split-intro__prose"><?php echo $atiyeh_intro ? $atiyeh_intro : '<p>[ متن معرفی شرکت ]</p>'; // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
 			<ul class="ticks" role="list">
-				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>اجرای کامل پروژه با یک تیم، از برداشت تا تحویل</li>
-				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>کنترل کیفیت چندمرحله‌ای برای هر پلاک و هر سند</li>
-				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>گزارش‌دهی منظم و شفاف به کارفرما</li>
+				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>دارای گواهی صلاحیت خدمات مشاوره آماری از مرکز آمار ایران (پایه ۲)</li>
+				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>گواهینامه رتبه‌بندی شرکت‌های انفورماتیکی (پایه ۴)</li>
+				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>کارفرمایانی چون شرکت ملی پست، مرکز آمار ایران، شهرداری‌ها و بیمارستان‌ها</li>
 			</ul>
 		</div>
 	</section>
@@ -68,7 +68,7 @@ while ( have_posts() ) :
 	?>
 
 	<section class="container duo">
-		<?php foreach ( atiyeh_service_blocks() as $atiyeh_i => $atiyeh_s ) : ?>
+		<?php foreach ( array_slice( atiyeh_service_blocks(), 0, 3 ) as $atiyeh_i => $atiyeh_s ) : ?>
 			<a class="duo__card lift zoom <?php echo $atiyeh_i ? 'rvl' : 'rvr'; ?>" href="<?php echo esc_url( atiyeh_page_url( 'services', '/#products' ) . '#' . $atiyeh_s['id'] ); ?>">
 				<img class="zi pimg duo__img" src="<?php echo esc_url( atiyeh_asset( 'img/' . $atiyeh_s['img'] ) ); ?>" alt="" width="600" height="450" loading="lazy" decoding="async">
 				<span class="duo__shade" aria-hidden="true"></span>

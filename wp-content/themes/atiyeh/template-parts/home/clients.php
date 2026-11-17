@@ -9,6 +9,10 @@ $atiyeh_clients = atiyeh_home_clients();
 $atiyeh_track   = static function ( bool $clone ) use ( $atiyeh_clients ): void {
 	echo '<div class="marquee__group"' . ( $clone ? ' aria-hidden="true"' : '' ) . '>';
 	foreach ( $atiyeh_clients as $c ) {
+		if ( '' === $c['src'] ) {
+			printf( '<span class="marquee__item marquee__item--name">%s</span>', esc_html( $c['alt'] ) );
+			continue;
+		}
 		printf(
 			'<span class="marquee__item lift"><img src="%1$s" alt="%2$s" width="200" height="92" loading="lazy" decoding="async"></span>',
 			esc_url( $c['src'] ),

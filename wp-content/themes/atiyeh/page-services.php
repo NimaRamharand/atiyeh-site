@@ -14,7 +14,7 @@ while ( have_posts() ) :
 		null,
 		array(
 			'kicker' => 'پلاک کدپستی · آرشیو دیجیتال اسناد',
-			'desc'   => 'دو خدمت تخصصی در یک مجموعه؛ از نصب پلاک بر سر در ساختمان‌ها تا آرشیو دیجیتال قابل جستجو.',
+			'desc'   => 'پلاک کدپستی، آرشیو الکترونیک اسناد، آمار و داده، مشاوره خرید اسکنر و خدمات انفورماتیک؛ همه در یک مجموعه.',
 			'img'    => 'project-map-update.webp',
 		)
 	);
@@ -30,12 +30,20 @@ while ( have_posts() ) :
 	</nav>
 
 	<?php foreach ( atiyeh_service_blocks() as $atiyeh_i => $atiyeh_s ) : ?>
-		<section class="container svc<?php echo $atiyeh_i ? ' svc--alt' : ''; ?>" id="<?php echo esc_attr( $atiyeh_s['id'] ); ?>" aria-labelledby="svc-<?php echo esc_attr( $atiyeh_s['id'] ); ?>">
-			<div class="svc__visual <?php echo $atiyeh_i ? 'rvl' : 'rvr'; ?>" aria-hidden="true">
+		<section class="container svc svc--<?php echo esc_attr( $atiyeh_s['visual'] ); ?><?php echo $atiyeh_i % 2 ? ' svc--alt' : ''; ?>" id="<?php echo esc_attr( $atiyeh_s['id'] ); ?>" aria-labelledby="svc-<?php echo esc_attr( $atiyeh_s['id'] ); ?>">
+			<div class="svc__visual <?php echo $atiyeh_i % 2 ? 'rvl' : 'rvr'; ?>" aria-hidden="true">
 				<div class="svc__blob">
-					<img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/' . $atiyeh_s['img'] ) ); ?>" alt="" width="600" height="600" loading="lazy" decoding="async">
+					<?php if ( $atiyeh_s['img'] ) : ?>
+						<img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/' . $atiyeh_s['img'] ) ); ?>" alt="" width="600" height="600" loading="lazy" decoding="async">
+					<?php endif; ?>
 				</div>
-				<?php if ( 'archive' === $atiyeh_s['id'] ) : ?>
+				<?php if ( 'ai' === $atiyeh_s['visual'] ) : ?>
+					<?php get_template_part( 'template-parts/blocks/ai-art' ); ?>
+				<?php elseif ( 'scanner' === $atiyeh_s['visual'] ) : ?>
+					<div class="svc__scanner"><?php get_template_part( 'template-parts/blocks/scanner-art' ); ?></div>
+				<?php elseif ( 'stats' === $atiyeh_s['visual'] ) : ?>
+					<div class="stats-art float"><?php echo atiyeh_logo_svg( false, 150 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><span>آمارگیری · استخراج · داده‌آمایی</span></div>
+				<?php elseif ( 'docs' === $atiyeh_s['visual'] ) : ?>
 					<div class="doc-stack svc__docs">
 						<div class="doc-stack__sheet doc-stack__sheet--back"></div>
 						<div class="doc-stack__sheet doc-stack__sheet--mid"></div>
@@ -53,7 +61,7 @@ while ( have_posts() ) :
 				<div class="svc__orbit spin"></div>
 				<div class="svc__dot drift"></div>
 			</div>
-			<div class="svc__text <?php echo $atiyeh_i ? 'rvr' : 'rvl'; ?>">
+			<div class="svc__text <?php echo $atiyeh_i % 2 ? 'rvr' : 'rvl'; ?>">
 				<span class="svc__badge"><?php echo esc_html( $atiyeh_s['badge'] ); ?></span>
 				<h2 class="section-title" id="svc-<?php echo esc_attr( $atiyeh_s['id'] ); ?>"><?php echo esc_html( $atiyeh_s['title'] ); ?></h2>
 				<p class="svc__lead"><?php echo esc_html( $atiyeh_s['lead'] ); ?></p>

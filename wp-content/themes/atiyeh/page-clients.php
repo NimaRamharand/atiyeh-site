@@ -9,9 +9,9 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'مورد اعتماد کارفرمایان', 'desc' => 'شهرداری‌ها و سازمان‌هایی که پروژه‌های پلاک کدپستی و اسکن اسناد خود را به ما سپرده‌اند.', 'img' => 'hero-1-green-city.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'مورد اعتماد کارفرمایان', 'desc' => 'شرکت ملی پست، مرکز آمار ایران، شهرداری‌ها و بیمارستان‌هایی که طرح‌های آماری، کدپستی، پلاک و آرشیو اسناد خود را به ما سپرده‌اند.', 'img' => 'hero-1-green-city.webp' ) );
 	$atiyeh_clients = post_type_exists( 'client' ) ? get_posts( array( 'post_type' => 'client', 'numberposts' => -1, 'orderby' => array( 'menu_order' => 'ASC', 'title' => 'ASC' ) ) ) : array();
-	$atiyeh_filters = array( 'plaque' => 'پلاک کدپستی', 'archive' => 'اسکن و آرشیو اسناد' );
+	$atiyeh_filters = array( 'plaque' => 'پلاک و کدپستی', 'archive' => 'اسکن و آرشیو اسناد', 'stats' => 'آمار و داده' );
 	$atiyeh_intro   = atiyeh_page_intro();
 	?>
 	<section class="container section-pad clients-page" data-filter>
@@ -47,7 +47,9 @@ while ( have_posts() ) :
 							if ( has_post_thumbnail( $atiyeh_c ) ) {
 								echo get_the_post_thumbnail( $atiyeh_c, 'medium', array( 'alt' => 'لوگوی ' . get_the_title( $atiyeh_c ) ) );
 							} else {
-								echo '<span class="client-card__ph">' . esc_html( mb_substr( get_the_title( $atiyeh_c ), 0, 1 ) ) . '</span>';
+								// No logo yet: an icon for the kind of work we did for this client.
+								$atiyeh_ic = in_array( 'archive', $atiyeh_slugs, true ) ? 'doc' : ( in_array( 'plaque', $atiyeh_slugs, true ) ? 'plaque' : ( in_array( 'stats', $atiyeh_slugs, true ) ? 'chart' : 'users' ) );
+								echo '<span class="client-card__ph" aria-hidden="true">' . atiyeh_icon( $atiyeh_ic, 34 ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput
 							}
 							?>
 						</span>

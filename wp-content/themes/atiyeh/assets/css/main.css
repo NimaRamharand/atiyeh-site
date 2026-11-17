@@ -198,7 +198,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .site-header.is-scrolled .site-header__bar { background: rgba(15, 63, 138, .82); box-shadow: 0 18px 40px rgba(10, 34, 80, .25); }
 .brand { display: flex; align-items: center; gap: 10px; flex: none; }
 .brand__mark {
-	width: 42px; height: 42px; flex: none; border-radius: 50% 50% 50% 10%; background: #fff; color: var(--c-primary);
+	width: 44px; height: 44px; flex: none; border-radius: 50%; background: #fff; color: var(--c-primary-dark);
 	display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
 .brand__mark img { width: 100%; height: 100%; object-fit: contain; }

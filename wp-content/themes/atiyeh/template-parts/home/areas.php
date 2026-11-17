@@ -12,7 +12,7 @@ $atiyeh_services = atiyeh_page_url( 'services', '/#areas' );
 	<div class="container areas__inner">
 		<div class="sec-head rv">
 			<div><span class="kicker">خدمات</span><h2 class="section-title">حوزه‌های فعالیت</h2></div>
-			<p class="sec-head__desc">دو خدمت تخصصی در یک مجموعه: پلاک کدپستی و آرشیو دیجیتال اسناد.</p>
+			<p class="sec-head__desc">از برداشت و بهنگام‌سازی کدپستی و نصب پلاک تا اسکن عمده اسناد.</p>
 		</div>
 		<ul class="areas__grid" role="list">
 			<?php foreach ( array_slice( atiyeh_home_areas(), 0, 5 ) as [ $n, $title, $desc ] ) : ?>

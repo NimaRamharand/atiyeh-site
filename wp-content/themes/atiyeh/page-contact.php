@@ -16,9 +16,10 @@ while ( have_posts() ) :
 			<div class="contact-page__ring spin" aria-hidden="true"></div>
 			<h2 class="contact-page__title">اطلاعات تماس</h2>
 			<dl class="facts facts--stack facts--icons">
-				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'pin', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>نشانی</dt><dd><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'address' ) ) ); ?></dd></div>
-				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'phone', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>تلفن</dt><dd dir="auto"><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'phone' ) ) ); ?></dd></div>
-				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'mail', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>ایمیل</dt><dd dir="auto"><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'email' ) ) ); ?></dd></div>
+				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'pin', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>نشانی</dt><dd><?php echo esc_html( atiyeh_contact( 'address' ) ); ?><br><small>کد پستی: <?php echo esc_html( atiyeh_contact( 'postal' ) ); ?></small></dd></div>
+				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'phone', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>تلفن و فکس</dt><dd><a href="tel:<?php echo esc_attr( atiyeh_tel( atiyeh_contact( 'phone' ) ) ); ?>" dir="ltr"><?php echo esc_html( atiyeh_contact( 'phone' ) ); ?></a></dd></div>
+				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'phone', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>تلفن همراه (<?php echo esc_html( atiyeh_contact( 'ceo' ) ); ?>، مدیرعامل)</dt><dd><a href="tel:<?php echo esc_attr( atiyeh_tel( atiyeh_contact( 'mobile' ) ) ); ?>" dir="ltr"><?php echo esc_html( atiyeh_contact( 'mobile' ) ); ?></a></dd></div>
+				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'mail', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>ایمیل</dt><dd><a href="mailto:<?php echo esc_attr( atiyeh_contact( 'email' ) ); ?>" dir="ltr"><?php echo esc_html( atiyeh_contact( 'email' ) ); ?></a></dd></div>
 				<div class="facts__item"><span class="facts__icon" aria-hidden="true"><?php echo atiyeh_icon( 'clock', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span><dt>ساعات کاری</dt><dd>[ روزها و ساعات کاری ]</dd></div>
 			</dl>
 			<a class="btn btn--white" href="<?php echo esc_url( atiyeh_page_url( 'request', '/#request' ) ); ?>">درخواست خدمات <span class="ar" aria-hidden="true">←</span></a>
@@ -36,7 +37,7 @@ while ( have_posts() ) :
 			<path class="map-card__route" d="M120 185 H480 V185 H720 Q760 185 760 150 V110"/>
 		</svg>
 		<div class="map-card__pin" aria-hidden="true"><?php echo atiyeh_icon( 'pin', 30 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><span class="map-card__pulse"></span></div>
-		<div class="map-card__label"><b>دفتر مرکزی</b><span><?php echo esc_html( atiyeh_nb( atiyeh_contact( 'address' ) ) ); ?></span></div>
+		<div class="map-card__label"><b>دفتر مرکزی</b><span><?php echo esc_html( atiyeh_contact( 'address' ) ); ?></span></div>
 	</section>
 
 	<section class="container quick" aria-label="دسترسی سریع">

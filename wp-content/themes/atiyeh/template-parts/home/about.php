@@ -25,7 +25,7 @@ $atiyeh_links = array(
 	<div class="about__text rvl">
 		<span class="kicker">درباره شرکت</span>
 		<h2 class="about__title">آمار پژوهان پارسیان</h2>
-		<p class="about__lead">[ متن معرفی شرکت، سابقه فعالیت و تخصص‌ها در اینجا قرار می‌گیرد. ]</p>
+		<p class="about__lead">آمار پژوهان پارسیان از سال ۱۳۸۸ در اجرای طرح‌های آماری، فهرست‌برداری و بهنگام‌سازی کدپستی، ساخت و نصب پلاک و آرشیو الکترونیک اسناد پزشکی فعالیت می‌کند؛ دارای گواهی صلاحیت خدمات مشاوره آماری از مرکز آمار ایران و گواهینامه رتبه‌بندی شرکت‌های انفورماتیکی.</p>
 		<div class="about__links">
 			<?php foreach ( $atiyeh_links as [ $slug, $label, $shape ] ) : ?>
 				<a class="sweep about__link about__link--<?php echo esc_attr( $shape ); ?>" href="<?php echo esc_url( atiyeh_page_url( "about/{$slug}", '/#about' ) ); ?>"><?php echo esc_html( $label ); ?> <span aria-hidden="true">←</span></a>

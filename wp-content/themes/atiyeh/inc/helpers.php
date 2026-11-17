@@ -148,3 +148,31 @@ function atiyeh_wave( string $path, string $fill, string $class = '', int $h = 9
 		esc_attr( $fill )
 	);
 }
+
+/**
+ * The company logo (A.P.P: histogram with a normal curve inside a circle), drawn as inline SVG.
+ * Uses currentColor, so it follows the surrounding text colour (and the dark theme).
+ *
+ * @param bool   $with_text Show «A.P.P» under the chart (skip it at small sizes).
+ * @param int    $size      Pixel size.
+ * @param string $label     Accessible name; empty = decorative.
+ */
+function atiyeh_logo_svg( bool $with_text = true, int $size = 40, string $label = '' ): string {
+	$dy    = $with_text ? 0 : 6; // Without the text the chart sits lower, centred in the circle.
+	$chart = sprintf(
+		'<g transform="translate(0 %1$d)" fill="none" stroke="currentColor" stroke-linejoin="miter">'
+		. '<path d="M20 67V46H32M32 67V37H44M44 67V27H56M56 67V37H68M68 67V46H80V67" stroke-width="2"/>'
+		. '<path d="M20 46H32M32 37H44M44 27H56M56 37H68M68 46H80" stroke-width="3"/>'
+		. '<path d="M11 62C28 61.5 36 28.5 50 28.5S72 61.5 89 62" stroke-width="1.3"/>'
+		. '<path d="M13 67.5H87" stroke-width="3.2"/></g>',
+		$dy
+	);
+	$text = $with_text ? '<text x="50" y="82" text-anchor="middle" font-family="\'Brush Script MT\', \'Segoe Script\', cursive, serif" font-style="italic" font-size="11" fill="currentColor">A.P.P</text>' : '';
+	return sprintf(
+		'<svg class="app-logo" width="%1$d" height="%1$d" viewBox="0 0 100 100" %2$s focusable="false"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.6"/>%3$s%4$s</svg>',
+		$size,
+		$label ? 'role="img" aria-label="' . esc_attr( $label ) . '"' : 'aria-hidden="true"',
+		$chart,
+		$text
+	);
+}

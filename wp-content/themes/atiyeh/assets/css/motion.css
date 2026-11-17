@@ -50,9 +50,10 @@
 .site-nav__list > li:nth-child(5) { animation-delay: .35s; } .site-nav__list > li:nth-child(6) { animation-delay: .4s; }
 .site-nav__list > li:nth-child(7) { animation-delay: .45s; } .site-nav__list > li:nth-child(8) { animation-delay: .5s; }
 .brand__mark { transition: transform .6s var(--ease), border-radius .6s var(--ease); }
-.brand:hover .brand__mark { transform: rotate(-8deg) scale(1.06); border-radius: 50% 10% 50% 50%; }
-.brand__mark .icon-logo path { stroke-dasharray: 60; animation: draw-logo 1.6s var(--ease) .3s both; }
-@keyframes draw-logo { from { stroke-dashoffset: 60; } to { stroke-dashoffset: 0; } }
+.brand:hover .brand__mark { transform: scale(1.08); }
+.app-logo path { stroke-dasharray: 220; animation: draw-logo 1.8s var(--ease) .3s both; }
+.app-logo circle { stroke-dasharray: 290; animation: draw-logo 1.6s var(--ease) both; }
+@keyframes draw-logo { from { stroke-dashoffset: 290; } to { stroke-dashoffset: 0; } }
 
 /* Theme toggle icon swap */
 .theme-toggle .icon-sun { display: none; }
@@ -195,8 +196,8 @@ html:not([data-theme="dark"]) .theme-toggle .icon-moon { animation: tt-in .6s va
 
 /* ---------- Footer ---------- */
 .site-footer__mark {
-	display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin-left: 10px; vertical-align: middle;
-	border-radius: 50% 50% 50% 10%; background: var(--c-primary); color: #fff;
+	display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; margin-left: 12px; vertical-align: middle;
+	border-radius: 50%; color: #fff;
 }
 .site-footer__name { display: inline-flex; align-items: center; }
 .site-footer__blurb { opacity: .75; max-width: 340px; line-height: 2; }

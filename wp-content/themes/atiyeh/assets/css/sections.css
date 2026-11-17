@@ -688,3 +688,8 @@ html[data-theme="dark"] .client-card__tags i { color: var(--c-accent); }
 	.ai-art__code p { width: auto; }
 	.scanner__sheet--out { top: 10px; }
 }
+
+.marquee__item--name { padding: 0 16px; text-align: center; font-weight: 800; font-size: 14.5px; line-height: 1.6; color: var(--c-primary-dark); background: linear-gradient(145deg, #fff, var(--c-soft)); }
+html[data-theme="dark"] .marquee__item--name { color: var(--c-ink); }
+
+.client-card__ph { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--c-soft); color: var(--c-primary); font-size: 0; }

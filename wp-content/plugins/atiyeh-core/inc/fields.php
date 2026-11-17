@@ -17,7 +17,8 @@ function atiyeh_core_fields(): array {
 		'project'     => array(
 			'_atiyeh_client' => array( 'کارفرما', 'text', 'مثلاً: شهرداری اصفهان' ),
 			'_atiyeh_city'   => array( 'شهر', 'text' ),
-			'_atiyeh_date'   => array( 'تاریخ اجرا', 'text', 'مثلاً: ۱۴۰۳ یا مهر ۱۴۰۳' ),
+			'_atiyeh_date'   => array( 'تاریخ اجرا', 'text', 'مثلاً: ۱۴۰۳ یا ۱۴۰۲–۱۴۰۳' ),
+			'_atiyeh_status' => array( 'وضعیت', 'select', '', array( 'done' => array( 'label' => 'اجراشده' ), 'ongoing' => array( 'label' => 'در حال اجرا' ) ) ),
 		),
 		'occasion'    => array(
 			'_atiyeh_kicker'   => array( 'برچسب بالای عنوان', 'text', 'مثلاً: مناسبت، رویداد، خبر مهم' ),

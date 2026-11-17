@@ -11,6 +11,7 @@ function atiyeh_core_service_terms(): array {
 		'plaque'  => 'پلاک کدپستی',
 		'archive' => 'آرشیو دیجیتال',
 		'update'  => 'بهنگام‌سازی',
+		'stats'   => 'آمار و داده',
 	);
 }
 

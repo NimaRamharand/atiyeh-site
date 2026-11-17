@@ -5,7 +5,7 @@
  * @package Atiyeh
  */
 
-$atiyeh_words = array( 'پلاک کدپستی', 'آرشیو دیجیتال اسناد', 'بهنگام‌سازی نشانی', 'اسکن و نمایه‌سازی', 'کنترل کیفیت میدانی', 'بازیابی سریع اسناد' );
+$atiyeh_words = array( 'پلاک کدپستی', 'آرشیو الکترونیک اسناد', 'بهنگام‌سازی کدپستی', 'آمارگیری میدانی', 'ژئوکدسازی', 'اسکن مدارک پزشکی' );
 $atiyeh_group = static function () use ( $atiyeh_words ): void {
 	echo '<div class="ticker__group">';
 	foreach ( $atiyeh_words as $w ) {

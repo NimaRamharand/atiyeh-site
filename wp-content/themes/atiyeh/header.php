@@ -27,7 +27,7 @@ $atiyeh_cta_url = $atiyeh_request ? get_permalink( $atiyeh_request ) : home_url(
 				if ( has_custom_logo() ) {
 					echo wp_get_attachment_image( (int) get_theme_mod( 'custom_logo' ), 'thumbnail', false, array( 'alt' => '' ) );
 				} else {
-					echo atiyeh_icon( 'logo', 24 ); // phpcs:ignore WordPress.Security.EscapeOutput
+					echo atiyeh_logo_svg( false, 34 ); // phpcs:ignore WordPress.Security.EscapeOutput
 				}
 				?>
 			</span>

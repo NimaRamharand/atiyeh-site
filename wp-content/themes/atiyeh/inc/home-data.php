@@ -89,10 +89,8 @@ function atiyeh_home_clients(): array {
 	if ( post_type_exists( 'client' ) ) {
 		$out = array();
 		foreach ( get_posts( array( 'post_type' => 'client', 'numberposts' => 10, 'orderby' => 'menu_order', 'order' => 'ASC' ) ) as $c ) {
-			$src = get_the_post_thumbnail_url( $c, 'medium' );
-			if ( $src ) {
-				$out[] = array( 'src' => $src, 'alt' => get_the_title( $c ) );
-			}
+			// Clients without a logo show their name as a text tile.
+			$out[] = array( 'src' => (string) get_the_post_thumbnail_url( $c, 'medium' ), 'alt' => get_the_title( $c ) );
 		}
 		if ( $out ) {
 			return $out;
@@ -130,14 +128,8 @@ function atiyeh_home_areas(): array {
  * @return array<int, array{v:string, l:string}>
  */
 function atiyeh_home_stats(): array {
-	$labels = array(
-		'plaques' => 'پلاک نصب‌شده',
-		'docs'    => 'سند اسکن‌شده',
-		'clients' => 'کارفرمای فعال',
-		'years'   => 'سال تجربه',
-	);
 	$out = array();
-	foreach ( $labels as $key => $label ) {
+	foreach ( atiyeh_stat_labels() as $key => $label ) {
 		$value = trim( (string) get_theme_mod( "atiyeh_stat_{$key}", '' ) );
 		$out[] = array(
 			'v' => '' === $value ? '[ ۰۰ ]' : $value,
@@ -157,6 +149,7 @@ function atiyeh_service_terms(): array {
 		'plaque'  => 'پلاک کدپستی',
 		'archive' => 'آرشیو دیجیتال',
 		'update'  => 'بهنگام‌سازی',
+		'stats'   => 'آمار و داده',
 	);
 }
 
@@ -195,6 +188,7 @@ function atiyeh_project_item( WP_Post $p ): array {
 		'services' => $services,
 		'img'      => $img ? $img : atiyeh_asset( 'img/project-postal-plaque.webp' ),
 		'url'      => (string) get_permalink( $p ),
+		'status'   => (string) get_post_meta( $p->ID, '_atiyeh_status', true ),
 	);
 }
 
