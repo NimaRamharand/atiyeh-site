@@ -52,12 +52,9 @@ foreach ( $atiyeh_projects as $atiyeh_i => [ $atiyeh_title, $atiyeh_services, $a
 }
 
 // Clients from the company profile. [ name, logo file or '', services, city ].
-// Najafabad and Khomeini-Shahr came with logos from the company but are not in the profile: services left empty.
 $atiyeh_clients = array(
 	array( 'شهرداری اصفهان (سازمان فاوا)', 'logo-esfahan.webp', array( 'plaque' ), 'اصفهان' ),
 	array( 'شهرداری افوس', 'logo-afus.webp', array( 'plaque' ), 'افوس' ),
-	array( 'شهرداری نجف‌آباد', 'logo-najafabad.webp', array(), 'نجف‌آباد' ),
-	array( 'شهرداری خمینی‌شهر', 'logo-khomeini.webp', array(), 'خمینی‌شهر' ),
 	array( 'شرکت ملی پست جمهوری اسلامی ایران', '', array( 'update', 'stats' ), 'استان اصفهان' ),
 	array( 'مرکز آمار ایران', '', array( 'stats' ), '' ),
 	array( 'بیمارستان الزهرا (س)', '', array( 'archive' ), 'اصفهان' ),

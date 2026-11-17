@@ -14,7 +14,7 @@ $atiyeh_roles = array( 'اپراتور اسکن', 'همگام‌ساز', 'نصا
 		<div class="careers__frame spin" aria-hidden="true"></div>
 		<div class="careers__text">
 			<h2 class="careers__title">به تیم ما بپیوندید</h2>
-			<p class="careers__desc">نیروهای میدانی، اپراتور اسکن، نمایه‌سازی و کنترل کیفیت؛ رزومه خود را برای ما ارسال کنید.</p>
+			<p class="careers__desc">نیروهای میدانی، همگام‌ساز، اپراتور اسکن و نصاب پلاک کدپستی؛ رزومه خود را برای ما ارسال کنید.</p>
 			<ul class="careers__roles" role="list">
 				<?php foreach ( $atiyeh_roles as $role ) : ?>
 					<li class="chip"><?php echo esc_html( $role ); ?></li>

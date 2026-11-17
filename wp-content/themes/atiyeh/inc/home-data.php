@@ -99,13 +99,11 @@ function atiyeh_home_clients(): array {
 	return array(
 		array( 'src' => atiyeh_asset( 'img/logos/logo-esfahan.webp' ), 'alt' => 'شهرداری اصفهان' ),
 		array( 'src' => atiyeh_asset( 'img/logos/logo-afus.webp' ), 'alt' => 'شهرداری افوس' ),
-		array( 'src' => atiyeh_asset( 'img/logos/logo-najafabad.webp' ), 'alt' => 'شهرداری نجف‌آباد' ),
-		array( 'src' => atiyeh_asset( 'img/logos/logo-khomeini.webp' ), 'alt' => 'شهرداری خمینی‌شهر' ),
 	);
 }
 
 /**
- * The 8 activity areas.
+ * The activity areas (three were removed after the demo meeting).
  *
  * @return array<int, array{0:string,1:string,2:string}>
  */
@@ -116,9 +114,6 @@ function atiyeh_home_areas(): array {
 		array( '۰۳', 'بهنگام‌سازی کدپستی', 'به‌روزرسانی نشانی و کدپستی واحدها و ساختمان‌ها' ),
 		array( '۰۴', 'کنترل کیفیت نصب', 'بازرسی و تأیید صحت نصب و اطلاعات هر پلاک' ),
 		array( '۰۵', 'اسکن عمده اسناد', 'اسکن سریع و دقیق حجم بالای اسناد سازمانی' ),
-		array( '۰۶', 'نمایه‌سازی و فهرست‌نویسی', 'ثبت مشخصات هر سند برای جستجوی آسان' ),
-		array( '۰۷', 'سامانه بازیابی اسناد', 'جستجو و دسترسی آنی به آرشیو دیجیتال' ),
-		array( '۰۸', 'ذخیره‌سازی امن و پشتیبان', 'نگهداری ایمن و پشتیبان‌گیری از آرشیو' ),
 	);
 }
 

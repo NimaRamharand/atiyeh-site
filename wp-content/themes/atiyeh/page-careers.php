@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'فرصت‌های شغلی', 'desc' => 'نیروهای میدانی، اپراتور اسکن، نمایه‌سازی و کنترل کیفیت؛ رزومه خود را برای ما ارسال کنید.', 'img' => 'careers-team.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'فرصت‌های شغلی', 'desc' => 'نیروهای میدانی، همگام‌ساز، اپراتور اسکن و نصاب پلاک کدپستی؛ رزومه خود را برای ما ارسال کنید.', 'img' => 'careers-team.webp' ) );
 	$atiyeh_jobs = post_type_exists( 'job' ) ? get_posts(
 		array(
 			'post_type'   => 'job',
