@@ -13,7 +13,7 @@ function atiyeh_contact_fields(): array {
 		'postal'  => array( 'کد پستی', '۸۱۸۵۷۷۷۳۶۲' ),
 		'phone'   => array( 'تلفن و فکس', '۰۳۱-۳۷۷۲۶۲۱۹' ),
 		'mobile'  => array( 'تلفن همراه (مدیرعامل)', '۰۹۱۳۲۳۳۳۷۲۰' ),
-		'email'   => array( 'ایمیل', 'amar.parsian1@gmail.com' ),
+		'email'   => array( 'ایمیل', 'contact@amarpp.com' ),
 		'ceo'     => array( 'مدیرعامل', 'اعظم عباسیان' ),
 		'regno'   => array( 'شماره ثبت', '۵۰۴۱۱' ),
 	);

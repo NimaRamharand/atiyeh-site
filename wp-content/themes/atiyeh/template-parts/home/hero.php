@@ -41,7 +41,7 @@ $atiyeh_total  = count( $atiyeh_slides );
 								<a class="btn btn--white hero-slide__cta" href="<?php echo esc_url( $atiyeh_href ); ?>"><?php echo esc_html( $s['cta'] ); ?> <span class="ar" aria-hidden="true">←</span></a>
 							<?php endif; ?>
 							<?php if ( ! $atiyeh_occ ) : ?>
-								<a class="btn btn--ghost" href="#request">درخواست دمو</a>
+								<a class="btn btn--ghost" href="#request">درخواست مشاوره</a>
 							<?php endif; ?>
 						</div>
 					</div>

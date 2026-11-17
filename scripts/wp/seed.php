@@ -225,7 +225,6 @@ atiyeh_demo_menu(
 	array(
 		array( 'درباره ما', $atiyeh_pages['about'] ),
 		array( 'خدمات', $atiyeh_pages['services'] ),
-		array( 'خدمات اصلی', '/#products' ),
 		array( 'پروژه‌ها', '/projects/' ),
 		array( 'حسن انجام کار', '/appreciations/' ),
 		array( 'همکاری با ما', $atiyeh_pages['careers'] ),

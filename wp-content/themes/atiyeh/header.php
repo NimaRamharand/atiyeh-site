@@ -46,7 +46,7 @@ $atiyeh_cta_url = $atiyeh_request ? get_permalink( $atiyeh_request ) : home_url(
 				)
 			);
 			?>
-			<a class="btn btn--accent site-nav__cta-mobile" href="<?php echo esc_url( $atiyeh_cta_url ); ?>">درخواست دمو</a>
+			<a class="btn btn--accent site-nav__cta-mobile" href="<?php echo esc_url( $atiyeh_cta_url ); ?>">درخواست مشاوره</a>
 		</nav>
 
 		<div class="site-header__actions">
@@ -56,7 +56,7 @@ $atiyeh_cta_url = $atiyeh_request ? get_permalink( $atiyeh_request ) : home_url(
 			<button class="icon-btn" type="button" aria-label="جستجو" aria-expanded="false" aria-controls="site-search" data-search-toggle>
 				<?php echo atiyeh_icon( 'search', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 			</button>
-			<a class="btn btn--accent site-header__cta" href="<?php echo esc_url( $atiyeh_cta_url ); ?>">درخواست دمو</a>
+			<a class="btn btn--accent site-header__cta" href="<?php echo esc_url( $atiyeh_cta_url ); ?>">درخواست مشاوره</a>
 			<button class="icon-btn site-header__burger" type="button" aria-label="باز کردن منو" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
 				<?php echo atiyeh_icon( 'menu', 22 ) . atiyeh_icon( 'close', 22 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 			</button>

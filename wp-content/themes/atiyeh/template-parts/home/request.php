@@ -17,7 +17,7 @@ $atiyeh_form = apply_filters( 'atiyeh_request_form_html', '' );
 			<p class="request__desc">فرم را تکمیل کنید تا کارشناسان ما برای بررسی و ارائه پیشنهاد با شما تماس بگیرند.</p>
 			<div class="request__btns">
 				<a class="btn btn--white" href="<?php echo esc_url( atiyeh_page_url( 'contact', '/#contact' ) ); ?>">تماس با ما <span class="ar" aria-hidden="true">←</span></a>
-				<a class="btn btn--ghost" href="#careers">همکاری با ما <span class="ar" aria-hidden="true">←</span></a>
+				<a class="btn btn--ghost" href="<?php echo esc_url( atiyeh_page_url( 'careers', '/#careers' ) ); ?>">همکاری با ما <span class="ar" aria-hidden="true">←</span></a>
 			</div>
 		</div>
 		<div class="request__form">
