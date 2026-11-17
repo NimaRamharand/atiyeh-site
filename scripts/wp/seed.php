@@ -187,6 +187,56 @@ function atiyeh_demo_pages(): array {
 	return $ids;
 }
 
+/**
+ * Rank Math settings for an offline company site: no account connection, company knowledge graph,
+ * breadcrumbs schema, no Article schema on pages, sitemap without empty types. Idempotent.
+ */
+function atiyeh_demo_seo( array $pages ): void {
+	if ( ! defined( 'RANK_MATH_VERSION' ) ) {
+		return;
+	}
+	update_option( 'rank_math_registration_skip', 1 );
+	update_option( 'rank_math_wizard_completed', 1 );
+	$name   = get_option( 'blogname' );
+	$assets = get_template_directory_uri() . '/assets/img/icon/';
+
+	$titles = (array) get_option( 'rank-math-options-titles', array() );
+	$titles = array_merge(
+		$titles,
+		array(
+			'knowledgegraph_type'     => 'company',
+			'knowledgegraph_name'     => $name,
+			'knowledgegraph_logo'     => $assets . 'logo-512.png',
+			'website_name'            => $name,
+			'website_alternate_name'  => 'A.P.P',
+			'title_separator'         => '|',
+			'open_graph_image'        => $assets . 'og-image.png',
+			'disable_author_archives' => 'on',
+		)
+	);
+	foreach ( array( 'page', 'project', 'appreciation' ) as $type ) {
+		$titles[ "pt_{$type}_title" ]                = '%title% %sep% %sitename%';
+		$titles[ "pt_{$type}_default_rich_snippet" ] = 'off';
+	}
+	update_option( 'rank-math-options-titles', $titles );
+
+	$general                = (array) get_option( 'rank-math-options-general', array() );
+	$general['breadcrumbs'] = 'on';
+	update_option( 'rank-math-options-general', $general );
+
+	$sitemap = (array) get_option( 'rank-math-options-sitemap', array() );
+	foreach ( array( 'pt_page_sitemap' => 'on', 'pt_project_sitemap' => 'on', 'pt_appreciation_sitemap' => 'on', 'pt_post_sitemap' => 'off', 'pt_attachment_sitemap' => 'off', 'authors_sitemap' => 'off', 'tax_category_sitemap' => 'off', 'tax_post_tag_sitemap' => 'off', 'tax_service_sitemap' => 'off' ) as $k => $v ) {
+		$sitemap[ $k ] = $v;
+	}
+	update_option( 'rank-math-options-sitemap', $sitemap );
+
+	// Home page title (static front page): brand first, then the main services.
+	if ( isset( $pages['home'] ) ) {
+		update_post_meta( $pages['home'], 'rank_math_title', '%sitename% %sep% طرح‌های آماری، پلاک کدپستی و آرشیو الکترونیک اسناد' );
+	}
+	WP_CLI::log( '  تنظیمات Rank Math اعمال شد' );
+}
+
 /** Builds a nav menu from [title, url|page_id] rows and assigns it to a theme location. */
 function atiyeh_demo_menu( string $name, string $location, array $items ): void {
 	$menu_id = wp_create_nav_menu( $name );
@@ -218,6 +268,7 @@ function atiyeh_demo_menu( string $name, string $location, array $items ): void 
 atiyeh_demo_purge();
 update_option( 'blogname', 'آمار پژوهان پارسیان' );
 $atiyeh_pages = atiyeh_demo_pages();
+atiyeh_demo_seo( $atiyeh_pages );
 
 atiyeh_demo_menu(
 	'منوی اصلی',
