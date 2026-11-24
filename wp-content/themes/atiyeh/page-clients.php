@@ -9,7 +9,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'مورد اعتماد کارفرمایان', 'desc' => 'شرکت ملی پست، مرکز آمار ایران، شهرداری‌ها و بیمارستان‌هایی که طرح‌های آماری، کدپستی، پلاک و آرشیو اسناد خود را به ما سپرده‌اند.', 'img' => 'hero-1-green-city.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'مورد اعتماد کارفرمایان', 'desc' => 'شرکت ملی پست، مرکز آمار ایران، شهرداری‌ها و بیمارستان‌هایی که طرح‌های آماری، کدپستی، پلاک و آرشیو اسناد خود را به ما سپرده‌اند.', 'img' => 'plaque-site-inspection.webp' ) );
 	$atiyeh_clients = post_type_exists( 'client' ) ? get_posts( array( 'post_type' => 'client', 'numberposts' => -1, 'orderby' => array( 'menu_order' => 'ASC', 'title' => 'ASC' ) ) ) : array();
 	$atiyeh_filters = array( 'plaque' => 'پلاک و کدپستی', 'archive' => 'اسکن و آرشیو اسناد', 'stats' => 'آمار و داده' );
 	$atiyeh_intro   = atiyeh_page_intro();

@@ -15,7 +15,7 @@ while ( have_posts() ) :
 		array(
 			'kicker' => 'پلاک کدپستی · آرشیو دیجیتال اسناد',
 			'desc'   => 'پلاک کدپستی، آرشیو الکترونیک اسناد، آمار و داده، مشاوره خرید اسکنر و خدمات انفورماتیک؛ همه در یک مجموعه.',
-			'img'    => 'project-map-update.webp',
+			'img'    => 'plaque-install-gate.webp',
 		)
 	);
 	$atiyeh_intro = atiyeh_page_intro();
@@ -51,11 +51,6 @@ while ( have_posts() ) :
 							<i class="doc-stack__head"></i><i></i><i></i><i class="w80"></i><i></i><i class="w55"></i>
 							<i class="doc-stack__scan"></i>
 						</div>
-					</div>
-				<?php else : ?>
-					<div class="plaque-mock float">
-						<span class="plaque-mock__no">[ ۰۰ ]</span>
-						<span class="plaque-mock__code" dir="ltr">[ ۰۰۰۰۰-۰۰۰۰۰ ]</span>
 					</div>
 				<?php endif; ?>
 				<div class="svc__orbit spin"></div>

@@ -15,7 +15,7 @@ get_template_part(
 		'title'  => $atiyeh_term ? 'پروژه‌های ' . $atiyeh_term->name : 'پروژه‌ها',
 		'kicker' => 'نمونه کارها',
 		'desc'   => 'نمونه‌ای از پروژه‌های پلاک کدپستی و آرشیو دیجیتال اسناد که برای کارفرمایان اجرا شده است.',
-		'img'    => 'project-map-update.webp',
+		'img'    => 'plaque-install-gate.webp',
 	)
 );
 ?>

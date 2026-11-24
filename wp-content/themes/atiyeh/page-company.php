@@ -25,7 +25,7 @@ while ( have_posts() ) :
 			<?php get_template_part( 'template-parts/blocks/profile-download' ); ?>
 		</div>
 		<div class="arch-img rvr">
-			<div class="arch-img__frame rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/careers-team.webp' ) ); ?>" alt="تیم آمار پژوهان پارسیان" width="700" height="800" loading="lazy" decoding="async"></div>
+			<div class="arch-img__frame rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/plaque-install-officials.webp' ) ); ?>" alt="نصب پلاک کدپستی توسط تیم آمار پژوهان پارسیان" width="1280" height="960" loading="lazy" decoding="async"></div>
 			<div class="arch-img__ball float" aria-hidden="true"></div>
 			<div class="arch-img__frame2 spin" aria-hidden="true"></div>
 		</div>

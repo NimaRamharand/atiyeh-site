@@ -31,7 +31,7 @@ function atiyeh_hero_slides(): array {
 			'c1'     => '#2a6fd6',
 			'c2'     => '#7ab8ff',
 			'chip'   => 'پلاک کدپستی',
-			'img'    => 'project-postal-plaque.webp',
+			'img'    => 'smart-qr-plaque-install.webp',
 			'docs'   => false,
 		),
 		array(
@@ -43,8 +43,8 @@ function atiyeh_hero_slides(): array {
 			'c1'     => '#134aa0',
 			'c2'     => '#7ab8ff',
 			'chip'   => 'اسکن اسناد',
-			'img'    => 'pattern-girih.webp',
-			'docs'   => true,
+			'img'    => 'scan-medical-records-operator.webp',
+			'docs'   => false,
 		),
 		array(
 			'kicker' => 'میدانی',
@@ -55,7 +55,7 @@ function atiyeh_hero_slides(): array {
 			'c1'     => '#2563c4',
 			'c2'     => '#cfe3ff',
 			'chip'   => 'بهنگام‌سازی',
-			'img'    => 'project-map-update.webp',
+			'img'    => 'plaque-install-gate.webp',
 			'docs'   => false,
 		),
 		array(

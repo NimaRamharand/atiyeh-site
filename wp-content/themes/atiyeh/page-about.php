@@ -15,15 +15,15 @@ while ( have_posts() ) :
 		array(
 			'kicker' => 'درباره ما',
 			'desc'   => 'مجموعه‌ای تخصصی در دو حوزه: پلاک کدپستی و آرشیو دیجیتال اسناد؛ با تمرکز بر دقت میدانی و نظم اطلاعات.',
-			'img'    => 'careers-team.webp',
+			'img'    => 'plaque-site-inspection.webp',
 		)
 	);
 	$atiyeh_intro = atiyeh_page_intro();
 	?>
 	<section class="container split-intro">
 		<div class="collage rvr" aria-hidden="true">
-			<div class="collage__big rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/hero-1-green-city.webp' ) ); ?>" alt="" width="700" height="700" loading="lazy" decoding="async"></div>
-			<div class="collage__small rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/project-postal-plaque.webp' ) ); ?>" alt="" width="360" height="450" loading="lazy" decoding="async"></div>
+			<div class="collage__big rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/plaque-install-officials.webp' ) ); ?>" alt="" width="1280" height="960" loading="lazy" decoding="async"></div>
+			<div class="collage__small rvc"><img class="pimg" src="<?php echo esc_url( atiyeh_asset( 'img/scan-medical-records-operator.webp' ) ); ?>" alt="" width="960" height="1280" loading="lazy" decoding="async"></div>
 			<div class="collage__badge float"><b>۱۳۸۸</b><span>آغاز فعالیت</span></div>
 			<div class="collage__ring spin"></div>
 		</div>

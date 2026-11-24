@@ -13,7 +13,7 @@ $atiyeh_links = array(
 <section class="about container" id="about">
 	<div class="about__media rvr">
 		<div class="about__img rvc">
-			<img src="<?php echo esc_url( atiyeh_asset( 'img/careers-team.webp' ) ); ?>" alt="تیم آمار پژوهان پارسیان" class="pimg" width="800" height="450" loading="lazy" decoding="async">
+			<img src="<?php echo esc_url( atiyeh_asset( 'img/plaque-site-inspection.webp' ) ); ?>" alt="بازدید میدانی تیم آمار پژوهان پارسیان از پروژه نصب پلاک کدپستی" class="pimg" width="1280" height="960" loading="lazy" decoding="async">
 		</div>
 		<div class="about__ball float" aria-hidden="true"></div>
 		<div class="about__frame spin" aria-hidden="true"></div>

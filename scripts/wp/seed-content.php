@@ -16,22 +16,31 @@ atiyeh_core_ensure_service_terms();
 // Projects from the company profile (رزومه شرکت) and the contracts in progress (Aban 1405).
 // [ title, services, image, client, city, date, status, excerpt ]
 $atiyeh_projects = array(
-	array( 'ساخت و نصب پلاک کدپستی مناطق ۲ و ۶ اصفهان', array( 'plaque' ), 'project-postal-plaque.webp', 'سازمان فاوا شهرداری اصفهان', 'اصفهان', '۱۴۰۳', 'ongoing', 'ساخت و نصب پلاک‌های کدپستی (پلاک هوشمند) در مناطق ۲ و ۶ شهر اصفهان؛ در مراحل پایانی.' ),
-	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان الزهرا (س)', array( 'archive' ), 'careers-team.webp', 'بیمارستان الزهرا (س)', 'اصفهان', '', 'ongoing', 'اسکن و تهیه آرشیو الکترونیک پرونده‌های پزشکی؛ مرحله نخست ۱۳۹۹ تا ۱۴۰۱ با نرم‌افزار HIS و HIT.' ),
+	array( 'ساخت و نصب پلاک کدپستی مناطق ۲ و ۶ اصفهان', array( 'plaque' ), 'smart-qr-plaque-install.webp', 'سازمان فاوا شهرداری اصفهان', 'اصفهان', '۱۴۰۳', 'ongoing', 'ساخت و نصب پلاک‌های کدپستی (پلاک هوشمند) در مناطق ۲ و ۶ شهر اصفهان؛ در مراحل پایانی.' ),
+	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان الزهرا (س)', array( 'archive' ), 'scan-medical-records-operator.webp', 'بیمارستان الزهرا (س)', 'اصفهان', '', 'ongoing', 'اسکن و تهیه آرشیو الکترونیک پرونده‌های پزشکی؛ مرحله نخست ۱۳۹۹ تا ۱۴۰۱ با نرم‌افزار HIS و HIT.' ),
 	array( 'طرح‌های آماری مرکز آمار ایران', array( 'stats' ), 'project-map-update.webp', 'مرکز آمار ایران · سازمان مدیریت و برنامه‌ریزی استان اصفهان', 'استان اصفهان', '۱۳۸۸–۱۳۹۶', 'done', 'استخراج و ورود اطلاعات بیش از ۴۰ طرح آماری، از قیمت تولیدکننده و هزینه و درآمد خانوار تا شاخص‌های ICT، با نرم‌افزار amar org.' ),
-	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان شهید بهشتی', array( 'archive' ), 'careers-team.webp', 'بیمارستان شهید بهشتی اصفهان', 'اصفهان', '۱۴۰۴–۱۴۰۵', 'ongoing', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
-	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان عیسی بن مریم (ع)', array( 'archive' ), 'careers-team.webp', 'بیمارستان عیسی بن مریم (ع)', 'اصفهان', '۱۴۰۵', 'ongoing', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
-	array( 'ساخت و نصب پلاک کدپستی شهر دیزیچه', array( 'plaque' ), 'hero-1-green-city.webp', 'شهرداری دیزیچه', 'دیزیچه', '', 'ongoing', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر دیزیچه.' ),
-	array( 'ساخت و نصب پلاک کدپستی شهر فلاورجان', array( 'plaque' ), 'project-postal-plaque.webp', 'شهرداری فلاورجان', 'فلاورجان', '', 'ongoing', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر فلاورجان.' ),
-	array( 'ساخت و نصب پلاک‌های منطقه ۱۴ اصفهان', array( 'plaque' ), 'hero-1-green-city.webp', 'سازمان فاوا شهرداری اصفهان', 'اصفهان', '۱۴۰۲', 'done', 'ساخت و نصب پلاک‌های بارکددار کدپستی ده‌رقمی منطقه ۱۴ و ثبت اطلاعات در نرم‌افزار Postcod.' ),
-	array( 'ساخت و نصب پلاک شهر افوس', array( 'plaque' ), 'project-postal-plaque.webp', 'شهرداری افوس', 'افوس', '۱۴۰۲–۱۴۰۳', 'done', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر افوس.' ),
-	array( 'ساخت و نصب پلاک شهر اشترجان', array( 'plaque' ), 'hero-1-green-city.webp', 'شهرداری اشترجان', 'اشترجان', '۱۴۰۲–۱۴۰۳', 'done', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر اشترجان.' ),
+	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان شهید بهشتی', array( 'archive' ), 'scan-medical-records-operator.webp', 'بیمارستان شهید بهشتی اصفهان', 'اصفهان', '۱۴۰۴–۱۴۰۵', 'ongoing', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
+	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان عیسی بن مریم (ع)', array( 'archive' ), 'scan-medical-records-operator.webp', 'بیمارستان عیسی بن مریم (ع)', 'اصفهان', '۱۴۰۵', 'ongoing', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
+	array( 'ساخت و نصب پلاک کدپستی شهر دیزیچه', array( 'plaque' ), 'plaque-install-officials.webp', 'شهرداری دیزیچه', 'دیزیچه', '', 'ongoing', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر دیزیچه.' ),
+	array( 'ساخت و نصب پلاک کدپستی شهر فلاورجان', array( 'plaque' ), 'plaque-site-inspection.webp', 'شهرداری فلاورجان', 'فلاورجان', '', 'ongoing', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر فلاورجان.' ),
+	array( 'ساخت و نصب پلاک‌های منطقه ۱۴ اصفهان', array( 'plaque' ), 'plaque-install-gate.webp', 'سازمان فاوا شهرداری اصفهان', 'اصفهان', '۱۴۰۲', 'done', 'ساخت و نصب پلاک‌های بارکددار کدپستی ده‌رقمی منطقه ۱۴ و ثبت اطلاعات در نرم‌افزار Postcod.' ),
+	array( 'ساخت و نصب پلاک شهر افوس', array( 'plaque' ), 'smart-qr-plaque-install.webp', 'شهرداری افوس', 'افوس', '۱۴۰۲–۱۴۰۳', 'done', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر افوس.' ),
+	array( 'ساخت و نصب پلاک شهر اشترجان', array( 'plaque' ), 'plaque-install-officials.webp', 'شهرداری اشترجان', 'اشترجان', '۱۴۰۲–۱۴۰۳', 'done', 'ساخت و نصب پلاک کدپستی ساختمان‌های شهر اشترجان.' ),
 	array( 'بهنگام‌سازی، ساخت و نصب پلاک کدپستی شهر بهارستان', array( 'plaque', 'update' ), 'project-map-update.webp', 'شهرداری بهارستان', 'بهارستان', '۱۳۹۹', 'done', 'بهنگام‌سازی اطلاعات کدپستی ده‌رقمی و ساخت و نصب پلاک ساختمان‌های شهر بهارستان.' ),
 	array( 'بهنگام‌سازی کدپستی ده‌رقمی کلان‌شهر اصفهان', array( 'update' ), 'project-map-update.webp', 'شرکت ملی پست جمهوری اسلامی ایران', 'اصفهان', '۱۳۹۴', 'done', 'برداشت میدانی و بهنگام‌سازی اطلاعات کدپستی ده‌رقمی کلان‌شهر اصفهان.' ),
 	array( 'ژئوکدسازی اطلاعات کدپستی استان اصفهان', array( 'stats', 'update' ), 'project-map-update.webp', 'شرکت ملی پست جمهوری اسلامی ایران', 'استان اصفهان', '۱۳۹۹–۱۴۰۰', 'done', 'ژئوکدسازی اطلاعات کدپستی ده‌رقمی استان اصفهان در نرم‌افزار Postcod.' ),
 	array( 'آمارگیری وضعیت کارگاه‌های صنعتی استان اصفهان', array( 'stats' ), 'project-map-update.webp', 'شرکت شهرک‌های صنعتی استان اصفهان', 'استان اصفهان', '۱۴۰۱–۱۴۰۲', 'done', 'طرح آمارگیری وضعیت فیزیکی کارگاه‌های صنعتی و کارگاه‌های زیر ظرفیت اسمی استان.' ),
-	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان امام حسین (ع)', array( 'archive' ), 'careers-team.webp', 'بیمارستان امام حسین (ع)', 'اصفهان', '۱۴۰۳–۱۴۰۴', 'done', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
-	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان امین', array( 'archive' ), 'careers-team.webp', 'بیمارستان امین', 'اصفهان', '۱۴۰۳–۱۴۰۴', 'done', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
+	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان امام حسین (ع)', array( 'archive' ), 'scan-medical-records-operator.webp', 'بیمارستان امام حسین (ع)', 'اصفهان', '۱۴۰۳–۱۴۰۴', 'done', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
+	array( 'آرشیو الکترونیک اسناد پزشکی بیمارستان امین', array( 'archive' ), 'scan-medical-records-operator.webp', 'بیمارستان امین', 'اصفهان', '۱۴۰۳–۱۴۰۴', 'done', 'اسکن مدارک پزشکی و تهیه آرشیو الکترونیک با نرم‌افزار سبارا.' ),
+);
+// Alt text for the company's own photos (Aban 1405).
+$atiyeh_alts = array(
+	'smart-qr-plaque-install.webp'       => 'نصب پلاک کدپستی هوشمند با کد QR توسط نیروی آمار پژوهان پارسیان',
+	'plaque-install-gate.webp'           => 'نصب پلاک کدپستی بر سر در ساختمان',
+	'plaque-install-officials.webp'      => 'نصب پلاک کدپستی با حضور ناظران پروژه',
+	'plaque-site-inspection.webp'        => 'بازدید میدانی از پروژه نصب پلاک کدپستی',
+	'scan-medical-records-operator.webp' => 'اپراتور در حال اسکن پرونده‌های پزشکی بیمارستان',
+	'project-map-update.webp'            => 'برداشت میدانی اطلاعات کدپستی',
 );
 foreach ( $atiyeh_projects as $atiyeh_i => [ $atiyeh_title, $atiyeh_services, $atiyeh_img, $atiyeh_client, $atiyeh_city, $atiyeh_date, $atiyeh_status, $atiyeh_excerpt ] ) {
 	$atiyeh_id = atiyeh_demo_insert(
@@ -45,7 +54,7 @@ foreach ( $atiyeh_projects as $atiyeh_i => [ $atiyeh_title, $atiyeh_services, $a
 		array( '_atiyeh_client' => $atiyeh_client, '_atiyeh_city' => $atiyeh_city, '_atiyeh_date' => $atiyeh_date, '_atiyeh_status' => $atiyeh_status )
 	);
 	wp_set_object_terms( $atiyeh_id, $atiyeh_services, 'service' );
-	$atiyeh_thumb = atiyeh_demo_image( $atiyeh_img );
+	$atiyeh_thumb = atiyeh_demo_image( $atiyeh_img, $atiyeh_alts[ $atiyeh_img ] ?? '' );
 	if ( $atiyeh_thumb ) {
 		set_post_thumbnail( $atiyeh_id, $atiyeh_thumb );
 	}

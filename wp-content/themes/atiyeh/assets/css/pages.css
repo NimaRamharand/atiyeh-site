@@ -420,3 +420,7 @@ html[data-theme="dark"] .team-card__tel { color: var(--c-accent); }
 .status-badge--ongoing::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: blink 1.2s steps(2) infinite; }
 .project-card__status { position: absolute; top: 16px; left: 16px; }
 @media (max-width: 900px) { .duo { grid-template-columns: 1fr; } }
+
+/* Services page: a real photo needs no overlay or blending. */
+.svc--photo .svc__blob img { opacity: 1; mix-blend-mode: normal; }
+.svc--photo .svc__blob { background: var(--c-soft-2); }

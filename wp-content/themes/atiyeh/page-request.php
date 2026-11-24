@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'پلاک کدپستی · آرشیو دیجیتال اسناد', 'desc' => 'فرم را تکمیل کنید؛ کارشناسان ما برای بررسی نیاز و ارائه پیشنهاد با شما تماس می‌گیرند.', 'img' => 'project-postal-plaque.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'پلاک کدپستی · آرشیو دیجیتال اسناد', 'desc' => 'فرم را تکمیل کنید؛ کارشناسان ما برای بررسی نیاز و ارائه پیشنهاد با شما تماس می‌گیرند.', 'img' => 'smart-qr-plaque-install.webp' ) );
 	?>
 	<section class="container next-steps" data-seen aria-labelledby="next-title">
 		<h2 class="screen-reader-text" id="next-title">پس از ارسال درخواست</h2>

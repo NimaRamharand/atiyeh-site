@@ -17,7 +17,7 @@ $atiyeh_request  = atiyeh_page_url( 'request', '/#request' );
 		</div>
 		<div class="bento">
 			<article class="bento__card bento__card--main rvs dk">
-				<img src="<?php echo esc_url( atiyeh_asset( 'img/project-postal-plaque.webp' ) ); ?>" alt="" class="pimg bento__bg" width="600" height="750" loading="lazy" decoding="async">
+				<img src="<?php echo esc_url( atiyeh_asset( 'img/plaque-install-officials.webp' ) ); ?>" alt="" class="pimg bento__bg" width="600" height="750" loading="lazy" decoding="async">
 				<div class="bento__shade" aria-hidden="true"></div>
 				<div class="bento__bubble float" aria-hidden="true"></div>
 				<div class="bento__frame spin" aria-hidden="true"></div>

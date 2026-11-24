@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'درباره ما', 'desc' => 'مدیرانی که برنامه‌ریزی، اجرا و کیفیت پروژه‌ها را هدایت می‌کنند.', 'img' => 'careers-team.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'درباره ما', 'desc' => 'مدیرانی که برنامه‌ریزی، اجرا و کیفیت پروژه‌ها را هدایت می‌کنند.', 'img' => 'plaque-site-inspection.webp' ) );
 	$atiyeh_intro = atiyeh_page_intro();
 	$atiyeh_team = array( array( atiyeh_contact( 'ceo' ), 'مدیرعامل', 'هدایت طرح‌های آماری، کدپستی، پلاک و آرشیو الکترونیک شرکت.' ) );
 	?>
