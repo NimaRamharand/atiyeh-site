@@ -32,8 +32,8 @@ while ( have_posts() ) :
 			<h2 class="section-title">آمار دقیق، نشانی درست، اسناد ماندگار</h2>
 			<div class="prose split-intro__prose"><?php echo $atiyeh_intro ? $atiyeh_intro : '<p>[ متن معرفی شرکت ]</p>'; // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
 			<ul class="ticks" role="list">
-				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>دارای گواهی صلاحیت خدمات مشاوره آماری از مرکز آمار ایران (پایه ۲)</li>
-				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>گواهینامه رتبه‌بندی شرکت‌های انفورماتیکی (پایه ۴)</li>
+				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>گواهینامه صلاحیت شرکت‌های آماری از مرکز آمار ایران (پایه ۲)</li>
+				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>گواهینامه صلاحیت انفورماتیک از سازمان برنامه و بودجه (پایه ۴)</li>
 				<li><?php echo atiyeh_icon( 'check', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>کارفرمایانی چون شرکت ملی پست، مرکز آمار ایران، شهرداری‌ها و بیمارستان‌ها</li>
 			</ul>
 		</div>

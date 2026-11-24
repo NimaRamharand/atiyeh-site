@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'درباره ما', 'desc' => 'از ۱۳۸۸ در طرح‌های آماری، کدپستی، ساخت و نصب پلاک و آرشیو الکترونیک اسناد؛ دارای گواهی صلاحیت از مرکز آمار ایران.', 'img' => 'hero-1-green-city.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'درباره ما', 'desc' => 'از ۱۳۸۸ در طرح‌های آماری، اسکن و آرشیو الکترونیک اسناد، بهنگام‌سازی کدپستی و پلاک‌های کدپستی هوشمند؛ با پشتوانه گواهینامه‌های معتبر.', 'img' => 'hero-1-green-city.webp' ) );
 	$atiyeh_intro = atiyeh_page_intro();
 	?>
 	<section class="container split-intro split-intro--card">

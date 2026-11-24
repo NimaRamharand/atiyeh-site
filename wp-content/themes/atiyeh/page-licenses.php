@@ -8,7 +8,7 @@
 get_header();
 while ( have_posts() ) :
 	the_post();
-	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'درباره ما', 'desc' => 'گواهی صلاحیت خدمات مشاوره آماری از مرکز آمار ایران، رتبه‌بندی شرکت‌های انفورماتیکی و مجوزهای اداره کار.', 'img' => 'trust-plaques.webp' ) );
+	get_template_part( 'template-parts/page-hero', null, array( 'kicker' => 'درباره ما', 'desc' => 'گواهینامه‌های صلاحیت از مرکز آمار ایران، سازمان برنامه و بودجه، سازمان نظام صنفی رایانه‌ای و اداره کل تعاون، کار و رفاه اجتماعی.', 'img' => 'trust-plaques.webp' ) );
 	$atiyeh_intro = atiyeh_page_intro();
 	?>
 	<section class="container section-pad certs">

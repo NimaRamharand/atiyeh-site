@@ -25,7 +25,7 @@ $atiyeh_links = array(
 	<div class="about__text rvl">
 		<span class="kicker">درباره شرکت</span>
 		<h2 class="about__title">آمار پژوهان پارسیان</h2>
-		<p class="about__lead">آمار پژوهان پارسیان از سال ۱۳۸۸ در اجرای طرح‌های آماری، فهرست‌برداری و بهنگام‌سازی کدپستی، ساخت و نصب پلاک و آرشیو الکترونیک اسناد پزشکی فعالیت می‌کند؛ دارای گواهی صلاحیت خدمات مشاوره آماری از مرکز آمار ایران و گواهینامه رتبه‌بندی شرکت‌های انفورماتیکی.</p>
+		<p class="about__lead">شرکت آمار پژوهان پارسیان در اصفهان، از سال ۱۳۸۸ در اجرای <strong>طرح‌های آماری و سرشماری</strong>، <strong>اسکن و آرشیو الکترونیک اسناد</strong>، <strong>بهنگام‌سازی کدپستی</strong> و <strong>ساخت و نصب پلاک‌های کدپستی هوشمند</strong> فعالیت می‌کند. گواهینامه صلاحیت شرکت‌های آماری از مرکز آمار ایران و گواهینامه صلاحیت انفورماتیک از سازمان برنامه و بودجه، در کنار اجرای بخش قابل توجهی از طرح‌های آماری و پروژه‌های کلان کشور، آمار پژوهان پارسیان را به شریکی قابل اعتماد برای سازمان‌های دولتی و خصوصی تبدیل کرده است.</p>
 		<div class="about__links">
 			<?php foreach ( $atiyeh_links as [ $slug, $label, $shape ] ) : ?>
 				<a class="sweep about__link about__link--<?php echo esc_attr( $shape ); ?>" href="<?php echo esc_url( atiyeh_page_url( "about/{$slug}", '/#about' ) ); ?>"><?php echo esc_html( $label ); ?> <span aria-hidden="true">←</span></a>
