@@ -9,7 +9,7 @@
 function atiyeh_core_service_terms(): array {
 	return array(
 		'plaque'  => 'پلاک کدپستی',
-		'archive' => 'آرشیو دیجیتال',
+		'archive' => 'آرشیو الکترونیک',
 		'update'  => 'بهنگام‌سازی',
 		'stats'   => 'آمار و داده',
 	);
@@ -116,8 +116,11 @@ add_action( 'init', 'atiyeh_core_register_types' );
 /** Ensures the service terms exist (called by the demo seeder). */
 function atiyeh_core_ensure_service_terms(): void {
 	foreach ( atiyeh_core_service_terms() as $slug => $name ) {
-		if ( ! term_exists( $slug, 'service' ) ) {
+		$term = term_exists( $slug, 'service' );
+		if ( ! $term ) {
 			wp_insert_term( $name, 'service', array( 'slug' => $slug ) );
+		} else {
+			wp_update_term( (int) $term['term_id'], 'service', array( 'name' => $name ) );
 		}
 	}
 }

@@ -142,7 +142,7 @@ function atiyeh_home_stats(): array {
 function atiyeh_service_terms(): array {
 	return array(
 		'plaque'  => 'پلاک کدپستی',
-		'archive' => 'آرشیو دیجیتال',
+		'archive' => 'آرشیو الکترونیک',
 		'update'  => 'بهنگام‌سازی',
 		'stats'   => 'آمار و داده',
 	);

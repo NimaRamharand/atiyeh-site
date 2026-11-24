@@ -60,29 +60,31 @@ foreach ( $atiyeh_projects as $atiyeh_i => [ $atiyeh_title, $atiyeh_services, $a
 	}
 }
 
-// Clients from the company profile. [ name, logo file or '', services, city ].
+// Clients from the company profile; logos from the company (Aban 1405), normalised to 480×220.
+// Hospitals and the university's treatment deputy use the Isfahan University of Medical Sciences logo.
+// [ name, logo file or '', services, city ].
 $atiyeh_clients = array(
+	array( 'شرکت ملی پست جمهوری اسلامی ایران', 'logo-post.webp', array( 'update', 'stats' ), 'استان اصفهان' ),
+	array( 'مرکز آمار ایران', 'logo-amar.webp', array( 'stats' ), '' ),
 	array( 'شهرداری اصفهان (سازمان فاوا)', 'logo-esfahan.webp', array( 'plaque' ), 'اصفهان' ),
+	array( 'بیمارستان الزهرا (س)', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
 	array( 'شهرداری افوس', 'logo-afus.webp', array( 'plaque' ), 'افوس' ),
-	array( 'شرکت ملی پست جمهوری اسلامی ایران', '', array( 'update', 'stats' ), 'استان اصفهان' ),
-	array( 'مرکز آمار ایران', '', array( 'stats' ), '' ),
-	array( 'بیمارستان الزهرا (س)', '', array( 'archive' ), 'اصفهان' ),
-	array( 'بیمارستان شهید بهشتی', '', array( 'archive' ), 'اصفهان' ),
-	array( 'بیمارستان عیسی بن مریم (ع)', '', array( 'archive' ), 'اصفهان' ),
+	array( 'شهرداری نطنز', 'logo-natanz.webp', array( 'plaque' ), 'نطنز' ),
+	array( 'شهرداری مبارکه', 'logo-mobarakeh.webp', array( 'plaque' ), 'مبارکه' ),
+	array( 'کلینیک چشم‌پزشکی آبان', 'logo-aban.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'شهرداری بهارستان', 'logo-baharestan.webp', array( 'plaque' ), 'بهارستان' ),
+	array( 'شهرداری فلاورجان', 'logo-falavarjan.webp', array( 'plaque' ), 'فلاورجان' ),
+	array( 'شهرداری اشترجان', 'logo-ashtarjan.webp', array( 'plaque' ), 'اشترجان' ),
+	array( 'شهرداری دیزیچه', 'logo-dizicheh.webp', array( 'plaque' ), 'دیزیچه' ),
+	array( 'بیمارستان شهید بهشتی اصفهان', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'بیمارستان عیسی بن مریم (ع)', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'بیمارستان امام حسین (ع)', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'بیمارستان امین', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'مرکز آموزشی درمانی امید (بیمارستان سیدالشهدا)', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'بیمارستان خورشید', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
+	array( 'معاونت درمان دانشگاه علوم پزشکی اصفهان', 'logo-iums.webp', array( 'archive' ), 'اصفهان' ),
 	array( 'سازمان مدیریت و برنامه‌ریزی استان اصفهان', '', array( 'stats' ), 'اصفهان' ),
 	array( 'شرکت شهرک‌های صنعتی استان اصفهان', '', array( 'stats' ), 'اصفهان' ),
-	array( 'بیمارستان امام حسین (ع)', '', array( 'archive' ), 'اصفهان' ),
-	array( 'بیمارستان امین', '', array( 'archive' ), 'اصفهان' ),
-	array( 'بیمارستان سیدالشهدا (مرکز امید)', '', array( 'archive' ), 'اصفهان' ),
-	array( 'مرکز بیمارستان خورشید', '', array( 'archive' ), 'اصفهان' ),
-	array( 'معاونت درمان دانشگاه علوم پزشکی اصفهان', '', array( 'archive' ), 'اصفهان' ),
-	array( 'کلینیک چشم‌پزشکی آبان', '', array( 'archive' ), 'اصفهان' ),
-	array( 'شهرداری نطنز', '', array( 'plaque' ), 'نطنز' ),
-	array( 'شهرداری مبارکه', '', array( 'plaque' ), 'مبارکه' ),
-	array( 'شهرداری بهارستان', '', array( 'plaque' ), 'بهارستان' ),
-	array( 'شهرداری اشترجان', '', array( 'plaque' ), 'اشترجان' ),
-	array( 'شهرداری دیزیچه', '', array( 'plaque' ), 'دیزیچه' ),
-	array( 'شهرداری فلاورجان', '', array( 'plaque' ), 'فلاورجان' ),
 );
 foreach ( $atiyeh_clients as $atiyeh_i => [ $atiyeh_title, $atiyeh_logo, $atiyeh_services, $atiyeh_city ] ) {
 	$atiyeh_id = atiyeh_demo_insert( array( 'post_type' => 'client', 'post_title' => $atiyeh_title, 'menu_order' => $atiyeh_i ), array( '_atiyeh_city' => $atiyeh_city, '_atiyeh_url' => '' ) );
